@@ -68,10 +68,6 @@ function M.setup(colors)
     hi.CursorColumn      = { guifg = nil,             guibg = M.colors.base01, gui = nil,              guisp = nil             }
     hi.CursorLine        = { guifg = nil,             guibg = M.colors.base01, gui = nil,              guisp = nil             }
     hi.Directory         = { guifg = M.colors.base0A, guibg = nil,             gui = nil,              guisp = nil             }
-    hi.DiffAdd           = { guifg = nil,             guibg = M.colors.base0B, gui = nil,              guisp = nil             }
-    hi.DiffChange        = { guifg = nil,             guibg = M.colors.base0E, gui = nil,              guisp = nil             }
-    hi.DiffDelete        = { guifg = nil,             guibg = M.colors.base08, gui = nil,              guisp = nil             }
-    hi.DiffText          = { guifg = nil,             guibg = nil,             gui = 'undercurl',      guisp = M.colors.base08 }
     hi.TermCursor        = { guifg = M.colors.base00, guibg = M.colors.base05, gui = NONE,             guisp = nil             }
     hi.TermCursorNC      = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil,              guisp = nil             }
     hi.ErrorMsg          = { guifg = M.colors.base08, guibg = M.colors.base00, gui='bold',             guisp = nil             }
@@ -221,6 +217,16 @@ function M.setup(colors)
     hi.User7 = { guifg = M.colors.base05, guibg = M.colors.base09, gui = NONE, guisp = nil }
     hi.User8 = { guifg = M.colors.base00, guibg = M.colors.base0A, gui = NONE, guisp = nil }
     hi.User9 = { guifg = M.colors.base00, guibg = M.colors.base0B, gui = NONE, guisp = nil }
+
+    hi.DiffAdd     = { guifg = M.colors.base0B, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.DiffChange  = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.DiffDelete  = { guifg = M.colors.base08, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.DiffText    = { guifg = M.colors.base0D, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.DiffAdded   = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffFile    = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffNewFile = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffLine    = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffRemoved = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
 end
 
 M.colorschemes = {}
