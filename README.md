@@ -153,3 +153,33 @@ woodland
 xcode-dusk
 zenburn
 ```
+
+# Examples
+
+## schemer-dark
+
+<img src="https://user-images.githubusercontent.com/21000943/111041838-4d837e00-8408-11eb-9a8f-9909abb29560.png" width="520" height="342">
+
+## gruvbox-dark-soft
+
+<img src="https://user-images.githubusercontent.com/21000943/111041834-4c525100-8408-11eb-8f5d-b17ef1c139dc.png" width="520" height="342">
+
+## solarized-dark
+
+<img src="https://user-images.githubusercontent.com/21000943/111041839-4e1c1480-8408-11eb-9351-22a4a1d55f2a.png" width="520" height="342">
+
+## onedark
+
+<img src="https://user-images.githubusercontent.com/21000943/111041835-4ceae780-8408-11eb-86e0-3d2857e8ba01.png" width="520" height="342">
+
+## one-light
+
+<img src="https://user-images.githubusercontent.com/21000943/111041836-4ceae780-8408-11eb-8ef1-69eb19768cac.png" width="520" height="342">
+
+## monokai
+
+<img src="https://user-images.githubusercontent.com/21000943/111041934-b965e680-8408-11eb-9b11-e2b97c3514dc.png" width="520" height="342">
+
+## paraiso
+
+<img src="https://user-images.githubusercontent.com/21000943/111041837-4d837e00-8408-11eb-89db-ed9c3884aa61.png" width="520" height="342">
