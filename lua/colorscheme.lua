@@ -110,7 +110,7 @@ function M.setup(colors)
     hi.Visual       = { guifg = nil,             guibg = M.colors.base02, gui = nil,    guisp = nil }
     hi.VisualNOS    = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
     hi.WarningMsg   = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.WildMenu     = { guifg = M.colors.base08, guibg = M.colors.base0A, gui = nil,    guisp = nil }
+    hi.WildMenu     = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil,    guisp = nil }
 
     hi.SpellBad   = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
     hi.SpellLocal = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0C }
@@ -183,7 +183,7 @@ function M.setup(colors)
     hi.TSFuncMacro          = { guifg = M.colors.base0D, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSInclude            = { guifg = M.colors.base0D, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSKeyword            = { guifg = M.colors.base0E, guibg = nil, gui = NONE,            guisp = nil }
-    hi.TSKeywordFunction    = { guifg = M.colors.base0D, guibg = nil, gui = NONE,            guisp = nil }
+    hi.TSKeywordFunction    = { guifg = M.colors.base0E, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSLabel              = { guifg = M.colors.base0E, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSMethod             = { guifg = M.colors.base0D, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSNamespace          = { guifg = M.colors.base0E, guibg = nil, gui = NONE,            guisp = nil }
@@ -194,7 +194,7 @@ function M.setup(colors)
     hi.TSParameterReference = { guifg = M.colors.base08, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSProperty           = { guifg = M.colors.base0A, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSPunctDelimiter     = { guifg = M.colors.base0F, guibg = nil, gui = NONE,            guisp = nil }
-    hi.TSPunctBracket       = { guifg = M.colors.base0F, guibg = nil, gui = NONE,            guisp = nil }
+    hi.TSPunctBracket       = { guifg = M.colors.base0C, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSPunctSpecial       = { guifg = M.colors.base0F, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSRepeat             = { guifg = M.colors.base0E, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSString             = { guifg = M.colors.base0B, guibg = nil, gui = NONE,            guisp = nil }
