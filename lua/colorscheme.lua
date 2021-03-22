@@ -235,21 +235,21 @@ function M.setup(colors)
     hi.DiffLine    = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.DiffRemoved = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
 
-    hi.gitcommitOverflow =      { guifg = M.colors.base08, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitSummary =       { guifg = M.colors.base0B, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitComment =       { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitUntracked =     { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitDiscarded =     { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitSelected =      { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitHeader =        { guifg = M.colors.base0E, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitSelectedType =  { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitUnmergedType =  { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitOverflow      = { guifg = M.colors.base08, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitSummary       = { guifg = M.colors.base0B, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitComment       = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitUntracked     = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitDiscarded     = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitSelected      = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitHeader        = { guifg = M.colors.base0E, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitSelectedType  = { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitUnmergedType  = { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
     hi.gitcommitDiscardedType = { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitBranch =        { guifg = M.colors.base09, guibg = nil, gui = "bold", guisp = nil }
+    hi.gitcommitBranch        = { guifg = M.colors.base09, guibg = nil, gui = "bold", guisp = nil }
     hi.gitcommitUntrackedFile = { guifg = M.colors.base0A, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitUnmergedFile =  { guifg = M.colors.base08, guibg = nil, gui = "bold", guisp = nil }
+    hi.gitcommitUnmergedFile  = { guifg = M.colors.base08, guibg = nil, gui = "bold", guisp = nil }
     hi.gitcommitDiscardedFile = { guifg = M.colors.base08, guibg = nil, gui = "bold", guisp = nil }
-    hi.gitcommitSelectedFile =  { guifg = M.colors.base0B, guibg = nil, gui = "bold", guisp = nil }
+    hi.gitcommitSelectedFile  = { guifg = M.colors.base0B, guibg = nil, gui = "bold", guisp = nil }
 end
 
 M.colorschemes = {}
