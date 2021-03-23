@@ -215,15 +215,15 @@ function M.setup(colors)
     hi.TSVariable           = { guifg = M.colors.base08, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSVariableBuiltin    = { guifg = M.colors.base0E, guibg = nil, gui = NONE,            guisp = nil }
 
-    hi.User1 = { guifg = M.colors.base05, guibg = M.colors.base01, gui = NONE, guisp = nil }
-    hi.User2 = { guifg = M.colors.base05, guibg = M.colors.base02, gui = NONE, guisp = nil }
-    hi.User3 = { guifg = M.colors.base05, guibg = M.colors.base03, gui = NONE, guisp = nil }
-    hi.User4 = { guifg = M.colors.base05, guibg = M.colors.base04, gui = NONE, guisp = nil }
-    hi.User5 = { guifg = M.colors.base01, guibg = M.colors.base05, gui = NONE, guisp = nil }
-    hi.User6 = { guifg = M.colors.base05, guibg = M.colors.base08, gui = NONE, guisp = nil }
-    hi.User7 = { guifg = M.colors.base05, guibg = M.colors.base09, gui = NONE, guisp = nil }
-    hi.User8 = { guifg = M.colors.base00, guibg = M.colors.base0A, gui = NONE, guisp = nil }
-    hi.User9 = { guifg = M.colors.base00, guibg = M.colors.base0B, gui = NONE, guisp = nil }
+    hi.User1 = { guifg = M.colors.base08, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User2 = { guifg = M.colors.base0E, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User3 = { guifg = M.colors.base05, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User4 = { guifg = M.colors.base0C, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User5 = { guifg = M.colors.base01, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User6 = { guifg = M.colors.base05, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User7 = { guifg = M.colors.base05, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User8 = { guifg = M.colors.base00, guibg = M.colors.base02, gui = NONE, guisp = nil }
+    hi.User9 = { guifg = M.colors.base00, guibg = M.colors.base02, gui = NONE, guisp = nil }
 
     hi.DiffAdd     = { guifg = M.colors.base0B, guibg = M.colors.base01, gui = nil, guisp = nil }
     hi.DiffChange  = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil, guisp = nil }
@@ -258,14 +258,14 @@ M.colorschemes = {}
 -- #16161D is called eigengrau and is kinda-ish the color your see when you
 -- close your eyes. It makes for a really good background.
 M.colorschemes['schemer-dark'] = {
-  base00 = '#16161D', base01 = '#2c313c', base02 = '#3e4451', base03 = '#6c7891',
-  base04 = '#565c64', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
+  base00 = '#16161D', base01 = '#3e4451', base02 = '#2c313c', base03 = '#565c64',
+  base04 = '#6c7891', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
   base08 = '#e06c75', base09 = '#d19a66', base0A = '#e5c07b', base0B = '#98c379',
   base0C = '#56b6c2', base0D = '#0184bc', base0E = '#c678dd', base0F = '#a06949',
 }
 M.colorschemes['schemer-medium'] = {
-  base00 = '#212226', base01 = '#2c313c', base02 = '#3e4451', base03 = '#6c7891',
-  base04 = '#565c64', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
+  base00 = '#212226', base01 = '#3e4451', base02 = '#2c313c', base03 = '#565c64',
+  base04 = '#6c7891', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
   base08 = '#e06c75', base09 = '#d19a66', base0A = '#e5c07b', base0B = '#98c379',
   base0C = '#56b6c2', base0D = '#0184bc', base0E = '#c678dd', base0F = '#a06949',
 }
