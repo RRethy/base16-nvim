@@ -4,7 +4,7 @@ Neovim plugin for building base16 colorschemes with support for Neovim's
 builtin LSP and Treesitter.
 
 ```lua
-local colorscheme = require('colorscheme')
+local colorscheme = require('base16-colorscheme')
 
 -- Simply provide the name of a builtin colorscheme
 colorscheme.setup('gruvbox-dark-soft')
