@@ -54,7 +54,6 @@ function M.setup(colors)
 
     vim.cmd('syntax on')
     vim.cmd('syntax reset')
-    vim.cmd('hi clear')
     vim.cmd('set termguicolors')
 
     M.colors = colors or M.colorschemes['schemer-dark']
