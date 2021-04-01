@@ -249,6 +249,8 @@ function M.setup(colors)
     hi.gitcommitUnmergedFile  = { guifg = M.colors.base08, guibg = nil, gui = "bold", guisp = nil }
     hi.gitcommitDiscardedFile = { guifg = M.colors.base08, guibg = nil, gui = "bold", guisp = nil }
     hi.gitcommitSelectedFile  = { guifg = M.colors.base0B, guibg = nil, gui = "bold", guisp = nil }
+
+    hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = NONE, guisp = nil }
 end
 
 M.colorschemes = {}
