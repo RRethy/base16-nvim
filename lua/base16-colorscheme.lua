@@ -158,10 +158,10 @@ function M.setup(colors)
     hi.LspDiagnosticsDefaultWarning       = { guifg = M.colors.base0E, guibg = nil, gui = NONE,        guisp = nil             }
     hi.LspDiagnosticsDefaultInformation   = { guifg = M.colors.base05, guibg = nil, gui = NONE,        guisp = nil             }
     hi.LspDiagnosticsDefaultHint          = { guifg = M.colors.base0C, guibg = nil, gui = NONE,        guisp = nil             }
-    hi.LspDiagnosticsUnderlineError       = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base08 }
-    hi.LspDiagnosticsUnderlineWarning     = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base0E }
-    hi.LspDiagnosticsUnderlineInformation = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base0F }
-    hi.LspDiagnosticsUnderlineHint        = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base0C }
+    hi.LspDiagnosticsUnderlineError       = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
+    hi.LspDiagnosticsUnderlineWarning     = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
+    hi.LspDiagnosticsUnderlineInformation = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0F }
+    hi.LspDiagnosticsUnderlineHint        = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0C }
 
     hi.TSAnnotation         = { guifg = M.colors.base0A, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSAttribute          = { guifg = M.colors.base0A, guibg = nil, gui = NONE,            guisp = nil }
