@@ -95,7 +95,7 @@ function M.setup(colors)
     hi.SignColumn   = { guifg = M.colors.base04, guibg = M.colors.base00, gui = nil,    guisp = nil }
     hi.SpecialKey   = { guifg = M.colors.base03, guibg = nil,             gui = nil,    guisp = nil }
     hi.StatusLine   = { guifg = M.colors.base04, guibg = M.colors.base02, gui = NONE,   guisp = nil }
-    hi.StatusLineNC = { guifg = M.colors.base03, guibg = M.colors.base00, gui = NONE,   guisp = nil }
+    hi.StatusLineNC = { guifg = M.colors.base03, guibg = M.colors.base01, gui = NONE,   guisp = nil }
     hi.Substitute   = { guifg = M.colors.base01, guibg = M.colors.base0A, gui = NONE,   guisp = nil }
     hi.TabLine      = { guifg = M.colors.base04, guibg = M.colors.base02, gui = NONE,   guisp = nil }
     hi.TabLineFill  = { guifg = M.colors.base03, guibg = M.colors.base01, gui = NONE,   guisp = nil }
