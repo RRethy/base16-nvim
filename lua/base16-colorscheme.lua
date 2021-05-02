@@ -83,7 +83,8 @@ function M.setup(colors)
     hi.MoreMsg      = { guifg = M.colors.base0B, guibg = nil,             gui = nil,    guisp = nil }
     hi.NonText      = { guifg = M.colors.base03, guibg = nil,             gui = NONE,   guisp = nil }
     hi.Normal       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.NormalFloat  = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil,    guisp = nil }
+    hi.NormalFloat  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
+    hi.FloatBorder  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
     hi.NormalNC     = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
     hi.PMenu        = { guifg = M.colors.base05, guibg = M.colors.base01, gui = NONE,   guisp = nil }
     hi.PmenuSbar    = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil,    guisp = nil }
