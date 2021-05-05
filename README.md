@@ -60,6 +60,7 @@ black-metal
 brewer
 bright
 brogrammer
+brogrammer2.0
 brushtrees-dark
 brushtrees
 chalk
