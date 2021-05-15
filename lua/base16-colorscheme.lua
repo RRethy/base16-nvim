@@ -225,10 +225,10 @@ function M.setup(colors)
     hi.User8 = { guifg = M.colors.base00, guibg = M.colors.base02, gui = NONE, guisp = nil }
     hi.User9 = { guifg = M.colors.base00, guibg = M.colors.base02, gui = NONE, guisp = nil }
 
-    hi.DiffAdd     = { guifg = M.colors.base0B, guibg = M.colors.base01, gui = nil, guisp = nil }
-    hi.DiffChange  = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil, guisp = nil }
-    hi.DiffDelete  = { guifg = M.colors.base08, guibg = M.colors.base01, gui = nil, guisp = nil }
-    hi.DiffText    = { guifg = M.colors.base0D, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.DiffAdd     = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffChange  = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffDelete  = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffText    = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.DiffAdded   = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.DiffFile    = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.DiffNewFile = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
