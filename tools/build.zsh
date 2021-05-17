@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+setopt extendedglob
+
 DIRNAME=${0:A:h}
 SCHEMES_SOURCE=https://github.com/chriskempson/base16-schemes-source/raw/master/list.yaml
 SCHEMES_LIST=${DIRNAME}/schemes.yaml
@@ -70,7 +72,7 @@ function process_lua() {
 function lua_init() {
   local file name
   printf "local M = {}\n\n"
-  for file in $(find ${LUA_DIR} -type f -name '*.lua' -not -name 'init.lua' | sort)
+  for file in ${LUA_DIR}/*.lua~*/init.lua
   do
     name=${file:t:r}
     echo "M['${name}'] = require('colors.${name}')"
@@ -83,7 +85,7 @@ function process() {
   printf "Processing scheme files..."
   rm -rf ${LUA_DIR}
   mkdir -p ${LUA_DIR} ${VIM_DIR}
-  for scheme in $(find ${SCHEMES_DIR} -type f -name '*.yaml' -maxdepth 2)
+  for scheme in ${SCHEMES_DIR}/*/*.yaml
   do
     name=${scheme:t:r}
     process_lua ${scheme} > ${LUA_DIR}/${name}.lua &
