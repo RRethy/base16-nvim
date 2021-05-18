@@ -6,13 +6,12 @@ License: Same terms as Vim itself (see |license|)
 INTRODUCTION                                                    *nvim-base16*
 ===========================================================================
 
-You can just pass the name of one of the |nvim-base16-builtin-colorschemes|
-colorschemes to the setup function.
+All builtin colorschemes can be accessed with |:colorscheme|.
 >
-    local colorscheme = require('colorscheme')
-    colorscheme.setup('gruvbox-dark-soft')
+    :colorscheme base16-gruvbox-dark-soft
 <
-Alternatively, you can provide a table specifying your colors.
+Alternatively, you can provide a table specifying your colors to the setup
+function.
 >
     local colorscheme = require('colorscheme')
     colorscheme.setup({
