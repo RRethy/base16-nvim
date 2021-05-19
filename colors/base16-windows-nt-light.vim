@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-windows-nt-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#ffffff', base01 = '#eaeaea', base02 = '#d5d5d5', base03 = '#c0c0c0',
     \ base04 = '#a0a0a0', base05 = '#808080', base06 = '#404040', base07 = '#000000',

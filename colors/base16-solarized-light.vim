@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-solarized-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#fdf6e3', base01 = '#eee8d5', base02 = '#93a1a1', base03 = '#839496',
     \ base04 = '#657b83', base05 = '#586e75', base06 = '#073642', base07 = '#002b36',

@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-embers'
 lua require('base16-colorscheme').setup({
     \ base00 = '#16130f', base01 = '#2c2620', base02 = '#433b32', base03 = '#5a5047',
     \ base04 = '#8a8075', base05 = '#a39a90', base06 = '#beb6ae', base07 = '#dbd6d1',

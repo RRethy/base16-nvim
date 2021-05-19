@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-icy'
 lua require('base16-colorscheme').setup({
     \ base00 = '#021012', base01 = '#031619', base02 = '#041f23', base03 = '#052e34',
     \ base04 = '#064048', base05 = '#095b67', base06 = '#0c7c8c', base07 = '#109cb0',

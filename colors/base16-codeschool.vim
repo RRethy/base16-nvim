@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-codeschool'
 lua require('base16-colorscheme').setup({
     \ base00 = '#232c31', base01 = '#1c3657', base02 = '#2a343a', base03 = '#3f4944',
     \ base04 = '#84898c', base05 = '#9ea7a6', base06 = '#a7cfa3', base07 = '#b5d8f6',

@@ -41,6 +41,7 @@ function process_vim() {
   local color
   local scheme=${1}
   local i=1
+  echo "let g:colors_name = 'base16-${scheme:t:r}'"
   echo "lua require('base16-colorscheme').setup({"
   for color in base0{0..9} base0{A..F}
   do

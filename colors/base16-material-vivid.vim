@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-material-vivid'
 lua require('base16-colorscheme').setup({
     \ base00 = '#202124', base01 = '#27292c', base02 = '#323639', base03 = '#44464d',
     \ base04 = '#676c71', base05 = '#80868b', base06 = '#9e9e9e', base07 = '#ffffff',

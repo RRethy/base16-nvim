@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-macintosh'
 lua require('base16-colorscheme').setup({
     \ base00 = '#000000', base01 = '#404040', base02 = '#404040', base03 = '#808080',
     \ base04 = '#808080', base05 = '#c0c0c0', base06 = '#c0c0c0', base07 = '#ffffff',

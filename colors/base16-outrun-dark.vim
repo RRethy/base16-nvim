@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-outrun-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#00002a', base01 = '#20204a', base02 = '#30305a', base03 = '#50507a',
     \ base04 = '#b0b0da', base05 = '#d0d0fa', base06 = '#e0e0ff', base07 = '#f5f5ff',

@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-rebecca'
 lua require('base16-colorscheme').setup({
     \ base00 = '#292a44', base01 = '#663399', base02 = '#383a62', base03 = '#666699',
     \ base04 = '#a0a0c5', base05 = '#f1eff8', base06 = '#ccccff', base07 = '#53495d',

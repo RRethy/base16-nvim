@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-pasque'
 lua require('base16-colorscheme').setup({
     \ base00 = '#271c3a', base01 = '#100323', base02 = '#3e2d5c', base03 = '#5d5766',
     \ base04 = '#bebcbf', base05 = '#dedcdf', base06 = '#edeaef', base07 = '#bbaadd',

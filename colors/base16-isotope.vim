@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-isotope'
 lua require('base16-colorscheme').setup({
     \ base00 = '#000000', base01 = '#404040', base02 = '#606060', base03 = '#808080',
     \ base04 = '#c0c0c0', base05 = '#d0d0d0', base06 = '#e0e0e0', base07 = '#ffffff',

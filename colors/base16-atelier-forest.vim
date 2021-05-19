@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-atelier-forest'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1b1918', base01 = '#2c2421', base02 = '#68615e', base03 = '#766e6b',
     \ base04 = '#9c9491', base05 = '#a8a19f', base06 = '#e6e2e0', base07 = '#f1efee',

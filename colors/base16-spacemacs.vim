@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-spacemacs'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1f2022', base01 = '#282828', base02 = '#444155', base03 = '#585858',
     \ base04 = '#b8b8b8', base05 = '#a3a3a3', base06 = '#e8e8e8', base07 = '#f8f8f8',

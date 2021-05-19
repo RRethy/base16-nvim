@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-harmonic-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#0b1c2c', base01 = '#223b54', base02 = '#405c79', base03 = '#627e99',
     \ base04 = '#aabcce', base05 = '#cbd6e2', base06 = '#e5ebf1', base07 = '#f7f9fb',

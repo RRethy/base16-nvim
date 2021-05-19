@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-monokai'
 lua require('base16-colorscheme').setup({
     \ base00 = '#272822', base01 = '#383830', base02 = '#49483e', base03 = '#75715e',
     \ base04 = '#a59f85', base05 = '#f8f8f2', base06 = '#f5f4f1', base07 = '#f9f8f5',

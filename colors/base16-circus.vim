@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-circus'
 lua require('base16-colorscheme').setup({
     \ base00 = '#191919', base01 = '#202020', base02 = '#303030', base03 = '#5f5a60',
     \ base04 = '#505050', base05 = '#a7a7a7', base06 = '#808080', base07 = '#ffffff',

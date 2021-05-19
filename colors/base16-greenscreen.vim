@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-greenscreen'
 lua require('base16-colorscheme').setup({
     \ base00 = '#001100', base01 = '#003300', base02 = '#005500', base03 = '#007700',
     \ base04 = '#009900', base05 = '#00bb00', base06 = '#00dd00', base07 = '#00ff00',

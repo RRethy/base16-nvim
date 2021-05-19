@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-sandcastle'
 lua require('base16-colorscheme').setup({
     \ base00 = '#282c34', base01 = '#2c323b', base02 = '#3e4451', base03 = '#665c54',
     \ base04 = '#928374', base05 = '#a89984', base06 = '#d5c4a1', base07 = '#fdf4c1',

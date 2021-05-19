@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-mocha'
 lua require('base16-colorscheme').setup({
     \ base00 = '#3b3228', base01 = '#534636', base02 = '#645240', base03 = '#7e705a',
     \ base04 = '#b8afad', base05 = '#d0c8c6', base06 = '#e9e1dd', base07 = '#f5eeeb',

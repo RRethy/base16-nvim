@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-shapeshifter'
 lua require('base16-colorscheme').setup({
     \ base00 = '#f9f9f9', base01 = '#e0e0e0', base02 = '#ababab', base03 = '#555555',
     \ base04 = '#343434', base05 = '#102015', base06 = '#040404', base07 = '#000000',

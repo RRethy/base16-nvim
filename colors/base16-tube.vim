@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-tube'
 lua require('base16-colorscheme').setup({
     \ base00 = '#231f20', base01 = '#1c3f95', base02 = '#5a5758', base03 = '#737171',
     \ base04 = '#959ca1', base05 = '#d9d8d8', base06 = '#e7e7e8', base07 = '#ffffff',

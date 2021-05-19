@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-marrakesh'
 lua require('base16-colorscheme').setup({
     \ base00 = '#201602', base01 = '#302e00', base02 = '#5f5b17', base03 = '#6c6823',
     \ base04 = '#86813b', base05 = '#948e48', base06 = '#ccc37a', base07 = '#faf0a5',

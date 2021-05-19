@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-nebula'
 lua require('base16-colorscheme').setup({
     \ base00 = '#22273b', base01 = '#414f60', base02 = '#5a8380', base03 = '#6e6f72',
     \ base04 = '#87888b', base05 = '#a4a6a9', base06 = '#c7c9cd', base07 = '#8dbdaa',

@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-grayscale-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#f7f7f7', base01 = '#e3e3e3', base02 = '#b9b9b9', base03 = '#ababab',
     \ base04 = '#525252', base05 = '#464646', base06 = '#252525', base07 = '#101010',

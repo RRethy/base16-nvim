@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-cupertino'
 lua require('base16-colorscheme').setup({
     \ base00 = '#ffffff', base01 = '#c0c0c0', base02 = '#c0c0c0', base03 = '#808080',
     \ base04 = '#808080', base05 = '#404040', base06 = '#404040', base07 = '#5e5e5e',

@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-atelier-estuary'
 lua require('base16-colorscheme').setup({
     \ base00 = '#22221b', base01 = '#302f27', base02 = '#5f5e4e', base03 = '#6c6b5a',
     \ base04 = '#878573', base05 = '#929181', base06 = '#e7e6df', base07 = '#f4f3ec',

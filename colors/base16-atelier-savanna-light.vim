@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-atelier-savanna-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#ecf4ee', base01 = '#dfe7e2', base02 = '#87928a', base03 = '#78877d',
     \ base04 = '#5f6d64', base05 = '#526057', base06 = '#232a25', base07 = '#171c19',

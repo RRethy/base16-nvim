@@ -1,3 +1,4 @@
+let g:colors_name = 'base16-eighties'
 lua require('base16-colorscheme').setup({
     \ base00 = '#2d2d2d', base01 = '#393939', base02 = '#515151', base03 = '#747369',
     \ base04 = '#a09f93', base05 = '#d3d0c8', base06 = '#e8e6df', base07 = '#f2f0ec',
