@@ -216,6 +216,10 @@ function M.setup(colors)
     hi.TSVariable           = { guifg = M.colors.base08, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSVariableBuiltin    = { guifg = M.colors.base0E, guibg = nil, gui = NONE,            guisp = nil }
 
+    hi.TSDefinition      = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.TSDefinitionUsage = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.TSCurrentScope    = { guifg = nil, guibg = nil, gui = 'bold',      guisp = nil }
+
     hi.User1 = { guifg = M.colors.base08, guibg = M.colors.base02, gui = NONE, guisp = nil }
     hi.User2 = { guifg = M.colors.base0E, guibg = M.colors.base02, gui = NONE, guisp = nil }
     hi.User3 = { guifg = M.colors.base05, guibg = M.colors.base02, gui = NONE, guisp = nil }
