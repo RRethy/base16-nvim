@@ -201,6 +201,7 @@ function M.setup(colors)
     hi.TSString             = { guifg = M.colors.base0B, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSStringRegex        = { guifg = M.colors.base0B, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSStringEscape       = { guifg = M.colors.base0C, guibg = nil, gui = NONE,            guisp = nil }
+    hi.TSSymbol             = { guifg = M.colors.base0B, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSTag                = { guifg = M.colors.base0A, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSTagDelimiter       = { guifg = M.colors.base0F, guibg = nil, gui = NONE,            guisp = nil }
     hi.TSText               = { guifg = M.colors.base05, guibg = nil, gui = NONE,            guisp = nil }
