@@ -258,6 +258,23 @@ function M.setup(colors)
     hi.gitcommitSelectedFile  = { guifg = M.colors.base0B, guibg = nil, gui = "bold", guisp = nil }
 
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = NONE, guisp = nil }
+    
+    vim.g.terminal_color_0  = M.colors.base00
+    vim.g.terminal_color_1  = M.colors.base08
+    vim.g.terminal_color_2  = M.colors.base0B
+    vim.g.terminal_color_3  = M.colors.base0A
+    vim.g.terminal_color_4  = M.colors.base0D
+    vim.g.terminal_color_5  = M.colors.base0E
+    vim.g.terminal_color_6  = M.colors.base0C
+    vim.g.terminal_color_7  = M.colors.base05
+    vim.g.terminal_color_8  = M.colors.base03
+    vim.g.terminal_color_9  = M.colors.base08
+    vim.g.terminal_color_10 = M.colors.base0B
+    vim.g.terminal_color_11 = M.colors.base0A
+    vim.g.terminal_color_12 = M.colors.base0D
+    vim.g.terminal_color_13 = M.colors.base0E
+    vim.g.terminal_color_14 = M.colors.base0C
+    vim.g.terminal_color_15 = M.colors.base07
 end
 
 function M.available_colorschemes()
