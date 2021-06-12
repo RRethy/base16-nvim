@@ -258,7 +258,7 @@ function M.setup(colors)
     hi.gitcommitSelectedFile  = { guifg = M.colors.base0B, guibg = nil, gui = "bold", guisp = nil }
 
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = NONE, guisp = nil }
-    
+
     vim.g.terminal_color_0  = M.colors.base00
     vim.g.terminal_color_1  = M.colors.base08
     vim.g.terminal_color_2  = M.colors.base0B
