@@ -261,6 +261,8 @@ function M.setup(colors)
     hi.User8 = { guifg = M.colors.base00, guibg = M.colors.base02, gui = 'none', guisp = nil }
     hi.User9 = { guifg = M.colors.base00, guibg = M.colors.base02, gui = 'none', guisp = nil }
 
+    hi.TreesitterContext = { guifg = nil, guibg = M.colors.base01, gui = 'italic', guisp = nil }
+
     vim.g.terminal_color_0  = M.colors.base00
     vim.g.terminal_color_1  = M.colors.base08
     vim.g.terminal_color_2  = M.colors.base0B
