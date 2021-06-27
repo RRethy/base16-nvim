@@ -285,7 +285,7 @@ function M.available_colorschemes()
   return vim.tbl_keys(M.colorschemes)
 end
 
-M.colorschemes = require('colors')
+M.colorschemes = require('colors/init')
 
 -- My own personal theme
 -- #16161D is called eigengrau and is kinda-ish the color your see when you
