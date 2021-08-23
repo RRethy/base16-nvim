@@ -67,7 +67,7 @@ function M.setup(colors)
     hi.Error        = { guifg = M.colors.base00, guibg = M.colors.base08, gui = nil,    guisp = nil }
     hi.ErrorMsg     = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil,    guisp = nil }
     hi.Exception    = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.FoldColumn   = { guifg = M.colors.base0C, guibg = M.colors.base01, gui = nil,    guisp = nil }
+    hi.FoldColumn   = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil,    guisp = nil }
     hi.Folded       = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil,    guisp = nil }
     hi.IncSearch    = { guifg = M.colors.base01, guibg = M.colors.base09, gui = 'none', guisp = nil }
     hi.Italic       = { guifg = nil,             guibg = nil,             gui = 'none', guisp = nil }
