@@ -6,18 +6,43 @@
 
 local M = {}
 
+local function validate_hilight_args(args)
+    if 'string' == type(args) then
+        return true
+    end
+
+    if 'table' ~= type(args) then
+        return 'args must either be a string or a table'
+    end
+
+    return nil ~= (args.guifg or args.guibg or args.gui or args.guisp),
+        'args must contains at least one of: guifg, guibg, gui, guisp'
+end
+
 -- This is a bit of syntactic sugar for creating highlight groups.
 --
 -- local colorscheme = require('colorscheme')
 -- local hi = colorscheme.highlight
 -- hi.Comment = { guifg='#ffffff', guibg='#000000', gui='italic', guisp=nil }
+-- hi.LspDiagnosticsDefaultError = 'DiagnosticError' -- Link to another group
 --
 -- This is equivalent to the following vimscript
 --
 -- hi Comment guifg=#ffffff guibg=#000000 gui=italic
+-- hi! link LspDiagnosticsDefaultError DiagnosticError
 M.highlight = setmetatable({}, {
     __newindex = function(_, hlgroup, args)
-        local guifg, guibg, gui, guisp = args.guifg, args.guibg, args.gui, args.guisp
+        vim.validate {
+            hlgroup = { hlgroup, 'string' },
+            args = { args, validate_hilight_args, 'string or table' },
+        }
+
+        if ('string' == type(args)) then
+            vim.cmd(('hi! link %s %s'):format(hlgroup, args))
+            return
+        end
+
+        local guifg, guibg, gui, guisp = args.guifg or nil, args.guibg or nil, args.gui or nil, args.guisp or nil
         local cmd = {'hi', hlgroup}
         if guifg then table.insert(cmd, 'guifg='..guifg) end
         if guibg then table.insert(cmd, 'guibg='..guibg) end
