@@ -11,13 +11,20 @@ local M = {}
 -- local colorscheme = require('colorscheme')
 -- local hi = colorscheme.highlight
 -- hi.Comment = { guifg='#ffffff', guibg='#000000', gui='italic', guisp=nil }
+-- hi.LspDiagnosticsDefaultError = 'DiagnosticError' -- Link to another group
 --
 -- This is equivalent to the following vimscript
 --
 -- hi Comment guifg=#ffffff guibg=#000000 gui=italic
-M.highlight = setmetatable({}, {
+-- hi! link LspDiagnosticsDefaultError DiagnosticError
+local hi = setmetatable({}, {
     __newindex = function(_, hlgroup, args)
-        local guifg, guibg, gui, guisp = args.guifg, args.guibg, args.gui, args.guisp
+        if ('string' == type(args)) then
+            vim.cmd(('hi! link %s %s'):format(hlgroup, args))
+            return
+        end
+
+        local guifg, guibg, gui, guisp = args.guifg or nil, args.guibg or nil, args.gui or nil, args.guisp or nil
         local cmd = {'hi', hlgroup}
         if guifg then table.insert(cmd, 'guifg='..guifg) end
         if guibg then table.insert(cmd, 'guibg='..guibg) end
@@ -56,8 +63,6 @@ function M.setup(colors)
     vim.cmd('set termguicolors')
 
     M.colors = colors or M.colorschemes[vim.env.BASE16_THEME] or M.colorschemes['schemer-dark']
-
-    local hi = M.highlight
 
     -- Vim editor colors
     hi.Normal       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
@@ -174,9 +179,6 @@ function M.setup(colors)
     hi.SpellCap   = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0D }
     hi.SpellRare  = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
 
-    hi.LspReferenceText                   = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-    hi.LspReferenceRead                   = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-    hi.LspReferenceWrite                  = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
     hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = nil, gui = 'none',      guisp = nil             }
     hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = nil, gui = 'none',      guisp = nil             }
     hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = nil, gui = 'none',      guisp = nil             }
@@ -185,14 +187,18 @@ function M.setup(colors)
     hi.DiagnosticUnderlineWarning         = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
     hi.DiagnosticUnderlineInformation     = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0F }
     hi.DiagnosticUnderlineHint            = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0C }
-    hi.LspDiagnosticsDefaultError         = { guifg = M.colors.base08, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.LspDiagnosticsDefaultWarning       = { guifg = M.colors.base0E, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.LspDiagnosticsDefaultInformation   = { guifg = M.colors.base05, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.LspDiagnosticsDefaultHint          = { guifg = M.colors.base0C, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.LspDiagnosticsUnderlineError       = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
-    hi.LspDiagnosticsUnderlineWarning     = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
-    hi.LspDiagnosticsUnderlineInformation = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0F }
-    hi.LspDiagnosticsUnderlineHint        = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0C }
+
+    hi.LspReferenceText                   = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceRead                   = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceWrite                  = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspDiagnosticsDefaultError         = 'DiagnosticError'
+    hi.LspDiagnosticsDefaultWarning       = 'DiagnosticWarn'
+    hi.LspDiagnosticsDefaultInformation   = 'DiagnosticInfo'
+    hi.LspDiagnosticsDefaultHint          = 'DiagnosticHint'
+    hi.LspDiagnosticsUnderlineError       = 'DiagnosticUnderlineError'
+    hi.LspDiagnosticsUnderlineWarning     = 'DiagnosticUnderlineWarning'
+    hi.LspDiagnosticsUnderlineInformation = 'DiagnosticUnderlineInformation'
+    hi.LspDiagnosticsUnderlineHint        = 'DiagnosticUnderlineHint'
 
     hi.TSAnnotation         = { guifg = M.colors.base0F, guibg = nil, gui = 'none',          guisp = nil }
     hi.TSAttribute          = { guifg = M.colors.base0A, guibg = nil, gui = 'none',          guisp = nil }
