@@ -214,7 +214,7 @@ function M.setup(colors)
     hi.TSConstMacro         = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
     hi.TSError              = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
     hi.TSException          = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSField              = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
+    hi.TSField              = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
     hi.TSFloat              = { guifg = M.colors.base09, guibg = nil, gui = 'none',          guisp = nil }
     hi.TSFunction           = { guifg = M.colors.base0D, guibg = nil, gui = 'none',          guisp = nil }
     hi.TSFuncBuiltin        = { guifg = M.colors.base0D, guibg = nil, gui = 'italic',        guisp = nil }
