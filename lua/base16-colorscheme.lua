@@ -322,7 +322,13 @@ function M.available_colorschemes()
   return vim.tbl_keys(M.colorschemes)
 end
 
-M.colorschemes = require('colors')
+M.colorschemes = {}
+setmetatable(M.colorschemes, {
+    __index = function(t, key)
+        t[key] = require(string.format('colors.%s', key))
+        return t[key]
+    end,
+})
 
 -- My own personal theme
 -- #16161D is called eigengrau and is kinda-ish the color your see when you
