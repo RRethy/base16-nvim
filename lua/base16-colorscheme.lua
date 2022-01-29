@@ -279,6 +279,16 @@ function M.setup(colors)
 
     hi.TreesitterContext = { guifg = nil, guibg = M.colors.base01, gui = 'italic', guisp = nil }
 
+    hi.TelescopeBorder       = { guifg = M.colors.base01, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.TelescopePromptBorder = { guifg = M.colors.base03, guibg = M.colors.base03, gui = nil, guisp = nil }
+    hi.TelescopePromptNormal = { guifg = M.colors.base05, guibg = M.colors.base03, gui = nil, guisp = nil }
+    hi.TelescopePromptPrefix = { guifg = M.colors.base08, guibg = M.colors.base03, gui = nil, guisp = nil }
+    hi.TelescopeNormal       = { guifg = nil,             guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.TelescopePreviewTitle = { guifg = M.colors.base02, guibg = M.colors.base0B, gui = nil, guisp = nil }
+    hi.TelescopePromptTitle  = { guifg = M.colors.base02, guibg = M.colors.base08, gui = nil, guisp = nil }
+    hi.TelescopeResultsTitle = { guifg = M.colors.base01, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.TelescopeSelection    = { guifg = nil,             guibg = M.colors.base03, gui = nil, guisp = nil }
+
     -- highlight NotifyERRORBorder guifg=#8A1F1F
     -- highlight NotifyWARNBorder guifg=#79491D
     -- highlight NotifyINFOBorder guifg=#4F6752
