@@ -4,7 +4,12 @@
 -- https://color.adobe.com/create/color-wheel
 -- http://vrl.cs.brown.edu/color
 
-local M = {}
+local M = {
+    ERROR_ICON   = '',
+    WARNING_ICON = '',
+    INFO_ICON    = '',
+    HINT_ICON    = '',
+}
 
 -- This is a bit of syntactic sugar for creating highlight groups.
 --
@@ -326,6 +331,11 @@ function M.setup(colors)
     vim.g.terminal_color_13 = M.colors.base0E
     vim.g.terminal_color_14 = M.colors.base0C
     vim.g.terminal_color_15 = M.colors.base07
+
+    vim.cmd(string.format('sign define DiagnosticSignError text=%s   texthl=DiagnosticSignError linehl= numhl=', M.ERROR_ICON))
+    vim.cmd(string.format('sign define DiagnosticSignWarn  text=%s   texthl=DiagnosticSignWarn  linehl= numhl=', M.WARNING_ICON))
+    vim.cmd(string.format('sign define DiagnosticSignInfo  text=%s   texthl=DiagnosticSignInfo  linehl= numhl=', M.INFO_ICON))
+    vim.cmd(string.format('sign define DiagnosticSignHint  text=%s   texthl=DiagnosticSignHint  linehl= numhl=', M.HINT_ICON))
 end
 
 function M.available_colorschemes()
