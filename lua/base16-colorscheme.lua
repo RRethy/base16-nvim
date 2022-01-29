@@ -304,6 +304,11 @@ function M.setup(colors)
     hi.NotifyINFOTitle   = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
     hi.NotifyDEBUGTitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
     hi.NotifyTRACETitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyERRORBody = 'Normal'
+    hi.NotifyWARNBody  = 'Normal'
+    hi.NotifyINFOBody  = 'Normal'
+    hi.NotifyDEBUGBody = 'Normal'
+    hi.NotifyTRACEBody = 'Normal'
 
     vim.g.terminal_color_0  = M.colors.base00
     vim.g.terminal_color_1  = M.colors.base08
