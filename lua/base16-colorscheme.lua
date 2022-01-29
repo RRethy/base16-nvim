@@ -289,26 +289,21 @@ function M.setup(colors)
     hi.TelescopeResultsTitle = { guifg = M.colors.base01, guibg = M.colors.base01, gui = nil, guisp = nil }
     hi.TelescopeSelection    = { guifg = nil,             guibg = M.colors.base03, gui = nil, guisp = nil }
 
-    -- highlight NotifyERRORBorder guifg=#8A1F1F
-    -- highlight NotifyWARNBorder guifg=#79491D
-    -- highlight NotifyINFOBorder guifg=#4F6752
-    -- highlight NotifyDEBUGBorder guifg=#8B8B8B
-    -- highlight NotifyTRACEBorder guifg=#4F3552
-    -- highlight NotifyERRORIcon guifg=#F70067
-    -- highlight NotifyWARNIcon guifg=#F79000
-    -- highlight NotifyINFOIcon guifg=#A9FF68
-    -- highlight NotifyDEBUGIcon guifg=#8B8B8B
-    -- highlight NotifyTRACEIcon guifg=#D484FF
-    -- highlight NotifyERRORTitle  guifg=#F70067
-    -- highlight NotifyWARNTitle guifg=#F79000
-    -- highlight NotifyINFOTitle guifg=#A9FF68
-    -- highlight NotifyDEBUGTitle  guifg=#8B8B8B
-    -- highlight NotifyTRACETitle  guifg=#D484FF
-    -- highlight link NotifyERRORBody Normal
-    -- highlight link NotifyWARNBody Normal
-    -- highlight link NotifyINFOBody Normal
-    -- highlight link NotifyDEBUGBody Normal
-    -- highlight link NotifyTRACEBody Normal
+    hi.NotifyERRORBorder = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyWARNBorder  = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyINFOBorder  = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyDEBUGBorder = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyTRACEBorder = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyERRORIcon   = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyWARNIcon    = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyINFOIcon    = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyDEBUGIcon   = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyTRACEIcon   = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyERRORTitle  = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyWARNTitle   = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyINFOTitle   = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyDEBUGTitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.NotifyTRACETitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
 
     vim.g.terminal_color_0  = M.colors.base00
     vim.g.terminal_color_1  = M.colors.base08
