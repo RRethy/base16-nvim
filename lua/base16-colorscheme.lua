@@ -387,7 +387,6 @@ setmetatable(M.colorschemes, {
     end,
 })
 
--- My own personal theme
 -- #16161D is called eigengrau and is kinda-ish the color your see when you
 -- close your eyes. It makes for a really good background.
 M.colorschemes['schemer-dark'] = {
