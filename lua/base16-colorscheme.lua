@@ -79,6 +79,12 @@ M.highlight = setmetatable({}, {
     end
 })
 
+function M.with_config(config)
+    M.config = vim.tbl_extend("force", {
+        telescope = true,
+    }, config or M.config or {})
+end
+
 --- Creates a base16 colorscheme using the colors specified.
 --
 -- Builtin colorschemes can be found in the M.colorschemes table.
@@ -97,7 +103,9 @@ M.highlight = setmetatable({}, {
 --   'base0A', 'base0B', 'base0C', 'base0D', 'base0E', 'base0F'. Each key should
 --   map to a valid 6 digit hex color. If a string is provided, the
 --   corresponding table specifying the colorscheme will be used.
-function M.setup(colors)
+function M.setup(colors, config)
+    M.with_config(config)
+
     if type(colors) == 'string' then
         colors = M.colorschemes[colors]
     end
@@ -324,19 +332,21 @@ function M.setup(colors)
 
     hi.TreesitterContext = { guifg = nil, guibg = M.colors.base01, gui = 'italic', guisp = nil }
 
-    if hex_re:match_str(M.colors.base00) and hex_re:match_str(M.colors.base01) and hex_re:match_str(M.colors.base02) then
-        local darkerbg = darken(M.colors.base00, 0.1)
-        local darkercursorline = darken(M.colors.base01, 0.1)
-        local darkerstatusline = darken(M.colors.base02, 0.1)
-        hi.TelescopeBorder       = { guifg = darkerbg,         guibg = darkerbg,         gui = nil, guisp = nil }
-        hi.TelescopePromptBorder = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
-        hi.TelescopePromptNormal = { guifg = M.colors.base05,  guibg = darkerstatusline, gui = nil, guisp = nil }
-        hi.TelescopePromptPrefix = { guifg = M.colors.base08,  guibg = darkerstatusline, gui = nil, guisp = nil }
-        hi.TelescopeNormal       = { guifg = nil,              guibg = darkerbg,         gui = nil, guisp = nil }
-        hi.TelescopePreviewTitle = { guifg = darkercursorline, guibg = M.colors.base0B,  gui = nil, guisp = nil }
-        hi.TelescopePromptTitle  = { guifg = darkercursorline, guibg = M.colors.base08,  gui = nil, guisp = nil }
-        hi.TelescopeResultsTitle = { guifg = darkerbg,         guibg = darkerbg,         gui = nil, guisp = nil }
-        hi.TelescopeSelection    = { guifg = nil,              guibg = darkerstatusline, gui = nil, guisp = nil }
+    if M.config.telescope then
+        if hex_re:match_str(M.colors.base00) and hex_re:match_str(M.colors.base01) and hex_re:match_str(M.colors.base02) then
+            local darkerbg = darken(M.colors.base00, 0.1)
+            local darkercursorline = darken(M.colors.base01, 0.1)
+            local darkerstatusline = darken(M.colors.base02, 0.1)
+            hi.TelescopeBorder       = { guifg = darkerbg,         guibg = darkerbg,         gui = nil, guisp = nil }
+            hi.TelescopePromptBorder = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
+            hi.TelescopePromptNormal = { guifg = M.colors.base05,  guibg = darkerstatusline, gui = nil, guisp = nil }
+            hi.TelescopePromptPrefix = { guifg = M.colors.base08,  guibg = darkerstatusline, gui = nil, guisp = nil }
+            hi.TelescopeNormal       = { guifg = nil,              guibg = darkerbg,         gui = nil, guisp = nil }
+            hi.TelescopePreviewTitle = { guifg = darkercursorline, guibg = M.colors.base0B,  gui = nil, guisp = nil }
+            hi.TelescopePromptTitle  = { guifg = darkercursorline, guibg = M.colors.base08,  gui = nil, guisp = nil }
+            hi.TelescopeResultsTitle = { guifg = darkerbg,         guibg = darkerbg,         gui = nil, guisp = nil }
+            hi.TelescopeSelection    = { guifg = nil,              guibg = darkerstatusline, gui = nil, guisp = nil }
+        end
     end
 
     hi.NotifyERRORBorder = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
