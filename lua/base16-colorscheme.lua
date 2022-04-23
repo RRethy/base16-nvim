@@ -312,6 +312,15 @@ function M.setup(colors, config)
     hi.TSDefinitionUsage = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
     hi.TSCurrentScope    = { guifg = nil, guibg = nil, gui = 'bold',      guisp = nil }
 
+    -- nvim-ts-rainbow
+    hi.rainbowcol1 = { guifg = M.colors.base08 }
+    hi.rainbowcol2 = { guifg = M.colors.base09 }
+    hi.rainbowcol3 = { guifg = M.colors.base0A }
+    hi.rainbowcol4 = { guifg = M.colors.base0B }
+    hi.rainbowcol5 = { guifg = M.colors.base0C }
+    hi.rainbowcol6 = { guifg = M.colors.base0D }
+    hi.rainbowcol7 = { guifg = M.colors.base0E }
+    
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = 'none', guisp = nil }
 
     hi.NormalFloat  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
