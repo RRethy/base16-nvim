@@ -82,6 +82,9 @@ M.highlight = setmetatable({}, {
 function M.with_config(config)
     M.config = vim.tbl_extend("force", {
         telescope = true,
+        indentblankline = true,
+        notify = true,
+        ts_rainbow = true,
     }, config or M.config or {})
 end
 
@@ -312,15 +315,16 @@ function M.setup(colors, config)
     hi.TSDefinitionUsage = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
     hi.TSCurrentScope    = { guifg = nil, guibg = nil, gui = 'bold',      guisp = nil }
 
-    -- nvim-ts-rainbow
-    hi.rainbowcol1 = { guifg = M.colors.base08 }
-    hi.rainbowcol2 = { guifg = M.colors.base09 }
-    hi.rainbowcol3 = { guifg = M.colors.base0A }
-    hi.rainbowcol4 = { guifg = M.colors.base0B }
-    hi.rainbowcol5 = { guifg = M.colors.base0C }
-    hi.rainbowcol6 = { guifg = M.colors.base0D }
-    hi.rainbowcol7 = { guifg = M.colors.base0E }
-    
+    if M.config.ts_rainbow then
+        hi.rainbowcol1 = { guifg = M.colors.base08 }
+        hi.rainbowcol2 = { guifg = M.colors.base09 }
+        hi.rainbowcol3 = { guifg = M.colors.base0A }
+        hi.rainbowcol4 = { guifg = M.colors.base0B }
+        hi.rainbowcol5 = { guifg = M.colors.base0C }
+        hi.rainbowcol6 = { guifg = M.colors.base0D }
+        hi.rainbowcol7 = { guifg = M.colors.base0E }
+    end
+
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = 'none', guisp = nil }
 
     hi.NormalFloat  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
@@ -359,26 +363,33 @@ function M.setup(colors, config)
         end
     end
 
-    hi.NotifyERRORBorder = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyWARNBorder  = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyINFOBorder  = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyDEBUGBorder = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyTRACEBorder = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyERRORIcon   = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyWARNIcon    = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyINFOIcon    = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyDEBUGIcon   = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyTRACEIcon   = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyERRORTitle  = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyWARNTitle   = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyINFOTitle   = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyDEBUGTitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyTRACETitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
-    hi.NotifyERRORBody = 'Normal'
-    hi.NotifyWARNBody  = 'Normal'
-    hi.NotifyINFOBody  = 'Normal'
-    hi.NotifyDEBUGBody = 'Normal'
-    hi.NotifyTRACEBody = 'Normal'
+    if M.config.notify then
+        hi.NotifyERRORBorder = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyWARNBorder  = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyINFOBorder  = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyDEBUGBorder = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyTRACEBorder = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyERRORIcon   = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyWARNIcon    = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyINFOIcon    = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyDEBUGIcon   = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyTRACEIcon   = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyERRORTitle  = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyWARNTitle   = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyINFOTitle   = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyDEBUGTitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyTRACETitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+        hi.NotifyERRORBody = 'Normal'
+        hi.NotifyWARNBody  = 'Normal'
+        hi.NotifyINFOBody  = 'Normal'
+        hi.NotifyDEBUGBody = 'Normal'
+        hi.NotifyTRACEBody = 'Normal'
+    end
+
+    if M.config.indentblankline then
+        hi.IndentBlanklineChar        = { guifg = M.colors.base02, gui = 'nocombine' }
+        hi.IndentBlanklineContextChar = { guifg = M.colors.base04, gui = 'nocombine' }
+    end
 
     vim.g.terminal_color_0  = M.colors.base00
     vim.g.terminal_color_1  = M.colors.base08
