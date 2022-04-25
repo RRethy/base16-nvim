@@ -316,10 +316,10 @@ function M.setup(colors, config)
     hi.TSCurrentScope    = { guifg = nil, guibg = nil, gui = 'bold',      guisp = nil }
 
     if M.config.ts_rainbow then
-        hi.rainbowcol1 = { guifg = M.colors.base08 }
+        hi.rainbowcol1 = { guifg = M.colors.base06 }
         hi.rainbowcol2 = { guifg = M.colors.base09 }
         hi.rainbowcol3 = { guifg = M.colors.base0A }
-        hi.rainbowcol4 = { guifg = M.colors.base0B }
+        hi.rainbowcol4 = { guifg = M.colors.base07 }
         hi.rainbowcol5 = { guifg = M.colors.base0C }
         hi.rainbowcol6 = { guifg = M.colors.base0D }
         hi.rainbowcol7 = { guifg = M.colors.base0E }
