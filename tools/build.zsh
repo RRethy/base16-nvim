@@ -3,35 +3,23 @@
 setopt extendedglob
 
 DIRNAME=${0:A:h}
-SCHEMES_SOURCE=https://github.com/chriskempson/base16-schemes-source/raw/master/list.yaml
-SCHEMES_LIST=${DIRNAME}/schemes.yaml
+SCHEMES_SOURCE=https://github.com/base16-project/base16-schemes
 SCHEMES_DIR=${DIRNAME}/schemes
 LUA_DIR=${DIRNAME:h}/lua/colors
 VIM_DIR=${DIRNAME:h}/colors
 
-function get_schemes_list() {
-  printf "Getting schemes list..."
-  curl -fsLS --create-dirs -o ${SCHEMES_LIST} ${SCHEMES_SOURCE}
-  echo "Done"
-}
-
 function get_schemes() {
-  grep -E "^[0-9a-zA-Z-]+: " ${SCHEMES_LIST} | while read line
-  do
-    name=$(echo ${line} | sed -ne 's/\([^:]*\): .*/\1/p')
-    repo=$(echo ${line} | sed -ne 's/.*: \(.*\)/\1/p')
-    if [ ! -d ${DIRNAME}/schemes/${name}/.git ]
-    then
-      git clone -q --depth=1 ${repo} ${SCHEMES_DIR}/${name} &
-    else
-      git \
-        --git-dir=${SCHEMES_DIR}/${name}/.git \
-        --work-tree=${SCHEMES_DIR}/${name} \
-        pull -q &
-    fi
-  done
+  if [ ! -d ${SCHEMES_DIR}/base16-schemes/.git ]
+  then
+    git clone -q --depth=1 ${SCHEMES_SOURCE} ${SCHEMES_DIR}/base16-schemes &
+  else
+    git \
+      --git-dir=${SCHEMES_DIR}/base16-schemes/.git \
+      --work-tree=${SCHEMES_DIR}/base16-schemes \
+      pull -q &
+  fi
 
-  printf "Cloning schemas..."
+  printf "Cloning base16-schemes..."
   wait
   echo "Done"
 }
@@ -98,7 +86,6 @@ function process() {
 }
 
 function main() {
-  get_schemes_list
   get_schemes
   process
 }
