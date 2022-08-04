@@ -33,13 +33,13 @@ local HEX_DIGITS = {
 }
 
 local function hex_to_rgb(hex)
-    return HEX_DIGITS[string.sub(hex, 1, 1)] * 16 +  HEX_DIGITS[string.sub(hex, 2, 2)],
-        HEX_DIGITS[string.sub(hex, 3, 3)] * 16 +  HEX_DIGITS[string.sub(hex, 4, 4)],
-        HEX_DIGITS[string.sub(hex, 5, 5)] * 16 +  HEX_DIGITS[string.sub(hex, 6, 6)]
+    return HEX_DIGITS[string.sub(hex, 1, 1)] * 16 + HEX_DIGITS[string.sub(hex, 2, 2)],
+        HEX_DIGITS[string.sub(hex, 3, 3)] * 16 + HEX_DIGITS[string.sub(hex, 4, 4)],
+        HEX_DIGITS[string.sub(hex, 5, 5)] * 16 + HEX_DIGITS[string.sub(hex, 6, 6)]
 end
 
 local function rgb_to_hex(r, g, b)
-  return bit.tohex(bit.bor(bit.lshift(r, 16), bit.lshift(g, 8), b), 6)
+    return bit.tohex(bit.bor(bit.lshift(r, 16), bit.lshift(g, 8), b), 6)
 end
 
 local function darken(hex, pct)
@@ -70,11 +70,11 @@ M.highlight = setmetatable({}, {
         end
 
         local guifg, guibg, gui, guisp = args.guifg or nil, args.guibg or nil, args.gui or nil, args.guisp or nil
-        local cmd = {'hi', hlgroup}
-        if guifg then table.insert(cmd, 'guifg='..guifg) end
-        if guibg then table.insert(cmd, 'guibg='..guibg) end
-        if gui then table.insert(cmd, 'gui='..gui) end
-        if guisp then table.insert(cmd, 'guisp='..guisp) end
+        local cmd = { 'hi', hlgroup }
+        if guifg then table.insert(cmd, 'guifg=' .. guifg) end
+        if guibg then table.insert(cmd, 'guibg=' .. guibg) end
+        if gui then table.insert(cmd, 'gui=' .. gui) end
+        if guisp then table.insert(cmd, 'guisp=' .. guisp) end
         vim.cmd(table.concat(cmd, ' '))
     end
 })
@@ -123,106 +123,106 @@ function M.setup(colors, config)
     local hi = M.highlight
 
     -- Vim editor colors
-    hi.Normal       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.Bold         = { guifg = nil,             guibg = nil,             gui = 'bold', guisp = nil }
-    hi.Debug        = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Directory    = { guifg = M.colors.base0D, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Error        = { guifg = M.colors.base00, guibg = M.colors.base08, gui = nil,    guisp = nil }
-    hi.ErrorMsg     = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.Exception    = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.FoldColumn   = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.Folded       = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil,    guisp = nil }
+    hi.Normal       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.Bold         = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil }
+    hi.Debug        = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.Directory    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+    hi.Error        = { guifg = M.colors.base00, guibg = M.colors.base08, gui = nil, guisp = nil }
+    hi.ErrorMsg     = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.Exception    = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.FoldColumn   = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.Folded       = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil, guisp = nil }
     hi.IncSearch    = { guifg = M.colors.base01, guibg = M.colors.base09, gui = 'none', guisp = nil }
-    hi.Italic       = { guifg = nil,             guibg = nil,             gui = 'none', guisp = nil }
-    hi.Macro        = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.MatchParen   = { guifg = nil,             guibg = M.colors.base03, gui = nil,    guisp = nil }
-    hi.ModeMsg      = { guifg = M.colors.base0B, guibg = nil,             gui = nil,    guisp = nil }
-    hi.MoreMsg      = { guifg = M.colors.base0B, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Question     = { guifg = M.colors.base0D, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Search       = { guifg = M.colors.base01, guibg = M.colors.base0A, gui = nil,    guisp = nil }
+    hi.Italic       = { guifg = nil, guibg = nil, gui = 'none', guisp = nil }
+    hi.Macro        = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.MatchParen   = { guifg = nil, guibg = M.colors.base03, gui = nil, guisp = nil }
+    hi.ModeMsg      = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil }
+    hi.MoreMsg      = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil }
+    hi.Question     = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+    hi.Search       = { guifg = M.colors.base01, guibg = M.colors.base0A, gui = nil, guisp = nil }
     hi.Substitute   = { guifg = M.colors.base01, guibg = M.colors.base0A, gui = 'none', guisp = nil }
-    hi.SpecialKey   = { guifg = M.colors.base03, guibg = nil,             gui = nil,    guisp = nil }
-    hi.TooLong      = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Underlined   = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Visual       = { guifg = nil,             guibg = M.colors.base02, gui = nil,    guisp = nil }
-    hi.VisualNOS    = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.WarningMsg   = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.WildMenu     = { guifg = M.colors.base08, guibg = M.colors.base0A, gui = nil,    guisp = nil }
-    hi.Title        = { guifg = M.colors.base0D, guibg = nil,             gui = 'none', guisp = nil }
-    hi.Conceal      = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.Cursor       = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil,    guisp = nil }
-    hi.NonText      = { guifg = M.colors.base03, guibg = nil,             gui = nil,    guisp = nil }
-    hi.LineNr       = { guifg = M.colors.base04, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.SignColumn   = { guifg = M.colors.base04, guibg = M.colors.base00, gui = nil,    guisp = nil }
+    hi.SpecialKey   = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.TooLong      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.Underlined   = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.Visual       = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
+    hi.VisualNOS    = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.WarningMsg   = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.WildMenu     = { guifg = M.colors.base08, guibg = M.colors.base0A, gui = nil, guisp = nil }
+    hi.Title        = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
+    hi.Conceal      = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.Cursor       = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil }
+    hi.NonText      = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.LineNr       = { guifg = M.colors.base04, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.SignColumn   = { guifg = M.colors.base04, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.StatusLine   = { guifg = M.colors.base05, guibg = M.colors.base02, gui = 'none', guisp = nil }
     hi.StatusLineNC = { guifg = M.colors.base04, guibg = M.colors.base01, gui = 'none', guisp = nil }
-    hi.WinBar       = { guifg = M.colors.base05, guibg = nil,             gui = 'none', guisp = nil }
-    hi.WinBarNC     = { guifg = M.colors.base04, guibg = nil,             gui = 'none', guisp = nil }
+    hi.WinBar       = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.WinBarNC     = { guifg = M.colors.base04, guibg = nil, gui = 'none', guisp = nil }
     hi.VertSplit    = { guifg = M.colors.base05, guibg = M.colors.base00, gui = 'none', guisp = nil }
-    hi.ColorColumn  = { guifg = nil,             guibg = M.colors.base01, gui = 'none', guisp = nil }
-    hi.CursorColumn = { guifg = nil,             guibg = M.colors.base01, gui = 'none', guisp = nil }
-    hi.CursorLine   = { guifg = nil,             guibg = M.colors.base01, gui = 'none', guisp = nil }
-    hi.CursorLineNr = { guifg = M.colors.base04, guibg = M.colors.base01, gui = nil,    guisp = nil }
-    hi.QuickFixLine = { guifg = nil,             guibg = M.colors.base01, gui = 'none', guisp = nil }
+    hi.ColorColumn  = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
+    hi.CursorColumn = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
+    hi.CursorLine   = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
+    hi.CursorLineNr = { guifg = M.colors.base04, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.QuickFixLine = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
     hi.PMenu        = { guifg = M.colors.base05, guibg = M.colors.base01, gui = 'none', guisp = nil }
-    hi.PMenuSel     = { guifg = M.colors.base01, guibg = M.colors.base05, gui = nil,    guisp = nil }
+    hi.PMenuSel     = { guifg = M.colors.base01, guibg = M.colors.base05, gui = nil, guisp = nil }
     hi.TabLine      = { guifg = M.colors.base03, guibg = M.colors.base01, gui = 'none', guisp = nil }
     hi.TabLineFill  = { guifg = M.colors.base03, guibg = M.colors.base01, gui = 'none', guisp = nil }
     hi.TabLineSel   = { guifg = M.colors.base0B, guibg = M.colors.base01, gui = 'none', guisp = nil }
 
     -- Standard syntax highlighting
-    hi.Boolean      = { guifg = M.colors.base09, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Character    = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Comment      = { guifg = M.colors.base03, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Conditional  = { guifg = M.colors.base0E, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Constant     = { guifg = M.colors.base09, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Define       = { guifg = M.colors.base0E, guibg = nil,             gui = 'none', guisp = nil }
-    hi.Delimiter    = { guifg = M.colors.base0F, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Float        = { guifg = M.colors.base09, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Function     = { guifg = M.colors.base0D, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Identifier   = { guifg = M.colors.base08, guibg = nil,             gui = 'none', guisp = nil }
-    hi.Include      = { guifg = M.colors.base0D, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Keyword      = { guifg = M.colors.base0E, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Label        = { guifg = M.colors.base0A, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Number       = { guifg = M.colors.base09, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Operator     = { guifg = M.colors.base05, guibg = nil,             gui = 'none', guisp = nil }
-    hi.PreProc      = { guifg = M.colors.base0A, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Repeat       = { guifg = M.colors.base0A, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Special      = { guifg = M.colors.base0C, guibg = nil,             gui = nil,    guisp = nil }
-    hi.SpecialChar  = { guifg = M.colors.base0F, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Statement    = { guifg = M.colors.base08, guibg = nil,             gui = nil,    guisp = nil }
-    hi.StorageClass = { guifg = M.colors.base0A, guibg = nil,             gui = nil,    guisp = nil }
-    hi.String       = { guifg = M.colors.base0B, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Structure    = { guifg = M.colors.base0E, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Tag          = { guifg = M.colors.base0A, guibg = nil,             gui = nil,    guisp = nil }
-    hi.Todo         = { guifg = M.colors.base0A, guibg = M.colors.base01, gui = nil,    guisp = nil }
-    hi.Type         = { guifg = M.colors.base0A, guibg = nil,             gui = 'none', guisp = nil }
-    hi.Typedef      = { guifg = M.colors.base0A, guibg = nil,             gui = nil,    guisp = nil }
+    hi.Boolean      = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
+    hi.Character    = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.Comment      = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.Conditional  = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+    hi.Constant     = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
+    hi.Define       = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.Delimiter    = { guifg = M.colors.base0F, guibg = nil, gui = nil, guisp = nil }
+    hi.Float        = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
+    hi.Function     = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+    hi.Identifier   = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.Include      = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+    hi.Keyword      = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+    hi.Label        = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+    hi.Number       = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
+    hi.Operator     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.PreProc      = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+    hi.Repeat       = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+    hi.Special      = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
+    hi.SpecialChar  = { guifg = M.colors.base0F, guibg = nil, gui = nil, guisp = nil }
+    hi.Statement    = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.StorageClass = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+    hi.String       = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil }
+    hi.Structure    = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+    hi.Tag          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+    hi.Todo         = { guifg = M.colors.base0A, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.Type         = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
+    hi.Typedef      = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
 
     -- Diff highlighting
-    hi.DiffAdd     = { guifg = M.colors.base0B, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffChange  = { guifg = M.colors.base03, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffDelete  = { guifg = M.colors.base08, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffText    = { guifg = M.colors.base0D, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffAdded   = { guifg = M.colors.base0B, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffFile    = { guifg = M.colors.base08, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffNewFile = { guifg = M.colors.base0B, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffLine    = { guifg = M.colors.base0D, guibg = M.colors.base00,  gui = nil, guisp = nil }
-    hi.DiffRemoved = { guifg = M.colors.base08, guibg = M.colors.base00,  gui = nil, guisp = nil }
+    hi.DiffAdd     = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffChange  = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffDelete  = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffText    = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffAdded   = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffFile    = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffNewFile = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffLine    = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.DiffRemoved = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
 
     -- Git highlighting
-    hi.gitcommitOverflow      = { guifg = M.colors.base08, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitSummary       = { guifg = M.colors.base0B, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitComment       = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitUntracked     = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitDiscarded     = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitSelected      = { guifg = M.colors.base03, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitHeader        = { guifg = M.colors.base0E, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitSelectedType  = { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitUnmergedType  = { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
-    hi.gitcommitDiscardedType = { guifg = M.colors.base0D, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitOverflow      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitSummary       = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitComment       = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitUntracked     = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitDiscarded     = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitSelected      = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitHeader        = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitSelectedType  = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitUnmergedType  = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+    hi.gitcommitDiscardedType = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
     hi.gitcommitBranch        = { guifg = M.colors.base09, guibg = nil, gui = 'bold', guisp = nil }
-    hi.gitcommitUntrackedFile = { guifg = M.colors.base0A, guibg = nil, gui = nil,    guisp = nil }
+    hi.gitcommitUntrackedFile = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.gitcommitUnmergedFile  = { guifg = M.colors.base08, guibg = nil, gui = 'bold', guisp = nil }
     hi.gitcommitDiscardedFile = { guifg = M.colors.base08, guibg = nil, gui = 'bold', guisp = nil }
     hi.gitcommitSelectedFile  = { guifg = M.colors.base0B, guibg = nil, gui = 'bold', guisp = nil }
@@ -239,19 +239,19 @@ function M.setup(colors, config)
     hi.SpellCap   = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0D }
     hi.SpellRare  = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
 
-    hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = nil, gui = 'none',      guisp = nil             }
-    hi.DiagnosticUnderlineError           = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
-    hi.DiagnosticUnderlineWarning         = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
-    hi.DiagnosticUnderlineWarn            = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
-    hi.DiagnosticUnderlineInformation     = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0F }
-    hi.DiagnosticUnderlineHint            = { guifg = nil,             guibg = nil, gui = 'undercurl', guisp = M.colors.base0C }
+    hi.DiagnosticError                = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticWarn                 = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticInfo                 = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticHint                 = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticUnderlineError       = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
+    hi.DiagnosticUnderlineWarning     = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
+    hi.DiagnosticUnderlineWarn        = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
+    hi.DiagnosticUnderlineInformation = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0F }
+    hi.DiagnosticUnderlineHint        = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0C }
 
-    hi.LspReferenceText                   = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-    hi.LspReferenceRead                   = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-    hi.LspReferenceWrite                  = { guifg = nil,             guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceText                   = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceRead                   = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceWrite                  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
     hi.LspDiagnosticsDefaultError         = 'DiagnosticError'
     hi.LspDiagnosticsDefaultWarning       = 'DiagnosticWarn'
     hi.LspDiagnosticsDefaultInformation   = 'DiagnosticInfo'
@@ -261,62 +261,62 @@ function M.setup(colors, config)
     hi.LspDiagnosticsUnderlineInformation = 'DiagnosticUnderlineInformation'
     hi.LspDiagnosticsUnderlineHint        = 'DiagnosticUnderlineHint'
 
-    hi.TSAnnotation         = { guifg = M.colors.base0F, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSAttribute          = { guifg = M.colors.base0A, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSBoolean            = { guifg = M.colors.base09, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSCharacter          = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSComment            = { guifg = M.colors.base03, guibg = nil, gui = 'italic',        guisp = nil }
-    hi.TSConstructor        = { guifg = M.colors.base0D, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSConditional        = { guifg = M.colors.base0E, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSConstant           = { guifg = M.colors.base09, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSConstBuiltin       = { guifg = M.colors.base09, guibg = nil, gui = 'italic',        guisp = nil }
-    hi.TSConstMacro         = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSError              = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSException          = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSField              = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSFloat              = { guifg = M.colors.base09, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSFunction           = { guifg = M.colors.base0D, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSFuncBuiltin        = { guifg = M.colors.base0D, guibg = nil, gui = 'italic',        guisp = nil }
-    hi.TSFuncMacro          = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSInclude            = { guifg = M.colors.base0D, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSKeyword            = { guifg = M.colors.base0E, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSKeywordFunction    = { guifg = M.colors.base0E, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSKeywordOperator    = { guifg = M.colors.base0E, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSLabel              = { guifg = M.colors.base0A, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSMethod             = { guifg = M.colors.base0D, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSNamespace          = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSNone               = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSNumber             = { guifg = M.colors.base09, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSOperator           = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSParameter          = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSParameterReference = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSProperty           = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSPunctDelimiter     = { guifg = M.colors.base0F, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSPunctBracket       = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSPunctSpecial       = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSRepeat             = { guifg = M.colors.base0E, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSString             = { guifg = M.colors.base0B, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSStringRegex        = { guifg = M.colors.base0C, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSStringEscape       = { guifg = M.colors.base0C, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSSymbol             = { guifg = M.colors.base0B, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSTag                = { guifg = M.colors.base0A, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSTagDelimiter       = { guifg = M.colors.base0F, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSText               = { guifg = M.colors.base05, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSStrong             = { guifg = nil,             guibg = nil, gui = 'bold',          guisp = nil }
-    hi.TSEmphasis           = { guifg = M.colors.base09, guibg = nil, gui = 'italic',        guisp = nil }
-    hi.TSUnderline          = { guifg = M.colors.base00, guibg = nil, gui = 'underline',     guisp = nil }
+    hi.TSAnnotation         = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSAttribute          = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSBoolean            = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSCharacter          = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSComment            = { guifg = M.colors.base03, guibg = nil, gui = 'italic', guisp = nil }
+    hi.TSConstructor        = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSConditional        = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSConstant           = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSConstBuiltin       = { guifg = M.colors.base09, guibg = nil, gui = 'italic', guisp = nil }
+    hi.TSConstMacro         = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSError              = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSException          = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSField              = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSFloat              = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSFunction           = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSFuncBuiltin        = { guifg = M.colors.base0D, guibg = nil, gui = 'italic', guisp = nil }
+    hi.TSFuncMacro          = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSInclude            = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSKeyword            = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSKeywordFunction    = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSKeywordOperator    = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSLabel              = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSMethod             = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSNamespace          = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSNone               = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSNumber             = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSOperator           = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSParameter          = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSParameterReference = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSProperty           = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSPunctDelimiter     = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSPunctBracket       = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSPunctSpecial       = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSRepeat             = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSString             = { guifg = M.colors.base0B, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSStringRegex        = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSStringEscape       = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSSymbol             = { guifg = M.colors.base0B, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSTag                = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSTagDelimiter       = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSText               = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSStrong             = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil }
+    hi.TSEmphasis           = { guifg = M.colors.base09, guibg = nil, gui = 'italic', guisp = nil }
+    hi.TSUnderline          = { guifg = M.colors.base00, guibg = nil, gui = 'underline', guisp = nil }
     hi.TSStrike             = { guifg = M.colors.base00, guibg = nil, gui = 'strikethrough', guisp = nil }
-    hi.TSTitle              = { guifg = M.colors.base0D, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSLiteral            = { guifg = M.colors.base09, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSURI                = { guifg = M.colors.base09, guibg = nil, gui = 'underline',     guisp = nil }
-    hi.TSType               = { guifg = M.colors.base0A, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSTypeBuiltin        = { guifg = M.colors.base0A, guibg = nil, gui = 'italic',        guisp = nil }
-    hi.TSVariable           = { guifg = M.colors.base08, guibg = nil, gui = 'none',          guisp = nil }
-    hi.TSVariableBuiltin    = { guifg = M.colors.base08, guibg = nil, gui = 'italic',        guisp = nil }
+    hi.TSTitle              = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSLiteral            = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSURI                = { guifg = M.colors.base09, guibg = nil, gui = 'underline', guisp = nil }
+    hi.TSType               = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSTypeBuiltin        = { guifg = M.colors.base0A, guibg = nil, gui = 'italic', guisp = nil }
+    hi.TSVariable           = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSVariableBuiltin    = { guifg = M.colors.base08, guibg = nil, gui = 'italic', guisp = nil }
 
     hi.TSDefinition      = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
     hi.TSDefinitionUsage = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-    hi.TSCurrentScope    = { guifg = nil, guibg = nil, gui = 'bold',      guisp = nil }
+    hi.TSCurrentScope    = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil }
 
     if M.config.ts_rainbow then
         hi.rainbowcol1 = { guifg = M.colors.base06 }
@@ -330,11 +330,11 @@ function M.setup(colors, config)
 
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = 'none', guisp = nil }
 
-    hi.NormalFloat  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.FloatBorder  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
-    hi.NormalNC     = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
+    hi.NormalFloat  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.FloatBorder  = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.NormalNC     = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.TermCursor   = { guifg = M.colors.base00, guibg = M.colors.base05, gui = 'none', guisp = nil }
-    hi.TermCursorNC = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil,    guisp = nil }
+    hi.TermCursorNC = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil }
 
     hi.User1 = { guifg = M.colors.base08, guibg = M.colors.base02, gui = 'none', guisp = nil }
     hi.User2 = { guifg = M.colors.base0E, guibg = M.colors.base02, gui = 'none', guisp = nil }
@@ -350,19 +350,19 @@ function M.setup(colors, config)
 
     if M.config.telescope then
         if hex_re:match_str(M.colors.base00) and hex_re:match_str(M.colors.base01) and hex_re:match_str(M.colors.base02) then
-            local darkerbg = darken(M.colors.base00, 0.1)
-            local darkercursorline = darken(M.colors.base01, 0.1)
-            local darkerstatusline = darken(M.colors.base02, 0.1)
-            hi.TelescopeBorder       = { guifg = darkerbg,         guibg = darkerbg,         gui = nil,    guisp = nil }
-            hi.TelescopePromptBorder = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil,    guisp = nil }
-            hi.TelescopePromptNormal = { guifg = M.colors.base05,  guibg = darkerstatusline, gui = nil,    guisp = nil }
-            hi.TelescopePromptPrefix = { guifg = M.colors.base08,  guibg = darkerstatusline, gui = nil,    guisp = nil }
-            hi.TelescopeNormal       = { guifg = nil,              guibg = darkerbg,         gui = nil,    guisp = nil }
-            hi.TelescopePreviewTitle = { guifg = darkercursorline, guibg = M.colors.base0B,  gui = nil,    guisp = nil }
-            hi.TelescopePromptTitle  = { guifg = darkercursorline, guibg = M.colors.base08,  gui = nil,    guisp = nil }
-            hi.TelescopeResultsTitle = { guifg = darkerbg,         guibg = darkerbg,         gui = nil,    guisp = nil }
-            hi.TelescopeSelection    = { guifg = nil,              guibg = darkerstatusline, gui = nil,    guisp = nil }
-            hi.TelescopePreviewLine  = { guifg = nil,              guibg = M.colors.base01,  gui = 'none', guisp = nil }
+            local darkerbg           = darken(M.colors.base00, 0.1)
+            local darkercursorline   = darken(M.colors.base01, 0.1)
+            local darkerstatusline   = darken(M.colors.base02, 0.1)
+            hi.TelescopeBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
+            hi.TelescopePromptBorder = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
+            hi.TelescopePromptNormal = { guifg = M.colors.base05, guibg = darkerstatusline, gui = nil, guisp = nil }
+            hi.TelescopePromptPrefix = { guifg = M.colors.base08, guibg = darkerstatusline, gui = nil, guisp = nil }
+            hi.TelescopeNormal       = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+            hi.TelescopePreviewTitle = { guifg = darkercursorline, guibg = M.colors.base0B, gui = nil, guisp = nil }
+            hi.TelescopePromptTitle  = { guifg = darkercursorline, guibg = M.colors.base08, gui = nil, guisp = nil }
+            hi.TelescopeResultsTitle = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
+            hi.TelescopeSelection    = { guifg = nil, guibg = darkerstatusline, gui = nil, guisp = nil }
+            hi.TelescopePreviewLine  = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
         end
     end
 
@@ -382,11 +382,11 @@ function M.setup(colors, config)
         hi.NotifyINFOTitle   = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
         hi.NotifyDEBUGTitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
         hi.NotifyTRACETitle  = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
-        hi.NotifyERRORBody = 'Normal'
-        hi.NotifyWARNBody  = 'Normal'
-        hi.NotifyINFOBody  = 'Normal'
-        hi.NotifyDEBUGBody = 'Normal'
-        hi.NotifyTRACEBody = 'Normal'
+        hi.NotifyERRORBody   = 'Normal'
+        hi.NotifyWARNBody    = 'Normal'
+        hi.NotifyINFOBody    = 'Normal'
+        hi.NotifyDEBUGBody   = 'Normal'
+        hi.NotifyTRACEBody   = 'Normal'
     end
 
     if M.config.indentblankline then
@@ -395,35 +395,35 @@ function M.setup(colors, config)
     end
 
     if M.config.cmp then
-      hi.CmpDocumentationBorder   = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-      hi.CmpDocumentation         = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-      hi.CmpItemAbbr              = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
-      hi.CmpItemAbbrDeprecated    = { guifg = M.colors.base03, guibg = nil, gui = 'strikethrough', guisp = nil }
-      hi.CmpItemAbbrMatch         = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindDefault       = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemMenu              = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindKeyword       = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindVariable      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindConstant      = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindReference     = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindValue         = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindFunction      = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindMethod        = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindConstructor   = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindClass         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindInterface     = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindStruct        = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindEvent         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindEnum          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindUnit          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindModule        = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindProperty      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindField         = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindTypeParameter = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindEnumMember    = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindOperator      = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
-      hi.CmpItemKindSnippet       = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpDocumentationBorder   = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+        hi.CmpDocumentation         = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+        hi.CmpItemAbbr              = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
+        hi.CmpItemAbbrDeprecated    = { guifg = M.colors.base03, guibg = nil, gui = 'strikethrough', guisp = nil }
+        hi.CmpItemAbbrMatch         = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindDefault       = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemMenu              = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindKeyword       = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindVariable      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindConstant      = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindReference     = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindValue         = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindFunction      = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindMethod        = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindConstructor   = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindClass         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindInterface     = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindStruct        = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindEvent         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindEnum          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindUnit          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindModule        = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindProperty      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindField         = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindTypeParameter = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindEnumMember    = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindOperator      = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindSnippet       = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
     end
 
     vim.g.terminal_color_0  = M.colors.base00
@@ -445,7 +445,7 @@ function M.setup(colors, config)
 end
 
 function M.available_colorschemes()
-  return vim.tbl_keys(M.colorschemes)
+    return vim.tbl_keys(M.colorschemes)
 end
 
 M.colorschemes = {}
