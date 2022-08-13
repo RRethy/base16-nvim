@@ -86,6 +86,7 @@ function M.with_config(config)
         notify = true,
         ts_rainbow = true,
         cmp = true,
+        illuminate = true,
     }, config or M.config or {})
 end
 
@@ -424,6 +425,12 @@ function M.setup(colors, config)
         hi.CmpItemKindEnumMember    = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindOperator      = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindSnippet       = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
+    end
+
+    if M.config.illuminate then
+        hi.IlluminatedWordText  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+        hi.IlluminatedWordRead  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+        hi.IlluminatedWordWrite = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
     end
 
     vim.g.terminal_color_0  = M.colors.base00
