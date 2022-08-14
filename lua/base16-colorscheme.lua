@@ -84,6 +84,7 @@ function M.with_config(config)
         telescope = true,
         indentblankline = true,
         notify = true,
+		bufferline = true,
         ts_rainbow = true,
         cmp = true,
     }, config or M.config or {})
@@ -121,6 +122,10 @@ function M.setup(colors, config)
 
     M.colors = colors or M.colorschemes[vim.env.BASE16_THEME] or M.colorschemes['schemer-dark']
     local hi = M.highlight
+
+	local darkerbg           = darken(M.colors.base00, 0.1)
+	local darkercursorline   = darken(M.colors.base01, 0.1)
+	local darkerstatusline   = darken(M.colors.base02, 0.1)
 
     -- Vim editor colors
     hi.Normal       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
@@ -365,6 +370,19 @@ function M.setup(colors, config)
             hi.TelescopePreviewLine  = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
         end
     end
+
+	if M.config.bufferline then
+		hi.BufferLineBackground			= { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
+		hi.BufferLineBufferSelected		= { guifg = nil, guibg = M.colors.base00, gui = nil, guisp = nil }
+		hi.BufferLineBufferVisible		= { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
+		hi.BufferLineCloseButton		= { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
+		hi.BufferLineCloseButtonVisible = { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
+		hi.BufferLineFill				= { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+		hi.BufferLineIndicatorSelected	= { guifg = M.colors.base00, guibg = M.colors.base00, gui = nil, guisp = nil }
+		hi.BufferLineIndicatorVisible	= { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
+		hi.BufferLineTabClose			= { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+		hi.BufferLineTabSelected		= { guifg = M.colors.base0E, gui = nil, guisp = nil }
+	end
 
     if M.config.notify then
         hi.NotifyERRORBorder = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
