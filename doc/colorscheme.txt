@@ -1,7 +1,6 @@
 *nvim-base16.txt* Neovim plugin for building base16 colorschemes.
 
 Author:  Adam P. Regasz-Rethy (RRethy) <rethy.spud@gmail.com>
-License: Same terms as Vim itself (see |license|)
 
 INTRODUCTION                                                    *nvim-base16*
 ===========================================================================
