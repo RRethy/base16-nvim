@@ -3,6 +3,8 @@
 Neovim plugin for building base16 colorschemes with support for Neovim's
 builtin LSP and Treesitter.
 
+https://user-images.githubusercontent.com/21000943/199322658-ecbf8113-fa4b-409b-a562-be4a100de844.mov
+
 ```lua
 -- All builtin colorschemes can be accessed with |:colorscheme|.
 vim.cmd('colorscheme base16-gruvbox-dark-soft')
