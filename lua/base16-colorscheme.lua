@@ -87,6 +87,7 @@ function M.with_config(config)
         ts_rainbow = true,
         cmp = true,
         illuminate = true,
+        lsp_semantic = true,
     }, config or M.config or {})
 end
 
@@ -504,6 +505,19 @@ function M.setup(colors, config)
         hi.IlluminatedWordText  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
         hi.IlluminatedWordRead  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
         hi.IlluminatedWordWrite = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    end
+
+    if M.config.lsp_semantic then
+        hi['@class'] = 'Structure'
+        hi['@struct'] = 'Structure'
+        hi['@enum'] = 'Type'
+        hi['@enumMember'] = 'Constant'
+        hi['@event'] = 'Identifier'
+        hi['@interface'] = 'Structure'
+        hi['@modifier'] = 'Identifier'
+        hi['@regexp'] = 'TSStringRegex'
+        hi['@typeParameter'] = 'Type'
+        hi['@decorator'] = 'Identifier'
     end
 
     vim.g.terminal_color_0  = M.colors.base00
