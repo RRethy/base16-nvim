@@ -508,9 +508,9 @@ function M.setup(colors, config)
     end
 
     if M.config.lsp_semantic then
-        hi['@class'] = 'Structure'
-        hi['@struct'] = 'Structure'
-        hi['@enum'] = 'Type'
+        hi['@class'] = 'TSType'
+        hi['@struct'] = 'TSType'
+        hi['@enum'] = 'TSType'
         hi['@enumMember'] = 'Constant'
         hi['@event'] = 'Identifier'
         hi['@interface'] = 'Structure'
