@@ -129,7 +129,7 @@ function M.setup(colors, config)
     hi.Bold         = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil }
     hi.Debug        = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.Directory    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-    hi.Error        = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.Error        = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.ErrorMsg     = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.Exception    = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.FoldColumn   = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil }
