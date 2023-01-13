@@ -129,7 +129,7 @@ function M.setup(colors, config)
     hi.Bold         = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil }
     hi.Debug        = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.Directory    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-    hi.Error        = { guifg = M.colors.base00, guibg = M.colors.base08, gui = nil, guisp = nil }
+    hi.Error        = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.ErrorMsg     = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.Exception    = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.FoldColumn   = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil }
@@ -301,7 +301,7 @@ function M.setup(colors, config)
     hi.TSStringRegex        = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
     hi.TSStringEscape       = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
     hi.TSSymbol             = { guifg = M.colors.base0B, guibg = nil, gui = 'none', guisp = nil }
-    hi.TSTag                = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSTag                = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
     hi.TSTagDelimiter       = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
     hi.TSText               = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
     hi.TSStrong             = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil }
@@ -359,7 +359,7 @@ function M.setup(colors, config)
         hi['@exception'] = 'TSException'
         hi['@type'] = 'TSType'
         hi['@type.builtin'] = 'TSTypeBuiltin'
-        hi['@type.qualifier'] = 'TSType'
+        hi['@type.qualifier'] = 'TSKeyword'
         hi['@type.definition'] = 'TSType'
         hi['@storageclass'] = 'StorageClass'
         hi['@attribute'] = 'TSAttribute'
