@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-google-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#ffffff', base01 = '#e0e0e0', base02 = '#c5c8c6', base03 = '#b4b7b4',

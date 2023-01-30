@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-atelier-cave-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#efecf4', base01 = '#e2dfe7', base02 = '#8b8792', base03 = '#7e7887',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-oceanicnext'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1b2b34', base01 = '#343d46', base02 = '#4f5b66', base03 = '#65737e',

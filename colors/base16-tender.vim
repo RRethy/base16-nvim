@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-tender'
 lua require('base16-colorscheme').setup({
     \ base00 = '#282828', base01 = '#383838', base02 = '#484848', base03 = '#4c4c4c',

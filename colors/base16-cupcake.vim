@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-cupcake'
 lua require('base16-colorscheme').setup({
     \ base00 = '#fbf1f2', base01 = '#f2f1f4', base02 = '#d8d5dd', base03 = '#bfb9c6',

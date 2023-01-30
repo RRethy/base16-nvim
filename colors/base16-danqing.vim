@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-danqing'
 lua require('base16-colorscheme').setup({
     \ base00 = '#2d302f', base01 = '#434846', base02 = '#5a605d', base03 = '#9da8a3',

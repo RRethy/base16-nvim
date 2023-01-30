@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-black-metal-bathory'
 lua require('base16-colorscheme').setup({
     \ base00 = '#000000', base01 = '#121212', base02 = '#222222', base03 = '#333333',

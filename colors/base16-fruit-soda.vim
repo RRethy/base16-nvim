@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-fruit-soda'
 lua require('base16-colorscheme').setup({
     \ base00 = '#f1ecf1', base01 = '#e0dee0', base02 = '#d8d5d5', base03 = '#b5b4b6',

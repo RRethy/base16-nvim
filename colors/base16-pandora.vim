@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-pandora'
 lua require('base16-colorscheme').setup({
     \ base00 = '#131213', base01 = '#2f1823', base02 = '#472234', base03 = '#ffbee3',

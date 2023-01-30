@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-summercamp'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1c1810', base01 = '#2a261c', base02 = '#3a3527', base03 = '#504b38',

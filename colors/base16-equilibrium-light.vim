@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-equilibrium-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#f5f0e7', base01 = '#e7e2d9', base02 = '#d8d4cb', base03 = '#73777f',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-stella'
 lua require('base16-colorscheme').setup({
     \ base00 = '#2b213c', base01 = '#362b48', base02 = '#4d4160', base03 = '#655978',

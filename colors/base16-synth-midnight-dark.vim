@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-synth-midnight-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#050608', base01 = '#1a1b1c', base02 = '#28292a', base03 = '#474849',

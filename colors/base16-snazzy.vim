@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-snazzy'
 lua require('base16-colorscheme').setup({
     \ base00 = '#282a36', base01 = '#34353e', base02 = '#43454f', base03 = '#78787e',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-summerfruit-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#151515', base01 = '#202020', base02 = '#303030', base03 = '#505050',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-xcode-dusk'
 lua require('base16-colorscheme').setup({
     \ base00 = '#282b35', base01 = '#3d4048', base02 = '#53555d', base03 = '#686a71',

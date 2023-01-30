@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-heetch'
 lua require('base16-colorscheme').setup({
     \ base00 = '#190134', base01 = '#392551', base02 = '#5a496e', base03 = '#7b6d8b',

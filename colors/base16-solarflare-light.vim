@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-solarflare-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#f5f7fa', base01 = '#e8e9ed', base02 = '#a6afb8', base03 = '#85939e',

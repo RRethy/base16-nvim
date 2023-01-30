@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-da-one-paper'
 lua require('base16-colorscheme').setup({
     \ base00 = '#faf0dc', base01 = '#c8c8c8', base02 = '#888888', base03 = '#585858',

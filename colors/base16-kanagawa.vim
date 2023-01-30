@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-kanagawa'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1f1f28', base01 = '#16161d', base02 = '#223249', base03 = '#54546d',

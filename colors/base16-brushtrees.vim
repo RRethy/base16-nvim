@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-brushtrees'
 lua require('base16-colorscheme').setup({
     \ base00 = '#e3efef', base01 = '#c9dbdc', base02 = '#b0c5c8', base03 = '#98afb5',

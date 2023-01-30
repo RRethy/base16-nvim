@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-unikitty-reversible'
 lua require('base16-colorscheme').setup({
     \ base00 = '#2e2a31', base01 = '#4b484e', base02 = '#69666b', base03 = '#878589',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-uwunicorn'
 lua require('base16-colorscheme').setup({
     \ base00 = '#241b26', base01 = '#2f2a3f', base02 = '#46354a', base03 = '#6c3cb2',

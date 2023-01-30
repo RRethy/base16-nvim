@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-unikitty-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#2e2a31', base01 = '#4a464d', base02 = '#666369', base03 = '#838085',

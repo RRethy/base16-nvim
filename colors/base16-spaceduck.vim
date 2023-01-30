@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-spaceduck'
 lua require('base16-colorscheme').setup({
     \ base00 = '#16172d', base01 = '#1b1c36', base02 = '#30365f', base03 = '#686f9a',

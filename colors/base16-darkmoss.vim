@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-darkmoss'
 lua require('base16-colorscheme').setup({
     \ base00 = '#171e1f', base01 = '#252c2d', base02 = '#373c3d', base03 = '#555e5f',

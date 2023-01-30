@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-atelier-heath-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#f7f3f7', base01 = '#d8cad8', base02 = '#ab9bab', base03 = '#9e8f9e',

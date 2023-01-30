@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-material-palenight'
 lua require('base16-colorscheme').setup({
     \ base00 = '#292d3e', base01 = '#444267', base02 = '#32374d', base03 = '#676e95',

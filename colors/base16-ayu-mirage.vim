@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-ayu-mirage'
 lua require('base16-colorscheme').setup({
     \ base00 = '#171b24', base01 = '#1f2430', base02 = '#242936', base03 = '#707a8c',

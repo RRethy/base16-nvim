@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-pico'
 lua require('base16-colorscheme').setup({
     \ base00 = '#000000', base01 = '#1d2b53', base02 = '#7e2553', base03 = '#008751',

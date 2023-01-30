@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-rose-pine'
 lua require('base16-colorscheme').setup({
     \ base00 = '#191724', base01 = '#1f1d2e', base02 = '#26233a', base03 = '#555169',

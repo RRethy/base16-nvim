@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-windows-highcontrast'
 lua require('base16-colorscheme').setup({
     \ base00 = '#000000', base01 = '#1c1c1c', base02 = '#383838', base03 = '#545454',
