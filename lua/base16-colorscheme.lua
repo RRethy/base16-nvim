@@ -373,6 +373,8 @@ function M.setup(colors, config)
         hi['@namespace'] = 'TSNamespace'
         hi['@symbol'] = 'TSSymbol'
         hi['@text'] = 'TSText'
+        hi['@text.diff.add'] = 'DiffAdd'
+        hi['@text.diff.delete'] = 'DiffDelete'
         hi['@text.strong'] = 'TSStrong'
         hi['@text.emphasis'] = 'TSEmphasis'
         hi['@text.underline'] = 'TSUnderline'
