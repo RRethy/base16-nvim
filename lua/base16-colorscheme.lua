@@ -478,29 +478,29 @@ function M.setup(colors, config)
         hi.CmpItemAbbrDeprecated    = { guifg = M.colors.base03, guibg = nil, gui = 'strikethrough', guisp = nil }
         hi.CmpItemAbbrMatch         = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindDefault       = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemMenu              = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindKeyword       = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindVariable      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindConstant      = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindReference     = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindValue         = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindFunction      = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindMethod        = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindConstructor   = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindClass         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindInterface     = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindStruct        = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindEvent         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindEnum          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindUnit          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindModule        = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindProperty      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindField         = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindTypeParameter = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindEnumMember    = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindOperator      = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindSnippet       = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindDefault       = { guibg = M.colors.base05, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindKeyword       = { guibg = M.colors.base0E, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindVariable      = { guibg = M.colors.base08, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindConstant      = { guibg = M.colors.base09, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindReference     = { guibg = M.colors.base05, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindValue         = { guibg = M.colors.base09, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindFunction      = { guibg = M.colors.base0D, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindMethod        = { guibg = M.colors.base0D, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindConstructor   = { guibg = M.colors.base0D, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindClass         = { guibg = M.colors.base0A, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindInterface     = { guibg = M.colors.base0E, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindStruct        = { guibg = M.colors.base0A, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindEvent         = { guibg = M.colors.base08, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindEnum          = { guibg = M.colors.base08, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindUnit          = { guibg = M.colors.base0A, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindModule        = { guibg = M.colors.base05, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindProperty      = { guibg = M.colors.base05, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindField         = { guibg = M.colors.base05, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindTypeParameter = { guibg = M.colors.base05, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindEnumMember    = { guibg = M.colors.base09, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindOperator      = { guibg = M.colors.base05, guifg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindSnippet       = { guibg = M.colors.base04, guifg = nil, gui = nil, guisp = nil }
     end
 
     if M.config.illuminate then
