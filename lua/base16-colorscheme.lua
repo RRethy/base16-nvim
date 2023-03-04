@@ -538,6 +538,23 @@ function M.setup(colors, config)
     vim.g.terminal_color_13 = M.colors.base0E
     vim.g.terminal_color_14 = M.colors.base0C
     vim.g.terminal_color_15 = M.colors.base07
+
+    vim.g.base16_gui00 = M.colors.base00
+    vim.g.base16_gui01 = M.colors.base01
+    vim.g.base16_gui02 = M.colors.base02
+    vim.g.base16_gui03 = M.colors.base03
+    vim.g.base16_gui04 = M.colors.base04
+    vim.g.base16_gui05 = M.colors.base05
+    vim.g.base16_gui06 = M.colors.base06
+    vim.g.base16_gui07 = M.colors.base07
+    vim.g.base16_gui08 = M.colors.base08
+    vim.g.base16_gui09 = M.colors.base09
+    vim.g.base16_gui0A = M.colors.base0A
+    vim.g.base16_gui0B = M.colors.base0B
+    vim.g.base16_gui0C = M.colors.base0C
+    vim.g.base16_gui0D = M.colors.base0D
+    vim.g.base16_gui0E = M.colors.base0E
+    vim.g.base16_gui0F = M.colors.base0F
 end
 
 function M.available_colorschemes()
