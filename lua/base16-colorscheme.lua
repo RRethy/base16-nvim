@@ -8,28 +8,28 @@ local M = {}
 local hex_re = vim.regex('#\\x\\x\\x\\x\\x\\x')
 
 local HEX_DIGITS = {
-    ['0'] = 0,
-    ['1'] = 1,
-    ['2'] = 2,
-    ['3'] = 3,
-    ['4'] = 4,
-    ['5'] = 5,
-    ['6'] = 6,
-    ['7'] = 7,
-    ['8'] = 8,
-    ['9'] = 9,
-    ['a'] = 10,
-    ['b'] = 11,
-    ['c'] = 12,
-    ['d'] = 13,
-    ['e'] = 14,
-    ['f'] = 15,
-    ['A'] = 10,
-    ['B'] = 11,
-    ['C'] = 12,
-    ['D'] = 13,
-    ['E'] = 14,
-    ['F'] = 15,
+        ['0'] = 0,
+        ['1'] = 1,
+        ['2'] = 2,
+        ['3'] = 3,
+        ['4'] = 4,
+        ['5'] = 5,
+        ['6'] = 6,
+        ['7'] = 7,
+        ['8'] = 8,
+        ['9'] = 9,
+        ['a'] = 10,
+        ['b'] = 11,
+        ['c'] = 12,
+        ['d'] = 13,
+        ['e'] = 14,
+        ['f'] = 15,
+        ['A'] = 10,
+        ['B'] = 11,
+        ['C'] = 12,
+        ['D'] = 13,
+        ['E'] = 14,
+        ['F'] = 15,
 }
 
 local function hex_to_rgb(hex)
@@ -89,6 +89,7 @@ function M.with_config(config)
         cmp = true,
         illuminate = true,
         lsp_semantic = true,
+        mini_completion = true,
     }, config or M.config or {})
 end
 
@@ -553,6 +554,11 @@ function M.setup(colors, config)
         -- hi['@lsp.type.macro'] = '@macro'
         -- hi['@lsp.type.decorator'] = '@function'
     end
+
+    if M.config.mini_completion then
+        hi.MiniCompletionActiveParameter = 'CursorLine'
+    end
+
 
     vim.g.terminal_color_0  = M.colors.base00
     vim.g.terminal_color_1  = M.colors.base08
