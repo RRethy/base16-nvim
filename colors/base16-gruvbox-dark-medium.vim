@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-gruvbox-dark-medium'
 lua require('base16-colorscheme').setup({
     \ base00 = '#282828', base01 = '#3c3836', base02 = '#504945', base03 = '#665c54',

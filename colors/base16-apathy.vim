@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-apathy'
 lua require('base16-colorscheme').setup({
     \ base00 = '#031a16', base01 = '#0b342d', base02 = '#184e45', base03 = '#2b685e',

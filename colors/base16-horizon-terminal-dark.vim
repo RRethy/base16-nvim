@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-horizon-terminal-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1c1e26', base01 = '#232530', base02 = '#2e303e', base03 = '#6f6f70',

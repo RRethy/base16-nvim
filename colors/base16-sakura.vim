@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-sakura'
 lua require('base16-colorscheme').setup({
     \ base00 = '#feedf3', base01 = '#f8e2e7', base02 = '#e0ccd1', base03 = '#755f64',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-hopscotch'
 lua require('base16-colorscheme').setup({
     \ base00 = '#322931', base01 = '#433b42', base02 = '#5c545b', base03 = '#797379',

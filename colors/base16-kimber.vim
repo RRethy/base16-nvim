@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-kimber'
 lua require('base16-colorscheme').setup({
     \ base00 = '#222222', base01 = '#313131', base02 = '#555d55', base03 = '#644646',

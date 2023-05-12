@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-zenburn'
 lua require('base16-colorscheme').setup({
     \ base00 = '#383838', base01 = '#404040', base02 = '#606060', base03 = '#6f6f6f',

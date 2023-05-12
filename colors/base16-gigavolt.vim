@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-gigavolt'
 lua require('base16-colorscheme').setup({
     \ base00 = '#202126', base01 = '#2d303d', base02 = '#5a576e', base03 = '#a1d2e6',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-bespin'
 lua require('base16-colorscheme').setup({
     \ base00 = '#28211c', base01 = '#36312e', base02 = '#5e5d5c', base03 = '#666666',

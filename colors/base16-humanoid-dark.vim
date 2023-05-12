@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-humanoid-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#232629', base01 = '#333b3d', base02 = '#484e54', base03 = '#60615d',

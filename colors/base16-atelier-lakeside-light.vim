@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-atelier-lakeside-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#ebf8ff', base01 = '#c1e4f6', base02 = '#7ea2b4', base03 = '#7195a8',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-helios'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1d2021', base01 = '#383c3e', base02 = '#53585b', base03 = '#6f7579',

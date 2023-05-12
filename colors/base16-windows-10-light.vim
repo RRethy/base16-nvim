@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-windows-10-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#f2f2f2', base01 = '#e5e5e5', base02 = '#d9d9d9', base03 = '#cccccc',

@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-atelier-sulphurpool'
 lua require('base16-colorscheme').setup({
     \ base00 = '#202746', base01 = '#293256', base02 = '#5e6687', base03 = '#6b7394',

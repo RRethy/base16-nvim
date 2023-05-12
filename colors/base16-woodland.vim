@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-woodland'
 lua require('base16-colorscheme').setup({
     \ base00 = '#231e18', base01 = '#302b25', base02 = '#48413a', base03 = '#9d8b70',

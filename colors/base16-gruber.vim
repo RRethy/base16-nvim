@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-gruber'
 lua require('base16-colorscheme').setup({
     \ base00 = '#181818', base01 = '#453d41', base02 = '#484848', base03 = '#52494e',

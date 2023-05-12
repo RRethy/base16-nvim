@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-atlas'
 lua require('base16-colorscheme').setup({
     \ base00 = '#002635', base01 = '#00384d', base02 = '#517f8d', base03 = '#6c8b91',

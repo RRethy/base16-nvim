@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-framer'
 lua require('base16-colorscheme').setup({
     \ base00 = '#181818', base01 = '#151515', base02 = '#464646', base03 = '#747474',

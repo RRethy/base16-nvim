@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-atelier-plateau'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1b1818', base01 = '#292424', base02 = '#585050', base03 = '#655d5d',

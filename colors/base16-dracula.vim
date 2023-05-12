@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-dracula'
 lua require('base16-colorscheme').setup({
     \ base00 = '#282936', base01 = '#3a3c4e', base02 = '#4d4f68', base03 = '#626483',

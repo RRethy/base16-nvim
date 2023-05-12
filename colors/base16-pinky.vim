@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-pinky'
 lua require('base16-colorscheme').setup({
     \ base00 = '#171517', base01 = '#1b181b', base02 = '#1d1b1d', base03 = '#383338',

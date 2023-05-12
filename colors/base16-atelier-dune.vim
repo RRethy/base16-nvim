@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-atelier-dune'
 lua require('base16-colorscheme').setup({
     \ base00 = '#20201d', base01 = '#292824', base02 = '#6e6b5e', base03 = '#7d7a68',

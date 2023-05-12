@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-shades-of-purple'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1e1e3f', base01 = '#43d426', base02 = '#f1d000', base03 = '#808080',

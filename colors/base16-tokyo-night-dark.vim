@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-tokyo-night-dark'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1a1b26', base01 = '#16161e', base02 = '#2f3549', base03 = '#444b6a',

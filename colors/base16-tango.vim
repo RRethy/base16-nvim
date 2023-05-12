@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-tango'
 lua require('base16-colorscheme').setup({
     \ base00 = '#2e3436', base01 = '#8ae234', base02 = '#fce94f', base03 = '#555753',

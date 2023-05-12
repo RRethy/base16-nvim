@@ -1,3 +1,4 @@
+hi clear
 let g:colors_name = 'base16-brogrammer'
 lua require('base16-colorscheme').setup({
     \ base00 = '#1f1f1f', base01 = '#f81118', base02 = '#2dc55e', base03 = '#ecba0f',
