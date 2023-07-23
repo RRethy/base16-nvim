@@ -8,28 +8,28 @@ local M = {}
 local hex_re = vim.regex('#\\x\\x\\x\\x\\x\\x')
 
 local HEX_DIGITS = {
-        ['0'] = 0,
-        ['1'] = 1,
-        ['2'] = 2,
-        ['3'] = 3,
-        ['4'] = 4,
-        ['5'] = 5,
-        ['6'] = 6,
-        ['7'] = 7,
-        ['8'] = 8,
-        ['9'] = 9,
-        ['a'] = 10,
-        ['b'] = 11,
-        ['c'] = 12,
-        ['d'] = 13,
-        ['e'] = 14,
-        ['f'] = 15,
-        ['A'] = 10,
-        ['B'] = 11,
-        ['C'] = 12,
-        ['D'] = 13,
-        ['E'] = 14,
-        ['F'] = 15,
+    ['0'] = 0,
+    ['1'] = 1,
+    ['2'] = 2,
+    ['3'] = 3,
+    ['4'] = 4,
+    ['5'] = 5,
+    ['6'] = 6,
+    ['7'] = 7,
+    ['8'] = 8,
+    ['9'] = 9,
+    ['a'] = 10,
+    ['b'] = 11,
+    ['c'] = 12,
+    ['d'] = 13,
+    ['e'] = 14,
+    ['f'] = 15,
+    ['A'] = 10,
+    ['B'] = 11,
+    ['C'] = 12,
+    ['D'] = 13,
+    ['E'] = 14,
+    ['F'] = 15,
 }
 
 local function hex_to_rgb(hex)
@@ -646,24 +646,24 @@ M.colorschemes['schemer-medium'] = {
     base0F = '#a06949',
 }
 
-M.load_from_shell = function ()
-    -- tinted-theming/base16 writes this file when a base_16_* theme is applied.
-    local set_theme_path = "$HOME/.config/tinted-theming/set_theme.lua"
-    local is_set_theme_file_readable = vim.fn.filereadable(vim.fn.expand(set_theme_path)) == 1 and true or false
-    if is_set_theme_file_readable then
-        vim.cmd([[let base16colorspace=256]])
-        vim.cmd("source " .. set_theme_path)
-        return
-    end
+M.load_from_shell = function()
+    local shell_theme_paths = {
+        -- tinted-theming/base16 writes this file
+        "~/.config/tinted-theming/set_theme.lua",
+        -- chriskempson/base16 writes this file
+        "~/.vimrc_background",
+    }
 
-    -- chriskempson/base16-shell writes this file when a base_16_* theme is applied.
-    local set_theme_vim_path = "$HOME/.vimrc_background"
-    local is_set_theme_vim_file_readable = vim.fn.filereadable(vim.fn.expand(set_theme_vim_path)) == 1 and true or false
-    if is_set_theme_vim_file_readable then
-        vim.cmd([[let base16colorspace=256]])
-        vim.cmd("source " .. set_theme_vim_path)
-        return
+    for _, path in pairs(shell_theme_paths)
+    do
+        local is_readable = vim.fn.filereadable(vim.fn.expand(path)) == 1 and true or false
+        if is_readable then
+            vim.cmd([[let base16colorspace=256]])
+            vim.cmd("source " .. path)
+            return path
+        end
     end
+    return false
 end
 
 return M
