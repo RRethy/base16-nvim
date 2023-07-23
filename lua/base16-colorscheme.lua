@@ -654,9 +654,8 @@ M.load_from_shell = function()
         "~/.vimrc_background",
     }
 
-    for _, path in pairs(shell_theme_paths)
-    do
-        local is_readable = vim.fn.filereadable(vim.fn.expand(path)) == 1 and true or false
+    for _, path in pairs(shell_theme_paths) do
+        local is_readable = vim.fn.filereadable(vim.fn.expand(path)) == 1
         if is_readable then
             vim.cmd([[let base16colorspace=256]])
             vim.cmd("source " .. path)
