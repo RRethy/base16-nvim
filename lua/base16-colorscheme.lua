@@ -646,4 +646,24 @@ M.colorschemes['schemer-medium'] = {
     base0F = '#a06949',
 }
 
+M.load_from_shell = function ()
+    -- tinted-theming/base16 writes this file when a base_16_* theme is applied.
+    local set_theme_path = "$HOME/.config/tinted-theming/set_theme.lua"
+    local is_set_theme_file_readable = vim.fn.filereadable(vim.fn.expand(set_theme_path)) == 1 and true or false
+    if is_set_theme_file_readable then
+        vim.cmd([[let base16colorspace=256]])
+        vim.cmd("source " .. set_theme_path)
+        return
+    end
+
+    -- chriskempson/base16-shell writes this file when a base_16_* theme is applied.
+    local set_theme_vim_path = "$HOME/.vimrc_background"
+    local is_set_theme_vim_file_readable = vim.fn.filereadable(vim.fn.expand(set_theme_vim_path)) == 1 and true or false
+    if is_set_theme_vim_file_readable then
+        vim.cmd([[let base16colorspace=256]])
+        vim.cmd("source " .. set_theme_vim_path)
+        return
+    end
+end
+
 return M
