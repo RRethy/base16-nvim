@@ -123,7 +123,13 @@ function M.setup(colors, config)
     end
     vim.cmd('set termguicolors')
 
-    M.colors                              = colors or M.colorschemes[vim.env.BASE16_THEME] or
+    -- BASE16_THEME in a tmux session cannot be trusted because of how envs in tmux panes work.
+    local base16_colorscheme = nil
+    if vim.env.TMUX == nil then
+        -- Only trust BASE16_THEME if not inside a tmux pane:
+        base16_colorscheme = M.colorschemes[vim.env.BASE16_THEME]
+    end
+    M.colors                              = colors or base16_colorscheme or
         M.colorschemes['schemer-dark']
     local hi                              = M.highlight
 
