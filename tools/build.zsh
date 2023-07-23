@@ -73,7 +73,8 @@ function lua_init() {
 function process() {
   local name scheme
   printf "Processing scheme files..."
-  rm -rf ${LUA_DIR}
+  # Delete all color files except catppuccin, its not present in base16-schemes
+  find ${LUA_DIR} ! -name 'catppuccin.lua' -type f -exec rm -f {} +
   mkdir -p ${LUA_DIR} ${VIM_DIR}
   for scheme in ${SCHEMES_DIR}/*/*.yaml
   do
