@@ -654,9 +654,9 @@ M.colorschemes['schemer-medium'] = {
 
 M.load_from_shell = function()
     local shell_theme_paths = {
-        -- tinted-theming/base16 writes this file
+        -- tinted-theming/base16-shell writes this file
         "~/.config/tinted-theming/set_theme.lua",
-        -- chriskempson/base16 writes this file
+        -- chriskempson/base16-shell writes this file
         "~/.vimrc_background",
     }
 
