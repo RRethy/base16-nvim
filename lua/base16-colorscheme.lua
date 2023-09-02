@@ -653,11 +653,10 @@ M.colorschemes['schemer-medium'] = {
 }
 
 M.load_from_shell = function()
-
     -- tinted-theming/base16-shell uses XDG_CONFIG_PATH if present.
     local config_dir = vim.env.XDG_CONFIG_HOME
     if config_dir == '' then
-    config_dir = '~/.config'
+        config_dir = '~/.config'
     end
 
     local shell_theme_paths = {
