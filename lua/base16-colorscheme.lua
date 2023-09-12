@@ -8,28 +8,28 @@ local M = {}
 local hex_re = vim.regex('#\\x\\x\\x\\x\\x\\x')
 
 local HEX_DIGITS = {
-        ['0'] = 0,
-        ['1'] = 1,
-        ['2'] = 2,
-        ['3'] = 3,
-        ['4'] = 4,
-        ['5'] = 5,
-        ['6'] = 6,
-        ['7'] = 7,
-        ['8'] = 8,
-        ['9'] = 9,
-        ['a'] = 10,
-        ['b'] = 11,
-        ['c'] = 12,
-        ['d'] = 13,
-        ['e'] = 14,
-        ['f'] = 15,
-        ['A'] = 10,
-        ['B'] = 11,
-        ['C'] = 12,
-        ['D'] = 13,
-        ['E'] = 14,
-        ['F'] = 15,
+    ['0'] = 0,
+    ['1'] = 1,
+    ['2'] = 2,
+    ['3'] = 3,
+    ['4'] = 4,
+    ['5'] = 5,
+    ['6'] = 6,
+    ['7'] = 7,
+    ['8'] = 8,
+    ['9'] = 9,
+    ['a'] = 10,
+    ['b'] = 11,
+    ['c'] = 12,
+    ['d'] = 13,
+    ['e'] = 14,
+    ['f'] = 15,
+    ['A'] = 10,
+    ['B'] = 11,
+    ['C'] = 12,
+    ['D'] = 13,
+    ['E'] = 14,
+    ['F'] = 15,
 }
 
 local function hex_to_rgb(hex)
@@ -123,7 +123,13 @@ function M.setup(colors, config)
     end
     vim.cmd('set termguicolors')
 
-    M.colors                              = colors or M.colorschemes[vim.env.BASE16_THEME] or
+    -- BASE16_THEME in a tmux session cannot be trusted because of how envs in tmux panes work.
+    local base16_colorscheme = nil
+    if vim.env.TMUX == nil then
+        -- Only trust BASE16_THEME if not inside a tmux pane:
+        base16_colorscheme = M.colorschemes[vim.env.BASE16_THEME]
+    end
+    M.colors                              = colors or base16_colorscheme or
         M.colorschemes['schemer-dark']
     local hi                              = M.highlight
 
@@ -645,5 +651,30 @@ M.colorschemes['schemer-medium'] = {
     base0E = '#c678dd',
     base0F = '#a06949',
 }
+
+M.load_from_shell = function()
+    -- tinted-theming/base16-shell uses XDG_CONFIG_PATH if present.
+    local config_dir = vim.env.XDG_CONFIG_HOME
+    if config_dir == '' then
+        config_dir = '~/.config'
+    end
+
+    local shell_theme_paths = {
+        -- tinted-theming/base16-shell writes this file
+        config_dir .. "/tinted-theming/set_theme.lua",
+        -- chriskempson/base16-shell writes this file
+        "~/.vimrc_background",
+    }
+
+    for _, path in pairs(shell_theme_paths) do
+        local is_readable = vim.fn.filereadable(vim.fn.expand(path)) == 1
+        if is_readable then
+            vim.cmd([[let base16colorspace=256]])
+            vim.cmd("source " .. path)
+            return path
+        end
+    end
+    return false
+end
 
 return M
