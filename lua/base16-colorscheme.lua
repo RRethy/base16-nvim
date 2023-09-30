@@ -65,17 +65,23 @@ end
 M.highlight = setmetatable({}, {
     __newindex = function(_, hlgroup, args)
         if ('string' == type(args)) then
-            vim.cmd(('hi! link %s %s'):format(hlgroup, args))
+            vim.api.nvim_set_hl(0, hlgroup, {link = args})
             return
         end
 
         local guifg, guibg, gui, guisp = args.guifg or nil, args.guibg or nil, args.gui or nil, args.guisp or nil
-        local cmd = { 'hi', hlgroup }
-        if guifg then table.insert(cmd, 'guifg=' .. guifg) end
-        if guibg then table.insert(cmd, 'guibg=' .. guibg) end
-        if gui then table.insert(cmd, 'gui=' .. gui) end
-        if guisp then table.insert(cmd, 'guisp=' .. guisp) end
-        vim.cmd(table.concat(cmd, ' '))
+        local val = {}
+        if guifg then val.fg = guifg end
+        if guibg then val.bg = guibg end
+        if guisp then val.sp = guisp end
+        if gui then
+            for x in string.gmatch(gui, '([^,]+)') do
+                if x ~= "none" then
+                    val[x] = true
+                end
+            end
+        end
+        vim.api.nvim_set_hl(0, hlgroup, val)
     end
 })
 
