@@ -65,7 +65,7 @@ end
 M.highlight = setmetatable({}, {
     __newindex = function(_, hlgroup, args)
         if ('string' == type(args)) then
-            vim.api.nvim_set_hl(0, hlgroup, {link = args})
+            vim.api.nvim_set_hl(0, hlgroup, { link = args })
             return
         end
 
@@ -498,6 +498,9 @@ function M.setup(colors, config)
     if M.config.indentblankline then
         hi.IndentBlanklineChar        = { guifg = M.colors.base02, gui = 'nocombine' }
         hi.IndentBlanklineContextChar = { guifg = M.colors.base04, gui = 'nocombine' }
+        hi.IblIndent                  = { guifg = M.colors.base02, gui = 'nocombine' }
+        hi.IblWhitespace              = 'Whitespace'
+        hi.IblScope                   = { guifg = M.colors.base04, gui = 'nocombine' }
     end
 
     if M.config.cmp then
@@ -661,7 +664,7 @@ M.colorschemes['schemer-medium'] = {
 M.load_from_shell = function()
     -- tinted-theming/base16-shell uses XDG_CONFIG_PATH if present.
     local config_dir = vim.env.XDG_CONFIG_HOME
-    if config_dir == nil or config_dir == ''  then
+    if config_dir == nil or config_dir == '' then
         config_dir = '~/.config'
     end
 
