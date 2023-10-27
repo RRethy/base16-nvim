@@ -144,7 +144,8 @@ function M.setup(colors, config)
     -- Vim editor colors
     hi.Normal                             = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil,
                                               ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
-    hi.Bold                               = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil }
+    hi.Bold                               = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil,
+                                              ctermfg = nil, ctermbg = nil }
     hi.Debug                              = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil,
                                               ctermfg = M.colors.cterm08, ctermbg = nil }
     hi.Directory                          = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil,
