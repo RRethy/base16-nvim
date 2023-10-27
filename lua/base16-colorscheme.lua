@@ -702,11 +702,11 @@ function M.setup(colors, config)
     end
 
     if M.config.indentblankline then
-        hi.IndentBlanklineChar        = { guifg = M.colors.base02, gui = 'nocombine', M.colors.cterm02 }
-        hi.IndentBlanklineContextChar = { guifg = M.colors.base04, gui = 'nocombine', M.colors.cterm04  }
-        hi.IblIndent                  = { guifg = M.colors.base02, gui = 'nocombine', M.colors.cterm02  }
+        hi.IndentBlanklineChar        = { guifg = M.colors.base02, gui = 'nocombine', ctermfg = M.colors.cterm02 }
+        hi.IndentBlanklineContextChar = { guifg = M.colors.base04, gui = 'nocombine', ctermfg = M.colors.cterm04  }
+        hi.IblIndent                  = { guifg = M.colors.base02, gui = 'nocombine', ctermfg = M.colors.cterm02  }
         hi.IblWhitespace              = 'Whitespace'
-        hi.IblScope                   = { guifg = M.colors.base04, gui = 'nocombine', M.colors.cterm04  }
+        hi.IblScope                   = { guifg = M.colors.base04, gui = 'nocombine', ctermfg = M.colors.cterm04  }
     end
 
     if M.config.cmp then
