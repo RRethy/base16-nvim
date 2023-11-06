@@ -202,7 +202,7 @@ function M.setup(colors, config)
     hi.Keyword                            = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
     hi.Label                              = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.Number                             = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
-    hi.Operator                           = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.Operator                           = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.PreProc                            = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.Repeat                             = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.Special                            = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
