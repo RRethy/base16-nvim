@@ -258,7 +258,7 @@ function M.setup(colors, config)
 
     hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
     hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
-    hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticInfo                     = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
     hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
     hi.DiagnosticUnderlineError           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
     hi.DiagnosticUnderlineWarning         = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
