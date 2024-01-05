@@ -264,8 +264,8 @@ function M.setup(colors, config)
                                               ctermfg = M.colors.cterm0A, ctermbg = nil }
     hi.Number                             = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil,
                                               ctermfg = M.colors.cterm09, ctermbg = nil }
-    hi.Operator                           = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil,
-                                              ctermfg = M.colors.cterm05, ctermbg = nil }
+    hi.Operator                           = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil,
+                                              ctermfg = M.colors.cterm0E, ctermbg = nil }
     hi.PreProc                            = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil,
                                               ctermfg = M.colors.cterm0A, ctermbg = nil }
     hi.Repeat                             = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil,
