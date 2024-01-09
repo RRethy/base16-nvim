@@ -310,7 +310,7 @@ function M.setup(colors, config)
     hi.TSProperty                         = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
     hi.TSPunctDelimiter                   = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
     hi.TSPunctBracket                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
-    hi.TSPunctSpecial                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSPunctSpecial                     = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
     hi.TSRepeat                           = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.TSString                           = { guifg = M.colors.base0B, guibg = nil, gui = 'none', guisp = nil }
     hi.TSStringRegex                      = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
