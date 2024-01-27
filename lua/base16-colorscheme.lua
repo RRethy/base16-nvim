@@ -96,6 +96,7 @@ function M.with_config(config)
         illuminate = true,
         lsp_semantic = true,
         mini_completion = true,
+        dapui = true,
     }, config or M.config or {})
 end
 
@@ -608,6 +609,52 @@ function M.setup(colors, config)
 
     if M.config.mini_completion then
         hi.MiniCompletionActiveParameter = 'CursorLine'
+    end
+
+    if M.config.dapui then
+        hi.DapUINormal = 'Normal'
+        hi.DapUINormal    = "Normal"
+        hi.DapUIVariable  = "Normal"
+        hi.DapUIScope     = { guifg = M.colors.base0D }
+        hi.DapUIType      = { guifg = M.colors.base0E }
+        hi.DapUIValue     = "Normal"
+        hi.DapUIModifiedValue = { gui = "bold", guifg = M.colors.base0D }
+        hi.DapUIDecoration = { guifg = M.colors.base0D }
+        hi.DapUIThread    = { guifg = M.colors.base0B }
+        hi.DapUIStoppedThread = { guifg = M.colors.base0D }
+        hi.DapUIFrameName = "Normal"
+        hi.DapUISource    = { guifg = M.colors.base0E }
+        hi.DapUILineNumber = { guifg = M.colors.base0D }
+        hi.DapUIFloatNormal = "NormalFloat"
+        hi.DapUIFloatBorder = { guifg = M.colors.base0D }
+        hi.DapUIWatchesEmpty = { guifg = M.colors.base08 }
+        hi.DapUIWatchesValue = { guifg = M.colors.base0B }
+        hi.DapUIWatchesError = { guifg = M.colors.base08 }
+        hi.DapUIBreakpointsPath = { guifg = M.colors.base0D }
+        hi.DapUIBreakpointsInfo = { guifg = M.colors.base0B }
+        hi.DapUIBreakpointsCurrentLine = { gui = "bold", guifg = M.colors.base0B }
+        hi.DapUIBreakpointsLine = "DapUILineNumber"
+        hi.DapUIBreakpointsDisabledLine = { guifg = M.colors.base02 }
+        hi.DapUICurrentFrameName = "DapUIBreakpointsCurrentLine"
+        hi.DapUIStepOver  = { guifg = M.colors.base0D }
+        hi.DapUIStepInto  = { guifg = M.colors.base0D }
+        hi.DapUIStepBack  = { guifg = M.colors.base0D }
+        hi.DapUIStepOut   = { guifg = M.colors.base0D }
+        hi.DapUIStop      = { guifg = M.colors.base08 }
+        hi.DapUIPlayPause = { guifg = M.colors.base0B }
+        hi.DapUIRestart   = { guifg = M.colors.base0B }
+        hi.DapUIUnavailable = { guifg = M.colors.base02 }
+        hi.DapUIWinSelect = { gui = "bold", guifg = M.colors.base0D }
+        hi.DapUIEndofBuffer = "EndOfBuffer"
+        hi.DapUINormalNC  = "Normal"
+        hi.DapUIPlayPauseNC = { guifg = M.colors.base0B }
+        hi.DapUIRestartNC = { guifg = M.colors.base0B }
+        hi.DapUIStopNC    = { guifg = M.colors.base08 }
+        hi.DapUIUnavailableNC = { guifg = M.colors.base02 }
+        hi.DapUIStepOverNC = { guifg = M.colors.base0D }
+        hi.DapUIStepIntoNC = { guifg = M.colors.base0D }
+        hi.DapUIStepBackNC = { guifg = M.colors.base0D }
+        hi.DapUIStepOutNC = { guifg = M.colors.base0D }
     end
 
 
