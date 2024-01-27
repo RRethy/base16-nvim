@@ -51,6 +51,47 @@ local function darken(hex, pct)
     return string.format("#%s", rgb_to_hex(r, g, b))
 end
 
+
+local function get_shell_theme_paths()
+    -- tinted-theming/base16-shell uses XDG_CONFIG_PATH if present.
+    local config_dir = vim.env.XDG_CONFIG_HOME
+    if config_dir == nil or config_dir == '' then
+        config_dir = '~/.config'
+    end
+
+    return {
+        -- tinted-theming/base16-shell writes this file
+        config_dir .. "/tinted-theming/set_theme.lua",
+        -- chriskempson/base16-shell writes this file
+        "~/.vimrc_background",
+    }
+end
+
+local watching_base16_shell_paths = false
+
+local function start_base16_shell_watcher()
+    local loaded, fwatch = pcall(require, "fwatch")
+    if not loaded then
+        vim.notify("fwatch plugin is required when config.start_base16_shell_watcher = true. It is missing.", vim.log.levels.ERROR)
+        return
+    end
+    if watching_base16_shell_paths == true then
+        return
+    end
+    local paths =get_shell_theme_paths()
+    for _, path in pairs(paths) do
+        local fullpath = vim.fn.expand(path)
+        fwatch.watch(fullpath, {
+            on_event = function ()
+                vim.schedule(function ()
+                    M.load_from_shell()
+                end)
+            end
+        })
+    end
+    watching_base16_shell_paths = true
+end
+
 -- This is a bit of syntactic sugar for creating highlight groups.
 --
 -- local colorscheme = require('colorscheme')
@@ -96,6 +137,7 @@ function M.with_config(config)
         illuminate = true,
         lsp_semantic = true,
         mini_completion = true,
+        reload_with_base16_shell = false,
     }, config or M.config or {})
 end
 
@@ -644,6 +686,10 @@ function M.setup(colors, config)
     vim.g.base16_gui0D      = M.colors.base0D
     vim.g.base16_gui0E      = M.colors.base0E
     vim.g.base16_gui0F      = M.colors.base0F
+
+    if M.config.reload_with_base16_shell then
+        start_base16_shell_watcher()
+    end
 end
 
 function M.available_colorschemes()
@@ -698,20 +744,8 @@ M.colorschemes['schemer-medium'] = {
 }
 
 M.load_from_shell = function()
-    -- tinted-theming/base16-shell uses XDG_CONFIG_PATH if present.
-    local config_dir = vim.env.XDG_CONFIG_HOME
-    if config_dir == nil or config_dir == '' then
-        config_dir = '~/.config'
-    end
-
-    local shell_theme_paths = {
-        -- tinted-theming/base16-shell writes this file
-        config_dir .. "/tinted-theming/set_theme.lua",
-        -- chriskempson/base16-shell writes this file
-        "~/.vimrc_background",
-    }
-
-    for _, path in pairs(shell_theme_paths) do
+    local paths = get_shell_theme_paths()
+    for _, path in pairs(paths) do
         local is_readable = vim.fn.filereadable(vim.fn.expand(path)) == 1
         if is_readable then
             vim.cmd([[let base16colorspace=256]])
