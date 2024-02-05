@@ -1,4 +1,5 @@
 -- Some useful links for making your own colorscheme:
+--
 -- https://github.com/chriskempson/base16
 -- https://colourco.de/
 -- https://color.adobe.com/create/color-wheel
@@ -853,46 +854,46 @@ function M.setup(colors, config)
         hi.DapUINormal = 'Normal'
         hi.DapUINormal    = "Normal"
         hi.DapUIVariable  = "Normal"
-        hi.DapUIScope     = { guifg = M.colors.base0D }
-        hi.DapUIType      = { guifg = M.colors.base0E }
+        hi.DapUIScope     = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIType      = { guifg = M.colors.base0E, ctermfg = M.colors.cterm0E }
         hi.DapUIValue     = "Normal"
-        hi.DapUIModifiedValue = { gui = "bold", guifg = M.colors.base0D }
-        hi.DapUIDecoration = { guifg = M.colors.base0D }
-        hi.DapUIThread    = { guifg = M.colors.base0B }
-        hi.DapUIStoppedThread = { guifg = M.colors.base0D }
+        hi.DapUIModifiedValue = { gui = "bold", guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIDecoration = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIThread    = { guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
+        hi.DapUIStoppedThread = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
         hi.DapUIFrameName = "Normal"
-        hi.DapUISource    = { guifg = M.colors.base0E }
-        hi.DapUILineNumber = { guifg = M.colors.base0D }
+        hi.DapUISource    = { guifg = M.colors.base0E, ctermfg = M.colors.cterm0E }
+        hi.DapUILineNumber = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
         hi.DapUIFloatNormal = "NormalFloat"
-        hi.DapUIFloatBorder = { guifg = M.colors.base0D }
-        hi.DapUIWatchesEmpty = { guifg = M.colors.base08 }
-        hi.DapUIWatchesValue = { guifg = M.colors.base0B }
-        hi.DapUIWatchesError = { guifg = M.colors.base08 }
-        hi.DapUIBreakpointsPath = { guifg = M.colors.base0D }
-        hi.DapUIBreakpointsInfo = { guifg = M.colors.base0B }
-        hi.DapUIBreakpointsCurrentLine = { gui = "bold", guifg = M.colors.base0B }
+        hi.DapUIFloatBorder = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIWatchesEmpty = { guifg = M.colors.base08, ctermfg = M.colors.cterm08 }
+        hi.DapUIWatchesValue = { guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
+        hi.DapUIWatchesError = { guifg = M.colors.base08, ctermfg = M.colors.cterm08 }
+        hi.DapUIBreakpointsPath = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIBreakpointsInfo = { guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
+        hi.DapUIBreakpointsCurrentLine = { gui = "bold", guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
         hi.DapUIBreakpointsLine = "DapUILineNumber"
-        hi.DapUIBreakpointsDisabledLine = { guifg = M.colors.base02 }
+        hi.DapUIBreakpointsDisabledLine = { guifg = M.colors.base02, ctermfg = M.colors.cterm02 }
         hi.DapUICurrentFrameName = "DapUIBreakpointsCurrentLine"
-        hi.DapUIStepOver  = { guifg = M.colors.base0D }
-        hi.DapUIStepInto  = { guifg = M.colors.base0D }
-        hi.DapUIStepBack  = { guifg = M.colors.base0D }
-        hi.DapUIStepOut   = { guifg = M.colors.base0D }
-        hi.DapUIStop      = { guifg = M.colors.base08 }
-        hi.DapUIPlayPause = { guifg = M.colors.base0B }
-        hi.DapUIRestart   = { guifg = M.colors.base0B }
-        hi.DapUIUnavailable = { guifg = M.colors.base02 }
-        hi.DapUIWinSelect = { gui = "bold", guifg = M.colors.base0D }
+        hi.DapUIStepOver  = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIStepInto  = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIStepBack  = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIStepOut   = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIStop      = { guifg = M.colors.base08, ctermfg = M.colors.cterm08 }
+        hi.DapUIPlayPause = { guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
+        hi.DapUIRestart   = { guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
+        hi.DapUIUnavailable = { guifg = M.colors.base02, ctermfg = M.colors.cterm02 }
+        hi.DapUIWinSelect = { gui = "bold", guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
         hi.DapUIEndofBuffer = "EndOfBuffer"
         hi.DapUINormalNC  = "Normal"
-        hi.DapUIPlayPauseNC = { guifg = M.colors.base0B }
-        hi.DapUIRestartNC = { guifg = M.colors.base0B }
-        hi.DapUIStopNC    = { guifg = M.colors.base08 }
-        hi.DapUIUnavailableNC = { guifg = M.colors.base02 }
-        hi.DapUIStepOverNC = { guifg = M.colors.base0D }
-        hi.DapUIStepIntoNC = { guifg = M.colors.base0D }
-        hi.DapUIStepBackNC = { guifg = M.colors.base0D }
-        hi.DapUIStepOutNC = { guifg = M.colors.base0D }
+        hi.DapUIPlayPauseNC = { guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
+        hi.DapUIRestartNC = { guifg = M.colors.base0B, ctermfg = M.colors.cterm0B }
+        hi.DapUIStopNC    = { guifg = M.colors.base08, ctermfg = M.colors.cterm08 }
+        hi.DapUIUnavailableNC = { guifg = M.colors.base02, ctermfg = M.colors.cterm02 }
+        hi.DapUIStepOverNC = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIStepIntoNC = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIStepBackNC = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
+        hi.DapUIStepOutNC = { guifg = M.colors.base0D, ctermfg = M.colors.cterm0D }
     end
 
 
