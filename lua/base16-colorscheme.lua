@@ -99,6 +99,7 @@ function M.with_config(config)
         illuminate = true,
         lsp_semantic = true,
         mini_completion = true,
+        dapui = true,
     }, config or M.config or {})
 end
 
@@ -367,8 +368,8 @@ function M.setup(colors, config)
                                               ctermfg = M.colors.cterm08, ctermbg = nil }
     hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil,
                                               ctermfg = M.colors.cterm0E, ctermbg = nil }
-    hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil,
-                                              ctermfg = M.colors.cterm05, ctermbg = nil }
+    hi.DiagnosticInfo                     = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil,
+                                              ctermfg = M.colors.cterm0D, ctermbg = nil }
     hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil,
                                               ctermfg = M.colors.cterm0C, ctermbg = nil }
     hi.DiagnosticUnderlineError           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base08,
@@ -461,8 +462,8 @@ function M.setup(colors, config)
                                               ctermfg = M.colors.cterm0F, ctermbg = nil }
     hi.TSPunctBracket                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil,
                                               ctermfg = M.colors.cterm05, ctermbg = nil }
-    hi.TSPunctSpecial                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil,
-                                              ctermfg = M.colors.cterm05, ctermbg = nil }
+    hi.TSPunctSpecial                     = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil,
+                                              ctermfg = M.colors.cterm0F, ctermbg = nil }
     hi.TSRepeat                           = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil,
                                               ctermfg = M.colors.cterm0E, ctermbg = nil }
     hi.TSString                           = { guifg = M.colors.base0B, guibg = nil, gui = 'none', guisp = nil,
@@ -513,78 +514,114 @@ function M.setup(colors, config)
                                               ctermfg = M.colors.cterm03, ctermbg = nil }
 
     if vim.fn.has('nvim-0.8.0') then
-        hi['@comment'] = 'TSComment'
-        hi['@error'] = 'TSError'
-        hi['@none'] = 'TSNone'
-        hi['@preproc'] = 'PreProc'
-        hi['@define'] = 'Define'
-        hi['@operator'] = 'TSOperator'
-        hi['@punctuation.delimiter'] = 'TSPunctDelimiter'
-        hi['@punctuation.bracket'] = 'TSPunctBracket'
-        hi['@punctuation.special'] = 'TSPunctSpecial'
-        hi['@string'] = 'TSString'
-        hi['@string.regex'] = 'TSStringRegex'
-        hi['@string.escape'] = 'TSStringEscape'
-        hi['@string.special'] = 'SpecialChar'
-        hi['@character'] = 'TSCharacter'
-        hi['@character.special'] = 'SpecialChar'
-        hi['@boolean'] = 'TSBoolean'
-        hi['@number'] = 'TSNumber'
-        hi['@float'] = 'TSFloat'
-        hi['@function'] = 'TSFunction'
-        hi['@function.call'] = 'TSFunction'
-        hi['@function.builtin'] = 'TSFuncBuiltin'
-        hi['@function.macro'] = 'TSFuncMacro'
-        hi['@method'] = 'TSMethod'
-        hi['@method.call'] = 'TSMethod'
-        hi['@constructor'] = 'TSConstructor'
-        hi['@parameter'] = 'TSParameter'
-        hi['@keyword'] = 'TSKeyword'
-        hi['@keyword.function'] = 'TSKeywordFunction'
-        hi['@keyword.operator'] = 'TSKeywordOperator'
-        hi['@keyword.return'] = 'TSKeyword'
-        hi['@conditional'] = 'TSConditional'
-        hi['@repeat'] = 'TSRepeat'
-        hi['@debug'] = 'Debug'
-        hi['@label'] = 'TSLabel'
-        hi['@include'] = 'TSInclude'
-        hi['@exception'] = 'TSException'
-        hi['@type'] = 'TSType'
-        hi['@type.builtin'] = 'TSTypeBuiltin'
-        hi['@type.qualifier'] = 'TSKeyword'
-        hi['@type.definition'] = 'TSType'
-        hi['@storageclass'] = 'StorageClass'
-        hi['@attribute'] = 'TSAttribute'
-        hi['@field'] = 'TSField'
-        hi['@property'] = 'TSProperty'
-        hi['@variable'] = 'TSVariable'
-        hi['@variable.builtin'] = 'TSVariableBuiltin'
-        hi['@constant'] = 'TSConstant'
-        hi['@constant.builtin'] = 'TSConstant'
-        hi['@constant.macro'] = 'TSConstant'
-        hi['@namespace'] = 'TSNamespace'
-        hi['@symbol'] = 'TSSymbol'
-        hi['@text'] = 'TSText'
-        hi['@text.diff.add'] = 'DiffAdd'
-        hi['@text.diff.delete'] = 'DiffDelete'
-        hi['@text.strong'] = 'TSStrong'
-        hi['@text.emphasis'] = 'TSEmphasis'
-        hi['@text.underline'] = 'TSUnderline'
-        hi['@text.strike'] = 'TSStrike'
-        hi['@text.title'] = 'TSTitle'
-        hi['@text.literal'] = 'TSLiteral'
-        hi['@text.uri'] = 'TSUri'
-        hi['@text.math'] = 'Number'
-        hi['@text.environment'] = 'Macro'
-        hi['@text.environment.name'] = 'Type'
-        hi['@text.reference'] = 'TSParameterReference'
-        hi['@text.todo'] = 'Todo'
-        hi['@text.note'] = 'Tag'
-        hi['@text.warning'] = 'DiagnosticWarn'
-        hi['@text.danger'] = 'DiagnosticError'
-        hi['@tag'] = 'TSTag'
-        hi['@tag.attribute'] = 'TSAttribute'
-        hi['@tag.delimiter'] = 'TSTagDelimiter'
+        hi['@comment']                  = 'TSComment'
+        hi['@error']                    = 'TSError'
+        hi['@none']                     = 'TSNone'
+        hi['@preproc']                  = 'PreProc'
+        hi['@define']                   = 'Define'
+        hi['@operator']                 = 'TSOperator'
+        hi['@punctuation.delimiter']    = 'TSPunctDelimiter'
+        hi['@punctuation.bracket']      = 'TSPunctBracket'
+        hi['@punctuation.special']      = 'TSPunctSpecial'
+        hi['@string']                   = 'TSString'
+        hi['@string.regex']             = 'TSStringRegex'
+        hi['@string.escape']            = 'TSStringEscape'
+        hi['@string.special']           = 'SpecialChar'
+        hi['@character']                = 'TSCharacter'
+        hi['@character.special']        = 'SpecialChar'
+        hi['@boolean']                  = 'TSBoolean'
+        hi['@number']                   = 'TSNumber'
+        hi['@float']                    = 'TSFloat'
+        hi['@function']                 = 'TSFunction'
+        hi['@function.call']            = 'TSFunction'
+        hi['@function.builtin']         = 'TSFuncBuiltin'
+        hi['@function.macro']           = 'TSFuncMacro'
+        hi['@method']                   = 'TSMethod'
+        hi['@method.call']              = 'TSMethod'
+        hi['@constructor']              = 'TSConstructor'
+        hi['@parameter']                = 'TSParameter'
+        hi['@keyword']                  = 'TSKeyword'
+        hi['@keyword.function']         = 'TSKeywordFunction'
+        hi['@keyword.operator']         = 'TSKeywordOperator'
+        hi['@keyword.return']           = 'TSKeyword'
+        hi['@conditional']              = 'TSConditional'
+        hi['@repeat']                   = 'TSRepeat'
+        hi['@debug']                    = 'Debug'
+        hi['@label']                    = 'TSLabel'
+        hi['@include']                  = 'TSInclude'
+        hi['@exception']                = 'TSException'
+        hi['@type']                     = 'TSType'
+        hi['@type.builtin']             = 'TSTypeBuiltin'
+        hi['@type.qualifier']           = 'TSKeyword'
+        hi['@type.definition']          = 'TSType'
+        hi['@storageclass']             = 'StorageClass'
+        hi['@attribute']                = 'TSAttribute'
+        hi['@field']                    = 'TSField'
+        hi['@property']                 = 'TSProperty'
+        hi['@variable']                 = 'TSVariable'
+        hi['@variable.builtin']         = 'TSVariableBuiltin'
+        hi['@constant']                 = 'TSConstant'
+        hi['@constant.builtin']         = 'TSConstant'
+        hi['@constant.macro']           = 'TSConstant'
+        hi['@namespace']                = 'TSNamespace'
+        hi['@symbol']                   = 'TSSymbol'
+        hi['@text']                     = 'TSText'
+        hi['@text.diff.add']            = 'DiffAdd'
+        hi['@text.diff.delete']         = 'DiffDelete'
+        hi['@text.strong']              = 'TSStrong'
+        hi['@text.emphasis']            = 'TSEmphasis'
+        hi['@text.underline']           = 'TSUnderline'
+        hi['@text.strike']              = 'TSStrike'
+        hi['@text.title']               = 'TSTitle'
+        hi['@text.literal']             = 'TSLiteral'
+        hi['@text.uri']                 = 'TSUri'
+        hi['@text.math']                = 'Number'
+        hi['@text.environment']         = 'Macro'
+        hi['@text.environment.name']    = 'Type'
+        hi['@text.reference']           = 'TSParameterReference'
+        hi['@text.todo']                = 'Todo'
+        hi['@text.note']                = 'Tag'
+        hi['@text.warning']             = 'DiagnosticWarn'
+        hi['@text.danger']              = 'DiagnosticError'
+        hi['@tag']                      = 'TSTag'
+        hi['@tag.attribute']            = 'TSAttribute'
+        hi['@tag.delimiter']            = 'TSTagDelimiter'
+
+        hi['@function.method']          = '@method'
+        hi['@function.method.call']     = '@method.call'
+        hi['@comment.error']            = '@text.danger'
+        hi['@comment.warning']          = '@text.warning'
+        hi['@comment.hint']             = 'DiagnosticHint'
+        hi['@comment.info']             = 'DiagnosticInfo'
+        hi['@comment.todo']             = '@text.todo'
+        hi['@diff.plus']                = '@text.diff.add'
+        hi['@diff.minus']               = '@text.diff.delete'
+        hi['@diff.delta']               = 'DiffChange'
+        hi['@string.special.url']       = '@text.uri'
+        hi['@keyword.directive']        = '@preproc'
+        hi['@keyword.directive.define'] = '@define'
+        hi['@keyword.storage']          = '@storageclass'
+        hi['@keyword.conditional']      = '@conditional'
+        hi['@keyword.debug']            = '@debug'
+        hi['@keyword.exception']        = '@exception'
+        hi['@keyword.import']           = '@include'
+        hi['@keyword.repeat']           = '@repeat'
+        hi['@variable.parameter']       = '@parameter'
+        hi['@variable.member']          = '@field'
+        hi['@module']                   = '@namespace'
+        hi['@number.float']             = '@float'
+        hi['@string.special.symbol']    = '@symbol'
+        hi['@string.regexp']            = '@string.regex'
+        hi['@markup.strong']            = '@text.strong'
+        hi['@markup.italic']            = '@text.italic'
+        hi['@markup.link']              = '@text.link'
+        hi['@markup.strikethrough']     = '@text.strikethrough'
+        hi['@markup.heading']           = '@text.title'
+        hi['@markup.raw']               = '@text.literal'
+        hi['@markup.link']              = '@text.reference'
+        hi['@markup.link.url']          = '@text.uri'
+        hi['@markup.link.label']        = '@string.special'
+        hi['@markup.list']              = '@punctuation.special'
     end
 
     if M.config.ts_rainbow then
@@ -810,6 +847,52 @@ function M.setup(colors, config)
 
     if M.config.mini_completion then
         hi.MiniCompletionActiveParameter = 'CursorLine'
+    end
+
+    if M.config.dapui then
+        hi.DapUINormal = 'Normal'
+        hi.DapUINormal    = "Normal"
+        hi.DapUIVariable  = "Normal"
+        hi.DapUIScope     = { guifg = M.colors.base0D }
+        hi.DapUIType      = { guifg = M.colors.base0E }
+        hi.DapUIValue     = "Normal"
+        hi.DapUIModifiedValue = { gui = "bold", guifg = M.colors.base0D }
+        hi.DapUIDecoration = { guifg = M.colors.base0D }
+        hi.DapUIThread    = { guifg = M.colors.base0B }
+        hi.DapUIStoppedThread = { guifg = M.colors.base0D }
+        hi.DapUIFrameName = "Normal"
+        hi.DapUISource    = { guifg = M.colors.base0E }
+        hi.DapUILineNumber = { guifg = M.colors.base0D }
+        hi.DapUIFloatNormal = "NormalFloat"
+        hi.DapUIFloatBorder = { guifg = M.colors.base0D }
+        hi.DapUIWatchesEmpty = { guifg = M.colors.base08 }
+        hi.DapUIWatchesValue = { guifg = M.colors.base0B }
+        hi.DapUIWatchesError = { guifg = M.colors.base08 }
+        hi.DapUIBreakpointsPath = { guifg = M.colors.base0D }
+        hi.DapUIBreakpointsInfo = { guifg = M.colors.base0B }
+        hi.DapUIBreakpointsCurrentLine = { gui = "bold", guifg = M.colors.base0B }
+        hi.DapUIBreakpointsLine = "DapUILineNumber"
+        hi.DapUIBreakpointsDisabledLine = { guifg = M.colors.base02 }
+        hi.DapUICurrentFrameName = "DapUIBreakpointsCurrentLine"
+        hi.DapUIStepOver  = { guifg = M.colors.base0D }
+        hi.DapUIStepInto  = { guifg = M.colors.base0D }
+        hi.DapUIStepBack  = { guifg = M.colors.base0D }
+        hi.DapUIStepOut   = { guifg = M.colors.base0D }
+        hi.DapUIStop      = { guifg = M.colors.base08 }
+        hi.DapUIPlayPause = { guifg = M.colors.base0B }
+        hi.DapUIRestart   = { guifg = M.colors.base0B }
+        hi.DapUIUnavailable = { guifg = M.colors.base02 }
+        hi.DapUIWinSelect = { gui = "bold", guifg = M.colors.base0D }
+        hi.DapUIEndofBuffer = "EndOfBuffer"
+        hi.DapUINormalNC  = "Normal"
+        hi.DapUIPlayPauseNC = { guifg = M.colors.base0B }
+        hi.DapUIRestartNC = { guifg = M.colors.base0B }
+        hi.DapUIStopNC    = { guifg = M.colors.base08 }
+        hi.DapUIUnavailableNC = { guifg = M.colors.base02 }
+        hi.DapUIStepOverNC = { guifg = M.colors.base0D }
+        hi.DapUIStepIntoNC = { guifg = M.colors.base0D }
+        hi.DapUIStepBackNC = { guifg = M.colors.base0D }
+        hi.DapUIStepOutNC = { guifg = M.colors.base0D }
     end
 
 
