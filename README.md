@@ -18,6 +18,8 @@ require('base16-colorscheme').setup({
 })
 ```
 
+*Note: If you don't see colours, try adding `vim.opt.termguicolors = true` to your init.lua*
+
 # Advanced Usage
 
 ```lua
