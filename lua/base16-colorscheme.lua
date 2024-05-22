@@ -441,7 +441,7 @@ function M.setup(colors, config)
         hi['@string.special.symbol']    = '@symbol'
         hi['@string.regexp']            = '@string.regex'
         hi['@markup.strong']            = '@text.strong'
-        hi['@markup.italic']            = '@text.italic'
+        hi['@markup.italic']            = 'Italic'
         hi['@markup.link']              = '@text.link'
         hi['@markup.strikethrough']     = '@text.strikethrough'
         hi['@markup.heading']           = '@text.title'
