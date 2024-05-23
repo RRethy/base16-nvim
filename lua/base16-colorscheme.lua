@@ -154,7 +154,7 @@ function M.setup(colors, config)
     hi.FoldColumn                         = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0C, ctermbg = M.colors.cterm00 }
     hi.Folded                             = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil, guisp = nil, ctermfg = M.colors.cterm03, ctermbg = M.colors.cterm01 }
     hi.IncSearch                          = { guifg = M.colors.base01, guibg = M.colors.base09, gui = 'none', guisp = nil, ctermfg = M.colors.cterm01, ctermbg = M.colors.cterm09 }
-    hi.Italic                             = { guifg = nil, guibg = nil, gui = 'none', guisp = nil, ctermfg = nil, ctermbg = nil }
+    hi.Italic                             = { guifg = nil, guibg = nil, gui = 'italic', guisp = nil, ctermfg = nil, ctermbg = nil }
     hi.Macro                              = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = nil }
     hi.MatchParen                         = { guifg = nil, guibg = M.colors.base03, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm03 }
     hi.ModeMsg                            = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = nil }
@@ -441,7 +441,7 @@ function M.setup(colors, config)
         hi['@string.special.symbol']    = '@symbol'
         hi['@string.regexp']            = '@string.regex'
         hi['@markup.strong']            = '@text.strong'
-        hi['@markup.italic']            = '@text.italic'
+        hi['@markup.italic']            = 'Italic'
         hi['@markup.link']              = '@text.link'
         hi['@markup.strikethrough']     = '@text.strikethrough'
         hi['@markup.heading']           = '@text.title'
