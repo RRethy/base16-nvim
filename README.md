@@ -9,7 +9,10 @@ https://user-images.githubusercontent.com/21000943/199322658-ecbf8113-fa4b-409b-
 -- All builtin colorschemes can be accessed with |:colorscheme|.
 vim.cmd('colorscheme base16-gruvbox-dark-soft')
 
--- Alternatively, you can provide a table specifying your colors to the setup function.
+-- You can use the lua `setup` function instead, if you prefer.
+require('base16-colorscheme').setup('base16-material-palenight')
+
+-- Alternatively, you can provide a table specifying your 16 colors to the `setup` function.
 require('base16-colorscheme').setup({
     base00 = '#16161D', base01 = '#2c313c', base02 = '#3e4451', base03 = '#6c7891',
     base04 = '#565c64', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
@@ -20,26 +23,49 @@ require('base16-colorscheme').setup({
 
 *Note: If you don't see colours, try adding `vim.opt.termguicolors = true` to your init.lua*
 
-# Advanced Usage
+## Advanced Usage
+
+To disable highlights for supported plugin(s), call the `with_config` function **before** setting the colorscheme:
 
 ```lua
--- To disable highlights for supported plugin(s), call the `with_config` function **before** setting the colorscheme.
--- These are the defaults.
+-- Call `with_config` **before** setting a colorscheme if you want to tweak anything
 require('base16-colorscheme').with_config({
+    -- These are the defaults.
     telescope = true,
+    telescope_borders = false,
     indentblankline = true,
     notify = true,
     ts_rainbow = true,
     cmp = true,
     illuminate = true,
+    lsp_semantic = true,
+    mini_completion = true,
     dapui = true,
 })
 
--- You can get the base16 colors **after** setting the colorscheme by name (base01, base02, etc.)
+-- `setup` should be called **after** `with_config`
+require('base16-colorscheme').setup('schemer-dark')
+
+-- or use `colorscheme` instead
+vim.cmd('colorscheme base16-catppuccin-mocha')
+```
+
+**After** you have called `setup` or set `colorscheme`, you can access the theme's base16 colors (base01, base02, etc.):
+```lua
 local color = require('base16-colorscheme').colors.base01
 ```
 
-# Builtin Colorschemes
+Alternatively, you can pass your config directly to `setup` as an additional argument:
+
+```lua
+-- e.g. a builtin colorscheme, with telescope & cmp integration disabled.
+require('base16-colorscheme').setup('base16-tokyo-night-dark', {
+    telescope = false,
+    cmp = false,
+})
+```
+
+## Builtin Colorschemes
 
 ```txt
 base16-3024
