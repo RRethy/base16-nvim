@@ -6,6 +6,7 @@ DIRNAME=${0:a:h}
 PROJECT_DIR=${DIRNAME:h}
 SCHEMES_SOURCE=https://github.com/base16-project/base16-schemes
 SCHEMES_DIR=${DIRNAME}/schemes
+EXTRA_SCHEMES_DIR=${DIRNAME}/extra-schemes
 LUA_DIR=${PROJECT_DIR}/lua/colors
 VIM_DIR=${PROJECT_DIR}/colors
 DOC_DIR=${PROJECT_DIR}/doc
@@ -98,10 +99,11 @@ function docs() {
 function process() {
   local name scheme
   printf "Processing scheme files..."
-  # Delete all color files except catppuccin, its not present in base16-schemes
-  find ${LUA_DIR} ! -name 'catppuccin.lua' -type f -exec rm -f {} +
+  # Delete all color files then copy in our extras
+  rm -rf ${LUA_DIR} ${VIM_DIR}
   rm -f ${THEMES_FILE}
   mkdir -p ${LUA_DIR} ${VIM_DIR}
+
   for scheme in ${SCHEMES_DIR}/*/*.yaml
   do
     name=${scheme:t:r}
@@ -124,8 +126,16 @@ function write_docs() {
   echo "Done"
 }
 
+extra_schemes() {
+  echo -n "Copying extra schemes..."
+  rm -rf ${SCHEMES_DIR}/extra
+  cp -rT ${EXTRA_SCHEMES_DIR} ${SCHEMES_DIR}/extra
+  echo "Done"
+}
+
 function main() {
   get_schemes
+  extra_schemes
   process
   write_docs
 }
