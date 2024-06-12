@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/21000943/199322658-ecbf8113-fa4b-409b-
 vim.cmd('colorscheme base16-gruvbox-dark-soft')
 
 -- You can use the lua `setup` function instead, if you prefer.
-require('base16-colorscheme').setup('base16-material-palenight')
+require('base16-colorscheme').setup('gruvbox-dark-soft')
 
 -- Alternatively, you can provide a table specifying your 16 colors to the `setup` function.
 require('base16-colorscheme').setup({
@@ -59,7 +59,7 @@ Alternatively, you can pass your config directly to `setup` as an additional arg
 
 ```lua
 -- e.g. a builtin colorscheme, with telescope & cmp integration disabled.
-require('base16-colorscheme').setup('base16-tokyo-night-dark', {
+require('base16-colorscheme').setup('tokyo-night-dark', {
     telescope = false,
     cmp = false,
 })
