@@ -2,7 +2,7 @@
 
 setopt extendedglob
 
-DIRNAME=${0:A:h}
+DIRNAME=${0:a:h}
 SCHEMES_SOURCE=https://github.com/base16-project/base16-schemes
 SCHEMES_DIR=${DIRNAME}/schemes
 LUA_DIR=${DIRNAME:h}/lua/colors

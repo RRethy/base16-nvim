@@ -5,9 +5,18 @@ light as possible.
 
 ## Requirements
 
+* sed
 * curl
 * git
 * zsh
+
+### Nix
+
+You can run the script directly, but if you prefer you can run it using `nix`. Doing so will ensure all dependencies are available.
+
+```shell
+nix-build && ./result
+```
 
 ## How Does it Work
 
