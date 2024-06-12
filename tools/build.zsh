@@ -3,10 +3,13 @@
 setopt extendedglob
 
 DIRNAME=${0:a:h}
+PROJECT_DIR=${DIRNAME:h}
 SCHEMES_SOURCE=https://github.com/base16-project/base16-schemes
 SCHEMES_DIR=${DIRNAME}/schemes
-LUA_DIR=${DIRNAME:h}/lua/colors
-VIM_DIR=${DIRNAME:h}/colors
+LUA_DIR=${PROJECT_DIR}/lua/colors
+VIM_DIR=${PROJECT_DIR}/colors
+DOC_DIR=${PROJECT_DIR}/doc
+THEMES_FILE=${PROJECT_DIR}/themes.txt
 
 function get_schemes() {
   if [ ! -d ${SCHEMES_DIR}/base16-schemes/.git ]
@@ -70,15 +73,39 @@ function lua_init() {
   printf "\nreturn M\n"
 }
 
+function readme() {
+  # Print README, until after the "generated" tag
+  sed '/^<!-- generated docs: -->$/q' ${PROJECT_DIR}/README.md
+  echo
+  echo '```txt'
+  # Print the themes with the base16 prefix
+  # TODO consider dropping the prefix here to be consistent with the docs and lua API
+  sed  's/^/base16-/' ${THEMES_FILE}
+  echo '```'
+}
+
+function docs() {
+  # Print docs, until after the preamble line "Here is a list of all builtin colorschemes."
+  sed '/^Here is a list of all builtin colorschemes\.$/q' ${DOC_DIR}/colorscheme.txt
+  echo
+  echo '>'
+  # Print THEMES_FILE with indentation
+  sed  's/^/    /' ${THEMES_FILE}
+  echo
+  echo 'vim:tw=78:ts=8:ft=help:norl:'
+}
+
 function process() {
   local name scheme
   printf "Processing scheme files..."
   # Delete all color files except catppuccin, its not present in base16-schemes
   find ${LUA_DIR} ! -name 'catppuccin.lua' -type f -exec rm -f {} +
+  rm -f ${THEMES_FILE}
   mkdir -p ${LUA_DIR} ${VIM_DIR}
   for scheme in ${SCHEMES_DIR}/*/*.yaml
   do
     name=${scheme:t:r}
+    echo ${name} >> ${THEMES_FILE}
     process_lua ${scheme} > ${LUA_DIR}/${name}.lua &
     process_vim ${scheme} > ${VIM_DIR}/base16-${name}.vim &
   done
@@ -87,9 +114,20 @@ function process() {
   echo "Done"
 }
 
+function write_docs() {
+  local buffer
+  echo -n "Processing docs..."
+  buffer=$(readme)
+  echo ${buffer} > ${PROJECT_DIR}/README.md
+  buffer=$(docs)
+  echo ${buffer} > ${DOC_DIR}/colorscheme.txt
+  echo "Done"
+}
+
 function main() {
   get_schemes
   process
+  write_docs
 }
 
 main

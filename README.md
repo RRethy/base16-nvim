@@ -41,6 +41,8 @@ local color = require('base16-colorscheme').colors.base01
 
 # Builtin Colorschemes
 
+<!-- generated docs: -->
+
 ```txt
 base16-3024
 base16-apathy
