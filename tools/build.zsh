@@ -97,16 +97,27 @@ function docs() {
 }
 
 function process() {
-  local name scheme
+<<<<<<< HEAD
+  local name scheme files
+  declare -A files # associative array
+
   printf "Processing scheme files..."
   # Delete all color files then copy in our extras
   rm -rf ${LUA_DIR} ${VIM_DIR}
   rm -f ${THEMES_FILE}
   mkdir -p ${LUA_DIR} ${VIM_DIR}
 
+  # Index schemes by name using an associative array
+  # This ensures we sort in name order, not filename order
   for scheme in ${SCHEMES_DIR}/*/*.yaml
   do
     name=${scheme:t:r}
+    files[${name}]=${scheme}
+  done
+
+  # The (@kon) expansion gives us sorted keys
+  for name in "${(@kon)files}"; do
+    scheme=${(@v)files[$name]}
     echo ${name} >> ${THEMES_FILE}
     process_lua ${scheme} > ${LUA_DIR}/${name}.lua &
     process_vim ${scheme} > ${VIM_DIR}/base16-${name}.vim &
