@@ -28,29 +28,34 @@ Here is a list of all builtin colorschemes.
 >
     3024
     apathy
+    apprentice
     ashes
-    atelier-cave-light
     atelier-cave
-    atelier-dune-light
+    atelier-cave-light
     atelier-dune
-    atelier-estuary-light
+    atelier-dune-light
     atelier-estuary
-    atelier-forest-light
+    atelier-estuary-light
     atelier-forest
-    atelier-heath-light
+    atelier-forest-light
     atelier-heath
-    atelier-lakeside-light
+    atelier-heath-light
     atelier-lakeside
-    atelier-plateau-light
+    atelier-lakeside-light
     atelier-plateau
-    atelier-savanna-light
+    atelier-plateau-light
     atelier-savanna
-    atelier-seaside-light
+    atelier-savanna-light
     atelier-seaside
-    atelier-sulphurpool-light
+    atelier-seaside-light
     atelier-sulphurpool
+    atelier-sulphurpool-light
     atlas
+    ayu-dark
+    ayu-light
+    ayu-mirage
     bespin
+    black-metal
     black-metal-bathory
     black-metal-burzum
     black-metal-dark-funeral
@@ -61,34 +66,72 @@ Here is a list of all builtin colorschemes.
     black-metal-mayhem
     black-metal-nile
     black-metal-venom
-    black-metal
+    blueforest
+    blueish
     brewer
     bright
     brogrammer
-    brushtrees-dark
     brushtrees
+    brushtrees-dark
+    caroline
+    catppuccin
+    catppuccin-frappe
+    catppuccin-latte
+    catppuccin-macchiato
+    catppuccin-mocha
     chalk
     circus
     classic-dark
     classic-light
     codeschool
+    colors
     cupcake
     cupertino
+    danqing
+    danqing-light
+    da-one-black
+    da-one-gray
+    da-one-ocean
+    da-one-paper
+    da-one-sea
+    da-one-white
+    darcula
+    darkmoss
     darktooth
+    darkviolet
+    decaf
     default-dark
     default-light
-    darcula
+    dirtysea
     dracula
+    edge-dark
+    edge-light
     eighties
     embers
+    emil
+    equilibrium-dark
+    equilibrium-gray-dark
+    equilibrium-gray-light
+    equilibrium-light
+    eris
+    espresso
+    eva
+    eva-dim
+    evenok-dark
+    everforest
+    everforest-dark-hard
     flat
+    framer
     fruit-soda
+    gigavolt
     github
     google-dark
     google-light
+    gotham
     grayscale-dark
     grayscale-light
     greenscreen
+    gruber
     gruvbox-dark-hard
     gruvbox-dark-medium
     gruvbox-dark-pale
@@ -96,66 +139,148 @@ Here is a list of all builtin colorschemes.
     gruvbox-light-hard
     gruvbox-light-medium
     gruvbox-light-soft
+    gruvbox-material-dark-hard
+    gruvbox-material-dark-medium
+    gruvbox-material-dark-soft
+    gruvbox-material-light-hard
+    gruvbox-material-light-medium
+    gruvbox-material-light-soft
+    hardcore
+    harmonic16-dark
+    harmonic16-light
     harmonic-dark
     harmonic-light
-    heetch-light
     heetch
+    heetch-light
     helios
     hopscotch
     horizon-dark
+    horizon-light
+    horizon-terminal-dark
+    horizon-terminal-light
+    humanoid-dark
+    humanoid-light
     ia-dark
     ia-light
     icy
     irblack
     isotope
+    kanagawa
+    katy
+    kimber
+    lime
     macintosh
     marrakesh
     materia
+    material
     material-darker
     material-lighter
     material-palenight
     material-vivid
-    material
     mellow-purple
     mexico-light
     mocha
     monokai
+    mountain
+    nebula
     nord
+    nova
     ocean
     oceanicnext
-    one-light
     onedark
+    one-light
     outrun-dark
+    oxocarbon-dark
+    oxocarbon-light
+    pandora
     papercolor-dark
     papercolor-light
     paraiso
+    pasque
     phd
     pico
+    pinky
     pop
     porple
+    primer-dark
+    primer-dark-dimmed
+    primer-light
+    purpledream
+    qualia
     railscasts
     rebecca
+    rose-pine
+    rose-pine-dawn
+    rose-pine-moon
+    sagelight
+    sakura
+    sandcastle
     schemer-dark
     schemer-medium
+    selenized-black
+    selenized-dark
+    selenized-light
+    selenized-white
     seti
+    shadesmear-dark
+    shadesmear-light
+    shades-of-purple
     shapeshifter
+    silk-dark
+    silk-light
     snazzy
     solarflare
+    solarflare-light
     solarized-dark
     solarized-light
+    spaceduck
     spacemacs
+    standardized-dark
+    standardized-light
+    stella
+    still-alive
+    summercamp
     summerfruit-dark
     summerfruit-light
     synth-midnight-dark
-    tomorrow-night-eighties
-    tomorrow-night
+    synth-midnight-light
+    tango
+    tarot
+    tender
+    tokyo-city-dark
+    tokyo-city-light
+    tokyo-city-terminal-dark
+    tokyo-city-terminal-light
+    tokyodark
+    tokyodark-terminal
+    tokyo-night-dark
+    tokyo-night-light
+    tokyo-night-storm
+    tokyo-night-terminal-dark
+    tokyo-night-terminal-light
+    tokyo-night-terminal-storm
     tomorrow
+    tomorrow-night
+    tomorrow-night-eighties
     tube
     twilight
     unikitty-dark
     unikitty-light
+    unikitty-reversible
+    uwunicorn
+    vice
+    vulcan
+    windows-10
+    windows-10-light
+    windows-95
+    windows-95-light
+    windows-highcontrast
+    windows-highcontrast-light
+    windows-nt
+    windows-nt-light
     woodland
     xcode-dusk
+    zenbones
     zenburn
 
 vim:tw=78:ts=8:ft=help:norl:

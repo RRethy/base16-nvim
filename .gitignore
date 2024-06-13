@@ -1,1 +1,4 @@
 doc/tags
+
+# Nix output symlink
+result
