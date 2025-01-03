@@ -1,0 +1,7 @@
+base16.lua:
+  filename: lua/colors/{{ scheme-slug }}.lua
+  supported-systems: [ base16 ]
+
+base16.vim:
+  filename: colors/base16-{{ scheme-slug }}.vim
+  supported-systems: [ base16 ]
