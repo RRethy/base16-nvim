@@ -1,6 +1,6 @@
 return {
-    base00 = '#282936', base01 = '#3a3c4e', base02 = '#4d4f68', base03 = '#626483',
-    base04 = '#62d6e8', base05 = '#e9e9f4', base06 = '#f1f2f8', base07 = '#f7f7fb',
-    base08 = '#ea51b2', base09 = '#b45bcf', base0A = '#00f769', base0B = '#ebff87',
-    base0C = '#a1efe4', base0D = '#62d6e8', base0E = '#b45bcf', base0F = '#00f769'
+    base00 = '#282a36', base01 = '#363447', base02 = '#44475a', base03 = '#6272a4',
+    base04 = '#9ea8c7', base05 = '#f8f8f2', base06 = '#f0f1f4', base07 = '#ffffff',
+    base08 = '#ff5555', base09 = '#ffb86c', base0A = '#f1fa8c', base0B = '#50fa7b',
+    base0C = '#8be9fd', base0D = '#80bfff', base0E = '#ff79c6', base0F = '#bd93f9'
 }
