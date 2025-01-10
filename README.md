@@ -179,6 +179,7 @@ base16-kanagawa
 base16-katy
 base16-kimber
 base16-lime
+base16-light-modern
 base16-macintosh
 base16-marrakesh
 base16-materia
