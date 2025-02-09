@@ -25,17 +25,44 @@ function ensure_tools() {
   fi
 }
 
+function sorted_vim_colors() {
+  print -l "${VIM_DIR}"/*.vim(#q:t:r) | sort
+}
+
 function update_readme() {
-  sed -i '' '/# Builtin Colorschemes/,$ d' "${PLUGIN_DIR}/README.md"
-  schemes=''
-  for file in "${VIM_DIR}"/*.vim
-  do
-    name="${file:t:r}"
-    schemes="${schemes}${name}\n"
-  done
-  schemes="$(echo $schemes | sed '/^$/d' | sort)"
-  content="# Builtin Colorschemes\n\n"'```'"txt\n$schemes\n"'```'
-  echo $content >>! README.md
+  local readme_path="${PLUGIN_DIR}/README.md"
+  local header="# Builtin Colorschemes"
+  sed -i '' "/${header}/,$ d" "$readme_path"
+  cat <<-EOF >>! "$readme_path"
+	$header
+
+	\`\`\`txt
+	$(sorted_vim_colors)
+	\`\`\`
+	EOF
+}
+
+function update_vimdoc() {
+  local vimdoc_path="${PLUGIN_DIR}/doc/colorscheme.txt"
+  # Replace all lines after this line:
+  local start_marker="^BUILTIN COLORSCHEMES"
+  # ...up until but not including this line:
+  local end_marker="^vim:"
+
+  # Build the text content:
+  # Header line: 75 "="s
+  local content=${(l:75::=:)}
+  content="${content}\n\nHere is a list of all builtin colorschemes.\n\n"
+  content="${content}>\n\n"
+  # Left-pad the colorschemes with 4 spaces
+  content="${content}$(sorted_vim_colors | awk '{ print "    "$1 }')\n"
+  echo "$content" | sed -i '' \
+    "/${start_marker}/,/${end_marker}/ {
+    /${start_marker}/!{
+      /${end_marker}/!d
+    }
+    /${start_marker}/r /dev/stdin
+}" "$vimdoc_path"
 }
 
 function process() {
@@ -53,6 +80,8 @@ function process() {
   lua_init > "${LUA_DIR}/init.lua"
   printf "Updating README.md...\n"
   update_readme
+  printf "Updating vimdoc...\n"
+  update_vimdoc
   echo "Done"
 }
 
