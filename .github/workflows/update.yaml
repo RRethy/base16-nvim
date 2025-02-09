@@ -8,13 +8,17 @@ jobs:
   run:
     runs-on: "ubuntu-latest"
     steps:
+      - name: Install zsh
+        run: "sudo apt-get update && sudo apt-get install zsh"
+
       - name: "Fetch the repository code"
         uses: "actions/checkout@v4.2.2"
 
       - name: "Update schemes"
         uses: "tinted-theming/tinted-builder-rust@latest"
 
-      - run: "zsh tools/build.zsh lua-init-only"
+      - run: "tools/build.zsh lua-init-only"
+        shell: 'zsh {0}'
 
       - name: "Commit any changes"
         uses: "stefanzweifel/git-auto-commit-action@v5.1.0"
