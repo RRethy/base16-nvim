@@ -7,19 +7,28 @@ on:
 jobs:
   run:
     runs-on: "ubuntu-latest"
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
     steps:
+      # tools/build.zsh requires Zsh
       - name: Install zsh
         run: "sudo apt-get update && sudo apt-get install zsh"
 
+      # Checkout this repo into the workspace
       - name: "Fetch the repository code"
         uses: "actions/checkout@v4.2.2"
 
+      # Update schemes using tinted-builder-rust
       - name: "Update schemes"
         uses: "tinted-theming/tinted-builder-rust@latest"
 
+      # Update init.lua
       - run: "tools/build.zsh lua-init-only"
         shell: 'zsh {0}'
 
+      # Commit any changes
       - name: "Commit any changes"
         uses: "stefanzweifel/git-auto-commit-action@v5.1.0"
         with:
