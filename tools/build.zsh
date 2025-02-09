@@ -19,28 +19,30 @@ function lua_init() {
 }
 
 function ensure_tools() {
-  if (( ! $+commands[tinty] )); then
-    2>&1 printf "tinty must be installed. See https://github.com/tinted-theming/tinty#installation\n\n"
+  if (( ! $+commands[tinted-builder-rust] )); then
+    2>&1 printf "tinted-builder-rust must be installed. See https://github.com/tinted-theming/tinted-builder-rust?tab=readme-ov-file#cli\n\n"
   fi
-}
-
-function update_schemes() {
-  tinty update
+  exit 1
 }
 
 function process() {
-  local name scheme
-  printf "Generating colorschemes...\n"
-  tinty build "$PLUGIN_DIR"
-  wait
+  if [[ "$1" != "lua-init-only"  ]]; then
+    ensure_tools
+    local name scheme
+    printf "Generating colorschemes...\n"
+    tinted-builder-rust build "$PLUGIN_DIR" --sync
+    wait
+  else
+    printf "Skipping colorscheme update & generation...\n"
+  fi
+
+  printf "Updating init.lua...\n"
   lua_init > "${LUA_DIR}/init.lua"
   echo "Done"
 }
 
 function main() {
-  ensure_tools
-  update_schemes
-  process
+  process "$@"
 }
 
-main
+main "$@"

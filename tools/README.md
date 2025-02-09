@@ -1,10 +1,10 @@
 # Generate Colorschemes with Latest Base16 Schemes
 
-Using [Tinty](https://github.com/tinted-theming/tinty), pulls the latest base16 schemes & generate the colorschemes.
+Using [tinted-builder-rust](https://github.com/tinted-theming/tinted-builder-rust), pulls the latest base16 schemes & generate the colorschemes.
 
 ## Requirements
 
-* `tinty`
+* `tinted-builder-rust`
 * `git`
 * `zsh`
 
