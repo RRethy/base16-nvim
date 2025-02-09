@@ -27,13 +27,14 @@ function ensure_tools() {
 
 function update_readme() {
   sed -i '' '/# Builtin Colorschemes/,$ d' "${PLUGIN_DIR}/README.md"
-  content="# Builtin Colorschemes\n\n"'```'"\n"
+  schemes=''
   for file in "${VIM_DIR}"/*.vim
   do
     name="${file:t:r}"
-    content="${content}${name}\n"
+    schemes="${schemes}${name}\n"
   done
-  content=$content'```'
+  schemes="$(echo $schemes | sed '/^$/d' | sort)"
+  content="# Builtin Colorschemes\n\n"'```'"txt\n$schemes\n"'```'
   echo $content >>! README.md
 }
 
@@ -50,6 +51,7 @@ function process() {
 
   printf "Updating init.lua...\n"
   lua_init > "${LUA_DIR}/init.lua"
+  printf "Updating README.md...\n"
   update_readme
   echo "Done"
 }
