@@ -21,6 +21,7 @@ function lua_init() {
 function ensure_tools() {
   if (( ! $+commands[tinted-builder-rust] )); then
     2>&1 printf "tinted-builder-rust must be installed. See https://github.com/tinted-theming/tinted-builder-rust?tab=readme-ov-file#cli\n\n"
+    exit 1
   fi
   exit 1
 }
