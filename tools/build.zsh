@@ -10,9 +10,7 @@ VIM_DIR="${PLUGIN_DIR}/colors"
 function lua_init() {
   local file name
   printf "local M = {}\n\n"
-  for file in "${LUA_DIR}"/*.lua~*/init.lua
-  do
-    name="${file:t:r}"
+  sorted_lua_colors | while read name; do
     echo "M['${name}'] = require('colors.${name}')"
   done
   printf "\nreturn M\n"
@@ -27,6 +25,10 @@ function ensure_tools() {
 
 function sorted_vim_colors() {
   print -l "${VIM_DIR}"/*.vim(#q:t:r) | sort
+}
+
+function sorted_lua_colors() {
+  print -l "${LUA_DIR}"/*.lua~*/init.lua(#q:t:r) | sort
 }
 
 function update_readme() {
