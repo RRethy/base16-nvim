@@ -8,4 +8,6 @@ Using [tinted-builder-rust](https://github.com/tinted-theming/tinted-builder-rus
 * `git`
 * `zsh`
 * `sed`
+* `awk`
+* `sort`
 
