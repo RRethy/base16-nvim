@@ -1,16 +1,10 @@
-# Import Latest Base16 Schemes
+# Generate Colorschemes with Latest Base16 Schemes
 
-A simple script to import the latest Base16 Schemes. Requirements were made as
-light as possible.
+Using [Tinty](https://github.com/tinted-theming/tinty), pulls the latest base16 schemes & generate the colorschemes.
 
 ## Requirements
 
-* curl
-* git
-* zsh
+* `tinty`
+* `git`
+* `zsh`
 
-## How Does it Work
-
-The script pulls the latest _schemas.yaml_ for Base16 and then pulls down each
-specified git repo. Using the scheme values for **base00** -> **base0F**, it
-generates the colorscheme lua or vimls wrapper files.
