@@ -1,0 +1,19 @@
+name: Update with the latest base16 schemes
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # Every day
+
+jobs:
+  run:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Update schemes"
+        uses: "tinted-theming/tinted-builder-rust@latest"
+
+      - run: "zsh tools/build.zsh lua-init-only"
+
+      - name: "Commit any changes"
+        uses: "stefanzweifel/git-auto-commit-action@v5.1.0"
+        with:
+          commit_message: "Update with the latest tinted-theming colorschemes"
