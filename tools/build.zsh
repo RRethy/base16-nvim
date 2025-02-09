@@ -53,7 +53,7 @@ function update_vimdoc() {
   # Header line: 75 "="s
   local content=${(l:75::=:)}
   content="${content}\n\nHere is a list of all builtin colorschemes.\n\n"
-  content="${content}>\n\n"
+  content="${content}>\n"
   # Left-pad the colorschemes with 4 spaces
   content="${content}$(sorted_vim_colors | awk '{ print "    "$1 }')\n"
   echo "$content" | sed -i '' \
