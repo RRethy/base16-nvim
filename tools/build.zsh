@@ -23,11 +23,22 @@ function ensure_tools() {
     2>&1 printf "tinted-builder-rust must be installed. See https://github.com/tinted-theming/tinted-builder-rust?tab=readme-ov-file#cli\n\n"
     exit 1
   fi
-  exit 1
+}
+
+function update_readme() {
+  sed -i '' '/# Builtin Colorschemes/,$ d' "${PLUGIN_DIR}/README.md"
+  content="# Builtin Colorschemes\n\n"'```'"\n"
+  for file in "${VIM_DIR}"/*.vim
+  do
+    name="${file:t:r}"
+    content="${content}${name}\n"
+  done
+  content=$content'```'
+  echo $content >>! README.md
 }
 
 function process() {
-  if [[ "$1" != "lua-init-only"  ]]; then
+  if [[ "$1" != "no-generate"  ]]; then
     ensure_tools
     local name scheme
     printf "Generating colorschemes...\n"
@@ -39,6 +50,7 @@ function process() {
 
   printf "Updating init.lua...\n"
   lua_init > "${LUA_DIR}/init.lua"
+  update_readme
   echo "Done"
 }
 

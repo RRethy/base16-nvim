@@ -24,8 +24,8 @@ jobs:
       - name: "Update schemes"
         uses: "tinted-theming/tinted-builder-rust@latest"
 
-      # Update init.lua
-      - run: "tools/build.zsh lua-init-only"
+      # Update other artifacts.
+      - run: "tools/build.zsh no-generate"
         shell: 'zsh {0}'
 
       # Commit any changes

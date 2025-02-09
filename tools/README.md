@@ -7,4 +7,5 @@ Using [tinted-builder-rust](https://github.com/tinted-theming/tinted-builder-rus
 * `tinted-builder-rust`
 * `git`
 * `zsh`
+* `sed`
 
