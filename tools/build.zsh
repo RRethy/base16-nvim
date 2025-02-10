@@ -1,11 +1,13 @@
 #!/usr/bin/env zsh
 
+set -o errexit
 setopt extendedglob
 
 DIRNAME="${0:A:h}"
 PLUGIN_DIR="${DIRNAME:h}"
 LUA_DIR="${PLUGIN_DIR}/lua/colors"
 VIM_DIR="${PLUGIN_DIR}/colors"
+SED_COMMAND=${SED_COMMAND:-sed}
 
 function lua_init() {
   local file name
@@ -34,7 +36,7 @@ function sorted_lua_colors() {
 function update_readme() {
   local readme_path="${PLUGIN_DIR}/README.md"
   local header="# Builtin Colorschemes"
-  sed -i '' "/${header}/,$ d" "$readme_path"
+  $SED_COMMAND -i "/^${header}/,$ d" "$readme_path"
   cat <<-EOF >>! "$readme_path"
 	$header
 
@@ -58,7 +60,7 @@ function update_vimdoc() {
   content="${content}>\n"
   # Left-pad the colorschemes with 4 spaces
   content="${content}$(sorted_vim_colors | awk '{ print "    "$1 }')\n"
-  echo "$content" | sed -i '' \
+  echo "$content" | $SED_COMMAND -i \
     "/${start_marker}/,/${end_marker}/ {
     /${start_marker}/!{
       /${end_marker}/!d
