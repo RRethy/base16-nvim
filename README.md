@@ -302,6 +302,7 @@ base16-unikitty-dark
 base16-unikitty-light
 base16-unikitty-reversible
 base16-uwunicorn
+base16-valua
 base16-vesper
 base16-vice
 base16-vulcan
