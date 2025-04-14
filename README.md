@@ -120,6 +120,7 @@ base16-decaf
 base16-deep-oceanic-next
 base16-default-dark
 base16-default-light
+base16-digital-rain
 base16-dirtysea
 base16-dracula
 base16-edge-dark
@@ -155,6 +156,7 @@ base16-gruvbox-dark-hard
 base16-gruvbox-dark-medium
 base16-gruvbox-dark-pale
 base16-gruvbox-dark-soft
+base16-gruvbox-light
 base16-gruvbox-light-hard
 base16-gruvbox-light-medium
 base16-gruvbox-light-soft
@@ -186,6 +188,7 @@ base16-irblack
 base16-isotope
 base16-jabuti
 base16-kanagawa
+base16-kanagawa-dragon
 base16-katy
 base16-kimber
 base16-lime
