@@ -145,6 +145,7 @@ base16-framer
 base16-fruit-soda
 base16-gigavolt
 base16-github
+base16-github-dark
 base16-google-dark
 base16-google-light
 base16-gotham

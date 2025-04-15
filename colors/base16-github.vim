@@ -1,8 +1,8 @@
 hi clear
 let g:colors_name = 'base16-github'
 lua require('base16-colorscheme').setup({
-    \ base00 = '#ffffff', base01 = '#f5f5f5', base02 = '#c8c8fa', base03 = '#969896',
-    \ base04 = '#e8e8e8', base05 = '#333333', base06 = '#ffffff', base07 = '#ffffff',
-    \ base08 = '#ed6a43', base09 = '#0086b3', base0A = '#795da3', base0B = '#183691',
-    \ base0C = '#183691', base0D = '#795da3', base0E = '#a71d5d', base0F = '#333333'
+    \ base00 = '#eaeef2', base01 = '#d0d7de', base02 = '#afb8c1', base03 = '#8c959f',
+    \ base04 = '#6e7781', base05 = '#424a53', base06 = '#32383f', base07 = '#1f2328',
+    \ base08 = '#fa4549', base09 = '#e16f24', base0A = '#bf8700', base0B = '#2da44e',
+    \ base0C = '#339d9b', base0D = '#218bff', base0E = '#a475f9', base0F = '#4d2d00'
     \})
