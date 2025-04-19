@@ -153,6 +153,7 @@ base16-grayscale-dark
 base16-grayscale-light
 base16-greenscreen
 base16-gruber
+base16-gruvbox-dark
 base16-gruvbox-dark-hard
 base16-gruvbox-dark-medium
 base16-gruvbox-dark-pale
