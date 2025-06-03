@@ -97,6 +97,8 @@ base16-catppuccin-latte
 base16-catppuccin-macchiato
 base16-catppuccin-mocha
 base16-chalk
+base16-chicago-day
+base16-chicago-night
 base16-circus
 base16-classic-dark
 base16-classic-light
