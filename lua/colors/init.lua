@@ -1,5 +1,6 @@
 local M = {}
 
+M['0x96f'] = require('colors.0x96f')
 M['3024'] = require('colors.3024')
 M['apathy'] = require('colors.apathy')
 M['apprentice'] = require('colors.apprentice')

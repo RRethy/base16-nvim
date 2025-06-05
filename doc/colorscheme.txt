@@ -26,6 +26,7 @@ BUILTIN COLORSCHEMES                       *nvim-base16-builtin-colorschemes*
 Here is a list of all builtin colorschemes.
 
 >
+    base16-0x96f
     base16-3024
     base16-apathy
     base16-apprentice

@@ -42,6 +42,7 @@ local color = require('base16-colorscheme').colors.base01
 # Builtin Colorschemes
 
 ```txt
+base16-0x96f
 base16-3024
 base16-apathy
 base16-apprentice
