@@ -231,6 +231,12 @@ base16-papercolor-dark
 base16-papercolor-light
 base16-paraiso
 base16-pasque
+base16-penumbra-dark
+base16-penumbra-dark-contrast-plus
+base16-penumbra-dark-contrast-plus-plus
+base16-penumbra-light
+base16-penumbra-light-contrast-plus
+base16-penumbra-light-contrast-plus-plus
 base16-phd
 base16-pico
 base16-pinky
