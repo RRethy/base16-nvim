@@ -201,6 +201,7 @@ base16-kanagawa-dragon
 base16-katy
 base16-kimber
 base16-lime
+base16-linux-vt
 base16-macintosh
 base16-marrakesh
 base16-materia
