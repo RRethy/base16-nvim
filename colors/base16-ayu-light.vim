@@ -1,8 +1,8 @@
 hi clear
 let g:colors_name = 'base16-ayu-light'
 lua require('base16-colorscheme').setup({
-    \ base00 = '#fafafa', base01 = '#f3f4f5', base02 = '#f8f9fa', base03 = '#abb0b6',
-    \ base04 = '#828c99', base05 = '#5c6773', base06 = '#242936', base07 = '#1a1f29',
-    \ base08 = '#f07178', base09 = '#fa8d3e', base0A = '#f2ae49', base0B = '#86b300',
-    \ base0C = '#4cbf99', base0D = '#36a3d9', base0E = '#a37acc', base0F = '#e6ba7e'
+    \ base00 = '#f8f9fa', base01 = '#edeff1', base02 = '#d2d4d8', base03 = '#a0a6ac',
+    \ base04 = '#8a9199', base05 = '#5c6166', base06 = '#4e5257', base07 = '#404447',
+    \ base08 = '#f07171', base09 = '#fa8d3e', base0A = '#f2ae49', base0B = '#6cbf49',
+    \ base0C = '#4cbf99', base0D = '#399ee6', base0E = '#a37acc', base0F = '#e6ba7e'
     \})
