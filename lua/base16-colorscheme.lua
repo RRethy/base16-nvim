@@ -226,7 +226,7 @@ function M.setup(colors, config)
     local diff_delete_bg = hex_re:match_str(M.colors.base08) and hex_re:match_str(M.colors.base00) and darken(M.colors.base08, 0.6) or M.colors.base00
     local diff_change_bg = hex_re:match_str(M.colors.base09) and hex_re:match_str(M.colors.base00) and darken(M.colors.base09, 0.8) or M.colors.base00
     local diff_text_bg = hex_re:match_str(M.colors.base0B) and hex_re:match_str(M.colors.base00) and darken(M.colors.base0B, 0.7) or M.colors.base01
-    
+
     hi.DiffAdd                            = { guifg = nil, guibg = diff_add_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm00 }
     hi.DiffChange                         = { guifg = nil, guibg = diff_change_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm00 }
     hi.DiffDelete                         = { guifg = nil, guibg = diff_delete_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm00 }
@@ -245,7 +245,7 @@ function M.setup(colors, config)
         hi.DiffviewEndOfBuffer            = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm03, ctermbg = nil }
         hi.DiffviewLineNr                 = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm04, ctermbg = nil }
         hi.DiffviewWinSeparator           = { guifg = M.colors.base02, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm02, ctermbg = nil }
-        
+
         -- File panel highlighting  
         hi.DiffviewFilePanelTitle         = { guifg = M.colors.base06, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm06, ctermbg = nil }
         hi.DiffviewFilePanelCounter       = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm04, ctermbg = nil }
@@ -254,7 +254,7 @@ function M.setup(colors, config)
         hi.DiffviewFilePanelRootPath      = { guifg = M.colors.base06, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm06, ctermbg = nil }
         hi.DiffviewFilePanelInsertions    = { guifg = M.colors.base0B, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = nil }
         hi.DiffviewFilePanelDeletions     = { guifg = M.colors.base08, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm08, ctermbg = nil }
-        
+
         -- Status highlighting for file panel
         hi.DiffviewStatusAdded            = { guifg = M.colors.base0B, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = nil }
         hi.DiffviewStatusUntracked        = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = nil }
@@ -266,7 +266,7 @@ function M.setup(colors, config)
         hi.DiffviewStatusBroken           = { guifg = M.colors.base08, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm08, ctermbg = nil }
         hi.DiffviewStatusUnknown          = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = nil }
         hi.DiffviewStatusUnmerged         = { guifg = M.colors.base0E, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm0E, ctermbg = nil }
-        
+
         -- Reference highlighting for better GitHub-like diff appearance
         hi.DiffviewDiffAddAsDelete        = { guifg = M.colors.base08, guibg = diff_delete_bg, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
         hi.DiffviewDiffDelete             = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm03, ctermbg = M.colors.cterm00 }
