@@ -176,6 +176,7 @@ base16-gruvbox-material-light-hard
 base16-gruvbox-material-light-medium
 base16-gruvbox-material-light-soft
 base16-hardcore
+base16-hardhacker
 base16-harmonic-dark
 base16-harmonic-light
 base16-harmonic16-dark
