@@ -30,6 +30,7 @@ Here is a list of all builtin colorschemes.
     base16-3024
     base16-apathy
     base16-apprentice
+    base16-ascendancy
     base16-ashes
     base16-atelier-cave
     base16-atelier-cave-light

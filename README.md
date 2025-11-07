@@ -46,6 +46,7 @@ base16-0x96f
 base16-3024
 base16-apathy
 base16-apprentice
+base16-ascendancy
 base16-ashes
 base16-atelier-cave
 base16-atelier-cave-light
