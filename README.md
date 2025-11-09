@@ -284,6 +284,7 @@ base16-shapeshifter
 base16-silk-dark
 base16-silk-light
 base16-snazzy
+base16-soft-server
 base16-solarflare
 base16-solarflare-light
 base16-solarized-dark

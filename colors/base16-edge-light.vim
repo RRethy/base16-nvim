@@ -3,6 +3,6 @@ let g:colors_name = 'base16-edge-light'
 lua require('base16-colorscheme').setup({
     \ base00 = '#fafafa', base01 = '#7c9f4b', base02 = '#d69822', base03 = '#5e646f',
     \ base04 = '#6587bf', base05 = '#5e646f', base06 = '#b870ce', base07 = '#5e646f',
-    \ base08 = '#db7070', base09 = '#db7070', base0A = '#d69822', base0B = '#7c9f4b',
+    \ base08 = '#db7070', base09 = '#eba31a', base0A = '#ebcc1a', base0B = '#7c9f4b',
     \ base0C = '#509c93', base0D = '#6587bf', base0E = '#b870ce', base0F = '#509c93'
     \})
