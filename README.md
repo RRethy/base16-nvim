@@ -153,6 +153,8 @@ base16-everforest-dark-hard
 base16-everforest-dark-medium
 base16-everforest-dark-soft
 base16-flat
+base16-flexoki-dark
+base16-flexoki-light
 base16-framer
 base16-fruit-soda
 base16-gigavolt
