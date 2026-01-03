@@ -136,6 +136,7 @@ base16-dracula
 base16-edge-dark
 base16-edge-light
 base16-eighties
+base16-eldritch
 base16-embers
 base16-embers-light
 base16-emil
