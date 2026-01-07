@@ -114,6 +114,7 @@ base16-codeschool
 base16-colors
 base16-cupcake
 base16-cupertino
+base16-cyberpunk
 base16-da-one-black
 base16-da-one-gray
 base16-da-one-ocean
