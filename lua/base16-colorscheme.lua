@@ -619,12 +619,12 @@ function M.setup(colors, config)
     if M.config.blink then
         hi.BlinkCmpMenu                         = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm01 }
         hi.BlinkCmpMenuBorder                   = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
-        hi.BlinkCmpMenuSelection                = { guifg = M.colors.base05, guibg = M.colors.base02, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm02 }
+        hi.BlinkCmpMenuSelection                = { guifg = M.colors.base05, guibg = M.colors.base02, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm02 }
         hi.BlinkCmpScrollBarThumb               = { guifg = nil, guibg = M.colors.base03, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm03 }
         hi.BlinkCmpScrollBarGutter              = { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm01 }
         hi.BlinkCmpLabel                        = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = nil }
         hi.BlinkCmpLabelDeprecated              = { guifg = M.colors.base03, guibg = nil, gui = 'strikethrough', guisp = nil, ctermfg = M.colors.cterm03, ctermbg = nil }
-        hi.BlinkCmpLabelMatch                   = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = nil }
+        hi.BlinkCmpLabelMatch                   = { guifg = M.colors.base0D, guibg = nil, gui = 'bold', guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = nil }
         hi.BlinkCmpLabelDetail                  = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm04, ctermbg = nil }
         hi.BlinkCmpLabelDescription             = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm04, ctermbg = nil }
         hi.BlinkCmpKind                         = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = nil }
@@ -658,7 +658,7 @@ function M.setup(colors, config)
         hi.BlinkCmpSignatureHelp                = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
         hi.BlinkCmpSignatureHelpBorder          = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
         hi.BlinkCmpSignatureHelpActiveParameter = { guifg = M.colors.base0D, guibg = M.colors.base02, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = M.colors.cterm02 }
-end
+    end
 
 
     if M.config.illuminate then
