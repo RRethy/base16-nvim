@@ -346,6 +346,9 @@ base16-windows-nt
 base16-windows-nt-light
 base16-woodland
 base16-xcode-dusk
+base16-yesterday
+base16-yesterday-bright
+base16-yesterday-night
 base16-zenbones
 base16-zenburn
 ```
