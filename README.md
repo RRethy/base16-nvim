@@ -87,6 +87,7 @@ base16-black-metal-nile
 base16-black-metal-venom
 base16-blueforest
 base16-blueish
+base16-booshnickle-dark
 base16-brewer
 base16-bright
 base16-brogrammer
