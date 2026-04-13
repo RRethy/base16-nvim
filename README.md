@@ -155,6 +155,9 @@ base16-everforest
 base16-everforest-dark-hard
 base16-everforest-dark-medium
 base16-everforest-dark-soft
+base16-everforest-light-hard
+base16-everforest-light-medium
+base16-everforest-light-soft
 base16-flat
 base16-flexoki-dark
 base16-flexoki-light
