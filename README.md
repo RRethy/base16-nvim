@@ -307,6 +307,8 @@ base16-still-alive
 base16-summercamp
 base16-summerfruit-dark
 base16-summerfruit-light
+base16-swamp-dark
+base16-swamp-light
 base16-synth-midnight-dark
 base16-synth-midnight-light
 base16-tango
