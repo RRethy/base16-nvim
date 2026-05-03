@@ -367,7 +367,7 @@ function M.setup(colors, config)
     hi.TSStrong                           = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil, ctermfg = nil, ctermbg = nil }
     hi.TSEmphasis                         = { guifg = M.colors.base09, guibg = nil, gui = 'italic', guisp = nil, ctermfg = M.colors.cterm09, ctermbg = nil }
     hi.TSUnderline                        = { guifg = M.colors.base00, guibg = nil, gui = 'underline', guisp = nil, ctermfg = M.colors.cterm00, ctermbg = nil }
-    hi.TSStrike                           = { guifg = M.colors.base00, guibg = nil, gui = 'strikethrough', guisp = nil, ctermfg = M.colors.cterm00, ctermbg = nil }
+    hi.TSStrike                           = { guifg = M.colors.base04, guibg = nil, gui = 'strikethrough', guisp = nil, ctermfg = M.colors.cterm04, ctermbg = nil }
     hi.TSTitle                            = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = nil }
     hi.TSLiteral                          = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil, ctermfg = M.colors.cterm09, ctermbg = nil }
     hi.TSURI                              = { guifg = M.colors.base09, guibg = nil, gui = 'underline', guisp = nil, ctermfg = M.colors.cterm09, ctermbg = nil }
@@ -484,7 +484,7 @@ function M.setup(colors, config)
         hi['@markup.strong']            = '@text.strong'
         hi['@markup.italic']            = 'Italic'
         hi['@markup.link']              = '@text.link'
-        hi['@markup.strikethrough']     = '@text.strikethrough'
+        hi['@markup.strikethrough']     = '@text.strike'
         hi['@markup.heading']           = '@text.title'
         hi['@markup.raw']               = '@text.literal'
         hi['@markup.link']              = '@text.reference'
