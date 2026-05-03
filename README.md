@@ -216,6 +216,8 @@ base16-kanagawa
 base16-kanagawa-dragon
 base16-katy
 base16-kimber
+base16-kissa-latte
+base16-kissa-macchiato
 base16-lime
 base16-linux-vt
 base16-macintosh
