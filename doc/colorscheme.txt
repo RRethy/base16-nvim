@@ -74,11 +74,14 @@ Here is a list of all builtin colorschemes.
     base16-boo-shnickle
     base16-boo-shnickle-light
     base16-booshnickle-dark
+    base16-bosque
+    base16-brasa
     base16-brewer
     base16-bright
     base16-brogrammer
     base16-brushtrees
     base16-brushtrees-dark
+    base16-cacao
     base16-caroline
     base16-catppuccin
     base16-catppuccin-frappe
@@ -216,16 +219,19 @@ Here is a list of all builtin colorschemes.
     base16-measured-light
     base16-mellow-purple
     base16-mexico-light
+    base16-mezcal
     base16-mocha
     base16-monokai
     base16-moonlight
     base16-mountain
     base16-nebula
+    base16-noche
     base16-nord
     base16-nord-light
     base16-nova
     base16-ocean
     base16-oceanicnext
+    base16-ocote
     base16-one-light
     base16-onedark
     base16-onedark-dark
@@ -233,6 +239,7 @@ Here is a list of all builtin colorschemes.
     base16-oxocarbon-dark
     base16-oxocarbon-light
     base16-pandora
+    base16-papel
     base16-papercolor-dark
     base16-papercolor-light
     base16-paraiso
@@ -304,6 +311,7 @@ Here is a list of all builtin colorschemes.
     base16-tender
     base16-terracotta
     base16-terracotta-dark
+    base16-tinta
     base16-tokyo-city-dark
     base16-tokyo-city-light
     base16-tokyo-city-terminal-dark
