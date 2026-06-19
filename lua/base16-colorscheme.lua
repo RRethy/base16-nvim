@@ -160,6 +160,7 @@ function M.setup(colors, config)
     hi.MatchParen                         = { guifg = nil, guibg = M.colors.base03, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm03 }
     hi.ModeMsg                            = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = nil }
     hi.MoreMsg                            = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = nil }
+    hi.OkMsg                              = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = nil }
     hi.Question                           = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = nil }
     hi.Search                             = { guifg = M.colors.base01, guibg = M.colors.base0A, gui = nil, guisp = nil, ctermfg = M.colors.cterm01, ctermbg = M.colors.cterm0A }
     hi.Substitute                         = { guifg = M.colors.base01, guibg = M.colors.base0A, gui = 'none', guisp = nil, ctermfg = M.colors.cterm01, ctermbg = M.colors.cterm0A }
