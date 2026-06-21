@@ -171,6 +171,11 @@ base16-fruit-soda
 base16-gigavolt
 base16-github
 base16-github-dark
+base16-github-dark-colorblind
+base16-github-dark-dimmed
+base16-github-dark-high-contrast
+base16-github-light-colorblind
+base16-github-light-high-contrast
 base16-google-dark
 base16-google-light
 base16-gotham
