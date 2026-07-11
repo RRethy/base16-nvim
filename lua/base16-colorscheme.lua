@@ -44,11 +44,11 @@ local function rgb_to_hex(r, g, b)
 end
 
 local function darken(hex, pct)
-    pct = 1 - pct
     local r, g, b = hex_to_rgb(string.sub(hex, 2))
-    r = math.floor(r * pct)
-    g = math.floor(g * pct)
-    b = math.floor(b * pct)
+    local br, bg, bb = hex_to_rgb(string.sub(M.colors.base00, 2))
+    r = math.floor(r + (br - r) * pct)
+    g = math.floor(g + (bg - g) * pct)
+    b = math.floor(b + (bb - b) * pct)
     return string.format("#%s", rgb_to_hex(r, g, b))
 end
 
@@ -223,15 +223,17 @@ function M.setup(colors, config)
     hi.Typedef                            = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0A, ctermbg = nil }
 
     -- Diff highlighting (GitHub-like style with subtle backgrounds)
-    local diff_add_bg = hex_re:match_str(M.colors.base0B) and hex_re:match_str(M.colors.base00) and darken(M.colors.base0B, 0.6) or M.colors.base00
-    local diff_delete_bg = hex_re:match_str(M.colors.base08) and hex_re:match_str(M.colors.base00) and darken(M.colors.base08, 0.6) or M.colors.base00
-    local diff_change_bg = hex_re:match_str(M.colors.base09) and hex_re:match_str(M.colors.base00) and darken(M.colors.base09, 0.8) or M.colors.base00
-    local diff_text_bg = hex_re:match_str(M.colors.base0B) and hex_re:match_str(M.colors.base00) and darken(M.colors.base0B, 0.7) or M.colors.base01
+    local diff_add_bg = hex_re:match_str(M.colors.base0B) and hex_re:match_str(M.colors.base00) and darken(M.colors.base0B, 0.85) or M.colors.base00
+    local diff_delete_bg = hex_re:match_str(M.colors.base08) and hex_re:match_str(M.colors.base00) and darken(M.colors.base08, 0.9) or M.colors.base00
+    local diff_change_bg = hex_re:match_str(M.colors.base09) and hex_re:match_str(M.colors.base00) and darken(M.colors.base01, 0.2) or M.colors.base01
+    local diff_text_bg = hex_re:match_str(M.colors.base0B) and hex_re:match_str(M.colors.base00) and darken(M.colors.base09, 0.8) or M.colors.base01
+    local diff_text_add_bg = hex_re:match_str(M.colors.base0B) and hex_re:match_str(M.colors.base00) and darken(M.colors.base0B, 0.9) or M.colors.base01
 
     hi.DiffAdd                            = { guifg = nil, guibg = diff_add_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm00 }
     hi.DiffChange                         = { guifg = nil, guibg = diff_change_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm00 }
     hi.DiffDelete                         = { guifg = nil, guibg = diff_delete_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm00 }
-    hi.DiffText                           = { guifg = nil, guibg = diff_text_bg, gui = 'bold', guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm01 }
+    hi.DiffText                           = { guifg = nil, guibg = diff_text_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm01 }
+    hi.DiffTextAdd                        = { guifg = nil, guibg = diff_text_add_bg, gui = nil, guisp = nil, ctermfg = nil, ctermbg = M.colors.cterm01 }
     hi.DiffAdded                          = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
     hi.DiffFile                           = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
     hi.DiffNewFile                        = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
