@@ -220,6 +220,7 @@ base16-icy
 base16-irblack
 base16-isotope
 base16-jabuti
+base16-jellybeans
 base16-kanagawa
 base16-kanagawa-dragon
 base16-katy
