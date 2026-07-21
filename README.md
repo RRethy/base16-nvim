@@ -104,6 +104,8 @@ base16-catppuccin-frappe
 base16-catppuccin-latte
 base16-catppuccin-macchiato
 base16-catppuccin-mocha
+base16-cerulean-signal-dark
+base16-cerulean-signal-light
 base16-chalk
 base16-charcoal-dark
 base16-charcoal-light
@@ -186,6 +188,7 @@ base16-gruber
 base16-gruvbox-dark
 base16-gruvbox-dark-hard
 base16-gruvbox-dark-medium
+base16-gruvbox-dark-medium-forest
 base16-gruvbox-dark-pale
 base16-gruvbox-dark-soft
 base16-gruvbox-light
@@ -227,6 +230,8 @@ base16-katy
 base16-kimber
 base16-kissa-latte
 base16-kissa-macchiato
+base16-lichen-chartreuse-dark
+base16-lichen-chartreuse-light
 base16-lime
 base16-linux-vt
 base16-macintosh

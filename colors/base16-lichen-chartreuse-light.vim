@@ -1,0 +1,8 @@
+hi clear
+let g:colors_name = 'base16-lichen-chartreuse-light'
+lua require('base16-colorscheme').setup({
+    \ base00 = '#f5f7f2', base01 = '#ecefe7', base02 = '#cfe4ae', base03 = '#687161',
+    \ base04 = '#4e5149', base05 = '#2d302b', base06 = '#232420', base07 = '#151613',
+    \ base08 = '#a34740', base09 = '#8b5d27', base0A = '#506b29', base0B = '#2f7462',
+    \ base0C = '#356569', base0D = '#356e8a', base0E = '#6e5689', base0F = '#8a4f67'
+    \})
