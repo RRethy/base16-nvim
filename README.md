@@ -254,6 +254,8 @@ base16-monokai
 base16-moonlight
 base16-mountain
 base16-nebula
+base16-neovim-dark
+base16-neovim-light
 base16-noche
 base16-nord
 base16-nord-light
