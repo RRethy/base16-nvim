@@ -275,6 +275,8 @@ base16-papercolor-dark
 base16-papercolor-light
 base16-paraiso
 base16-pasque
+base16-pastelon-de-amarillos
+base16-pastelon-de-amarillos-dark
 base16-penumbra-dark
 base16-penumbra-dark-contrast-plus
 base16-penumbra-dark-contrast-plus-plus

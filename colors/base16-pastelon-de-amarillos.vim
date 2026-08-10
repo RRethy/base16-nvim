@@ -1,0 +1,8 @@
+hi clear
+let g:colors_name = 'base16-pastelon-de-amarillos'
+lua require('base16-colorscheme').setup({
+    \ base00 = '#fff4d6', base01 = '#f2d083', base02 = '#d69b45', base03 = '#80616b',
+    \ base04 = '#684653', base05 = '#432c3b', base06 = '#2f1c2e', base07 = '#1c0f20',
+    \ base08 = '#bd3548', base09 = '#ad570f', base0A = '#946400', base0B = '#167451',
+    \ base0C = '#007270', base0D = '#1e5da8', base0E = '#8d3f89', base0F = '#7c3528'
+    \})
