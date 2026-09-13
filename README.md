@@ -122,6 +122,8 @@ base16-classic-dark
 base16-classic-light
 base16-codeschool
 base16-colors
+base16-corduroy
+base16-corduroy-dark
 base16-cupcake
 base16-cupertino
 base16-cyberpunk

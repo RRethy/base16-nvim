@@ -1,0 +1,8 @@
+hi clear
+let g:colors_name = 'base16-corduroy'
+lua require('base16-colorscheme').setup({
+    \ base00 = '#1d1920', base01 = '#261e2a', base02 = '#2e2533', base03 = '#6f6373',
+    \ base04 = '#887b8c', base05 = '#cdc8d0', base06 = '#cdc8d0', base07 = '#504757',
+    \ base08 = '#e06278', base09 = '#e99d90', base0A = '#edb392', base0B = '#4b8686',
+    \ base0C = '#e99d90', base0D = '#d27f91', base0E = '#c285b2', base0F = '#887b8c'
+    \})
