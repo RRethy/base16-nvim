@@ -75,6 +75,7 @@ base16-ayu-dark
 base16-ayu-light
 base16-ayu-mirage
 base16-aztec
+base16-berlin
 base16-bespin
 base16-black-metal
 base16-black-metal-bathory
@@ -89,6 +90,7 @@ base16-black-metal-nile
 base16-black-metal-venom
 base16-blueforest
 base16-blueish
+base16-bogota
 base16-boo-shnickle
 base16-boo-shnickle-light
 base16-booshnickle-dark
@@ -214,6 +216,7 @@ base16-harmonic16-light
 base16-heetch
 base16-heetch-light
 base16-helios
+base16-helsinki
 base16-hopscotch
 base16-horizon-dark
 base16-horizon-light
@@ -234,11 +237,14 @@ base16-katy
 base16-kimber
 base16-kissa-latte
 base16-kissa-macchiato
+base16-lahabana
 base16-lichen-chartreuse-dark
 base16-lichen-chartreuse-light
 base16-lime
 base16-linux-vt
+base16-london
 base16-macintosh
+base16-madrid
 base16-marrakesh
 base16-materia
 base16-material
@@ -251,6 +257,7 @@ base16-measured-light
 base16-mellow-purple
 base16-mexico-light
 base16-mezcal
+base16-miami
 base16-mocha
 base16-monokai
 base16-moonlight
@@ -268,6 +275,7 @@ base16-ocote
 base16-one-light
 base16-onedark
 base16-onedark-dark
+base16-oslo
 base16-outrun-dark
 base16-oxocarbon-dark
 base16-oxocarbon-light
@@ -276,6 +284,7 @@ base16-papel
 base16-papercolor-dark
 base16-papercolor-light
 base16-paraiso
+base16-paris
 base16-pasque
 base16-pastelon-de-amarillos
 base16-pastelon-de-amarillos-dark
@@ -290,6 +299,7 @@ base16-pico
 base16-pinky
 base16-pop
 base16-porple
+base16-praha
 base16-precious-dark-eleven
 base16-precious-dark-fifteen
 base16-precious-light-warm
@@ -347,6 +357,7 @@ base16-tender
 base16-terracotta
 base16-terracotta-dark
 base16-tinta
+base16-tokio
 base16-tokyo-city-dark
 base16-tokyo-city-light
 base16-tokyo-city-terminal-dark
@@ -382,6 +393,7 @@ base16-windows-highcontrast-light
 base16-windows-nt
 base16-windows-nt-light
 base16-woodland
+base16-x
 base16-xcode-dusk
 base16-yesterday
 base16-yesterday-bright
