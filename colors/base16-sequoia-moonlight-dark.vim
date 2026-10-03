@@ -1,0 +1,8 @@
+hi clear
+let g:colors_name = 'base16-sequoia-moonlight-dark'
+lua require('base16-colorscheme').setup({
+    \ base00 = '#0f1014', base01 = '#111216', base02 = '#111216', base03 = '#43444d',
+    \ base04 = '#575861', base05 = '#868690', base06 = '#868690', base07 = '#0f1014',
+    \ base08 = '#f58ee0', base09 = '#f58ee0', base0A = '#9898a6', base0B = '#8eb6f5',
+    \ base0C = '#ffbb88', base0D = '#c58fff', base0E = '#9898a6', base0F = '#8eb6f5'
+    \})

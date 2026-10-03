@@ -308,6 +308,15 @@ Here is a list of all builtin colorschemes.
     base16-selenized-dark
     base16-selenized-light
     base16-selenized-white
+    base16-sequoia-monochrome-dark
+    base16-sequoia-monochrome-light
+    base16-sequoia-moonlight-dark
+    base16-sequoia-moonlight-light
+    base16-sequoia-retro-dark
+    base16-sequoia-retro-light
+    base16-serendipity-midnight
+    base16-serendipity-morning
+    base16-serendipity-sunset
     base16-seti
     base16-shades-of-purple
     base16-shadesmear-dark
