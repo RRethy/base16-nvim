@@ -43,9 +43,9 @@ local function rgb_to_hex(r, g, b)
     return bit.tohex(bit.bor(bit.lshift(r, 16), bit.lshift(g, 8), b), 6)
 end
 
-local function darken(hex, pct)
+local function darken(hex, pct, towards)
     local r, g, b = hex_to_rgb(string.sub(hex, 2))
-    local br, bg, bb = hex_to_rgb(string.sub(M.colors.base00, 2))
+    local br, bg, bb = hex_to_rgb(string.sub(towards or M.colors.base00, 2))
     r = math.floor(r + (br - r) * pct)
     g = math.floor(g + (bg - g) * pct)
     b = math.floor(b + (bb - b) * pct)
@@ -530,7 +530,7 @@ function M.setup(colors, config)
     if M.config.telescope then
         if not M.config.telescope_borders and hex_re:match_str(M.colors.base00) and hex_re:match_str(M.colors.base01) and
             hex_re:match_str(M.colors.base02) then
-            local darkerbg           = darken(M.colors.base00, 0.1)
+            local darkerbg           = darken(M.colors.base00, 0.1, "#000000")
             local darkercursorline   = darken(M.colors.base01, 0.1)
             local darkerstatusline   = darken(M.colors.base02, 0.1)
             hi.TelescopeBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
