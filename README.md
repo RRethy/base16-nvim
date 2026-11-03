@@ -50,6 +50,7 @@ base16-arroz-con-dulce
 base16-arroz-con-dulce-dark
 base16-ascendancy
 base16-ashes
+base16-ataerm
 base16-atelier-cave
 base16-atelier-cave-light
 base16-atelier-dune
