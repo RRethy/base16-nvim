@@ -103,6 +103,7 @@ base16-brogrammer
 base16-brushtrees
 base16-brushtrees-dark
 base16-cacao
+base16-carbonfox
 base16-caroline
 base16-catppuccin
 base16-catppuccin-frappe
@@ -142,6 +143,8 @@ base16-darcula
 base16-darkmoss
 base16-darktooth
 base16-darkviolet
+base16-dawnfox
+base16-dayfox
 base16-decaf
 base16-deep-oceanic-next
 base16-default-dark
@@ -149,6 +152,7 @@ base16-default-light
 base16-digital-rain
 base16-dirtysea
 base16-dracula
+base16-duskfox
 base16-edge-dark
 base16-edge-light
 base16-eighties
@@ -266,9 +270,11 @@ base16-mountain
 base16-nebula
 base16-neovim-dark
 base16-neovim-light
+base16-nightfox
 base16-noche
 base16-nord
 base16-nord-light
+base16-nordfox
 base16-nova
 base16-ocean
 base16-oceanicnext
@@ -364,6 +370,7 @@ base16-synth-midnight-light
 base16-tango
 base16-tarot
 base16-tender
+base16-terafox
 base16-terracotta
 base16-terracotta-dark
 base16-tinta
