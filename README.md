@@ -360,6 +360,12 @@ base16-standardized-dark
 base16-standardized-light
 base16-stella
 base16-still-alive
+base16-stranger-theme-dimension-x
+base16-stranger-theme-hawkins
+base16-stranger-theme-starcourt
+base16-stranger-theme-the-lab
+base16-stranger-theme-tigers
+base16-stranger-theme-upside-down
 base16-summercamp
 base16-summerfruit-dark
 base16-summerfruit-light
