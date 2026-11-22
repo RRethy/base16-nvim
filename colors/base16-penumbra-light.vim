@@ -1,8 +1,8 @@
 hi clear
 let g:colors_name = 'base16-penumbra-light'
 lua require('base16-colorscheme').setup({
-    \ base00 = '#fffdfb', base01 = '#fff7ed', base02 = '#f2e6d4', base03 = '#bebebe',
-    \ base04 = '#8f8f8f', base05 = '#636363', base06 = '#303338', base07 = '#24272b',
-    \ base08 = '#ca736c', base09 = '#ba823a', base0A = '#8d9741', base0B = '#47a477',
-    \ base0C = '#00a2af', base0D = '#5794d0', base0E = '#9481cc', base0F = '#bc73a4'
+    \ base00 = '#efe8dd', base01 = '#dfd9d0', base02 = '#d1ccc5', base03 = '#b4b1ad',
+    \ base04 = '#a19f9d', base05 = '#8b8b8b', base06 = '#5e6063', base07 = '#2c2e31',
+    \ base08 = '#bb626b', base09 = '#b4763e', base0A = '#958a1c', base0B = '#509259',
+    \ base0C = '#008a87', base0D = '#0082b5', base0E = '#7177b0', base0F = '#9d68a2'
     \})
