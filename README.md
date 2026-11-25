@@ -243,6 +243,7 @@ base16-kimber
 base16-kissa-latte
 base16-kissa-macchiato
 base16-lahabana
+base16-lavense
 base16-lichen-chartreuse-dark
 base16-lichen-chartreuse-light
 base16-lime
